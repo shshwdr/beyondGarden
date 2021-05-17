@@ -1,0 +1,167 @@
+﻿Database,final dialog
+Author,
+Version,
+Description,
+
+---Actors---
+Name,Description
+Player,
+Monster_small,
+
+---Conversations---
+
+Conversation 1,level1 - intro
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_1_1,Player,,Ah! The beast!
+Player_1_2,Player,,And you're alone too.
+Player_1_3,Player,,Then you're vulnerable...unlike me! Take this!\n(Use arrow keys to shove the monster around.)
+
+Conversation 2,merge
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_2_1,Player,,Huh? Even monsters have their Valentines?
+Player_2_2,Player,,"They look...stronger. Together. Ah, that can't be right. I'll still kill them."
+
+Conversation 3,village
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_3_1,Player,,"Well, it's Valentine's Day. Again.\n(Press arrow keys to continue...)"
+Player_3_2,Player,,It's fine. I didn't want a date anyway.
+Player_3_3,Player,,I've heard that a lonely beast lives in the Northern Forest Dungeon.
+Player_3_4,Player,,"Not that I want that. I've always said, I'm stronger on my own."
+Player_3_5,Player,,I've got more important things to do than waste my time on love. I'll...fight a monster.
+Player_3_6,Player,,Sounds like easy pickings. I'll go and slay that beast and be the hero. Then the villagers will love me.
+
+Conversation 4,mushroom
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_4_1,Player,,Surely mushrooms can't fall in love.
+Player_4_2,Player,,"And even if they do, that'd be OK. I like mushrooms."
+Player_4_3,Player,,"Fried with butter and garlic, that is."
+
+Conversation 5,combination
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_5_1,Player,,What's going on here? Some sort of party?
+Player_5_2,Player,,"I don't want to be the party crasher, guys, but..."
+Player_5_3,Player,,...there probably will be a little crashing.
+
+Conversation 6,long
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_6_1,Player,,"Yuck, more pairs of monsters?"
+Player_6_2,Player,,You'll never get to be together.
+Player_6_3,Player,,That's my Valentines gift for all of you.\nYou're welcome.
+
+Conversation 7,undecided
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_7_1,Player,,Sometimes I wonder...am I better off alone?
+Player_7_2,Player,,I'm spending my day trying to keep these monsters apart.
+Player_7_3,Player,,But are they in love? Are they stronger together?
+Player_7_4,Player,,Ha! Not a chance. Monsters can't feel love.
+
+Conversation 8,boss_meet
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_8_1,Player,,this room looks empty.
+Monster_small_8_2,Monster_small,,You are the one who killed my minions.
+Player_8_3,Player,,You must be the boss.
+Player_8_4,Player,,"Let's make it fast. I kill you, then get back home and enjoy the rest of my day."
+Monster_small_8_5,Monster_small,,..Alone.
+Monster_small_8_6,Monster_small,,You poor lonely loathsome human being.
+Monster_small_8_7,Monster_small,,So you've decided to disrupt all the love in my dungeon. And on Valentine's day.
+Monster_small_8_8,Monster_small,,I forgot there were people like you. People who get in others' business because of their own...problems.
+Player_8_9,Player,,"Ergh! That cut deep, big cat."
+Player_8_10,Player,,But you're as alone as me. Death is all you deserve!
+
+Conversation 9,boss_finish
+Description,
+entrytag,Actor,Description,Dialogue Text
+Monster_small_9_1,Monster_small,,AAAAAAh!
+Player_9_2,Player,,"Haha, now here is the last strike!"
+Monster_small_9_3,Monster_small,,Wait wait wait!
+Player_9_4,Player,,"I shouldn't stop here, but since I have nothing to do the rest of the day..."
+Monster_small_9_5,Monster_small,,OK. OK. Stop. I have a suggestion.\nHow about...we...merge?
+Player_9_6,Player,,What? No! Yuck! What are you talking about?
+Player_9_7,Player,,Only monsters that are just the same as each other can merge. And we're NOTHING alike.
+Monster_small_9_8,Monster_small,,Heh. Don't be so sure.
+Monster_small_9_9,Monster_small,,"We're aggressive, full of hate, and..."
+Monster_small_9_10,Monster_small,,...we're lonely. Do you want to be alone forever?
+Player_9_11,Player,,Let's merge.
+Player_9_12,Player,,Get away from me!
+Monster_small_9_13,Monster_small,,Smart choice!
+Monster_small_9_14,Monster_small,,How do you feel?
+Player_9_15,Player,,"Hmm. The same, I think."
+Monster_small_9_16,Monster_small,,Now try pressing Space.
+Player_9_17,Player,,O...K...?
+Player_9_18,Player,,Die you monster!
+Monster_small_9_19,Monster_small,,AHHHH!
+Player_9_20,Player,,....
+Player_9_21,Player,,..........\n
+Player_9_22,Player,,There. Alone again. Much better.
+
+Conversation 10,firstMerge
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_10_1,Player,,Hey! Look at what I made!
+Monster_small_10_2,Monster_small,,You can spawn minions now. Look at you go!
+Player_10_3,Player,,I'm stronger.
+Monster_small_10_4,Monster_small,,"Stronger, together. Right?"
+Monster_small_10_5,Monster_small,,Now it's YOUR responsibility to make them stronger too... make us stronger!
+Player_10_6,Player,,Us? I really am the monster now.
+
+Conversation 11,backToForest
+Description,
+entrytag,Actor,Description,Dialogue Text
+Monster_small_11_1,Monster_small,,Monster! A monster!
+Player_11_2,Player,,It's me! Remember?
+Monster_small_11_3,Monster_small,,The monster can talk! Run!!!
+Player_11_4,Player,,Come back! I don't want to be alone...
+Monster_small_11_5,Monster_small,,Hi! You look tired. Have you been out in the forest alone?
+Player_11_6,Player,,Yeah. I went and killed that big old cat in the dungeon. He'll not bother you any more.
+Monster_small_11_7,Monster_small,,Oh! Then I guess you saved us all...
+Monster_small_11_8,Monster_small,,I'll go back and tell others this great news!
+Player_11_9,Player,,Oh wow. Will I finally get to be the hero?
+
+Conversation 13,backToTown
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_13_1,Player,,people are sharing the good news of extermination of the monsters.
+Player_13_2,Player,,They are laughing and cheering. Together.
+Player_13_3,Player,,Look how happy they are together. And I still have nothing.
+Player_13_4,Player,,Maybe merging with that lonely cat is not the worst idea. At least I wouldn't be alone then.
+Monster_small_13_5,Monster_small,,That's the monster! Kill it! Kill it!
+Player_13_6,Player,,No! I'm not!
+Monster_small_13_7,Monster_small,,(Ka-BLAM)
+Monster_small_13_8,Monster_small,,"Get out of here, monster!"
+Monster_small_13_9,Monster_small,,"Don't let the monster get between us! He'll split us up, that's what they do."
+Monster_small_13_10,Monster_small,,Nothing is getting between our love. Never ever again.
+Player_13_11,Player,,(You died alone on the cold ground.)
+Monster_small_13_12,Monster_small,,What the...?
+Monster_small_13_13,Monster_small,,It's the monster that prowls the northern dungeons! Run!
+Player_13_14,Player,,They've gone? Then it's my village now. I own it. Mine alone.
+Player_13_15,Player,,Um...yay?
+Monster_small_13_16,Monster_small,,
+
+Conversation 14,getHelp
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_14_1,Player,,You've spawned a LOT of minions.
+Player_14_2,Player,,Some may call them monsters. But they're YOUR monsters.
+Player_14_3,Player,,You'll never be alone again. Not like in town. Not like when you were a human.
+
+Conversation 15,dungeonForever
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_15_1,Player,,The dungeon is your home now.
+Player_15_2,Player,,"Having raised hundreds, even thousands of minions, you're hated and feared by the humans."
+Player_15_3,Player,,"It's said that the humans tell stories of you, of a lonely hero who made friends with a monster, and became one."
+Player_15_4,Player,,"But none of it matters. You have your family of monsters, and you'll never be alone again."
+
+Conversation 16,beforeBoss
+Description,
+entrytag,Actor,Description,Dialogue Text
+Player_16_1,Player,,"The room gets larger, and the monsters become more numerous."
+Player_16_2,Player,,Anyone would think they're trying to protect something...

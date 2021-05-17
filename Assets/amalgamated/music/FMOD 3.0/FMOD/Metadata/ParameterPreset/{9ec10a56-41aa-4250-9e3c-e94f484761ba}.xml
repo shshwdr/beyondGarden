@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{9ec10a56-41aa-4250-9e3c-e94f484761ba}">
+		<property name="name">
+			<value>Town-Forest</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac247b73-7b65-412b-b58b-4efdffc09a7a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f2670680-6ec9-4ea8-87a2-0dc0e79659c6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f2670680-6ec9-4ea8-87a2-0dc0e79659c6}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.89999997615814209</value>
+		</property>
+	</object>
+</objects>

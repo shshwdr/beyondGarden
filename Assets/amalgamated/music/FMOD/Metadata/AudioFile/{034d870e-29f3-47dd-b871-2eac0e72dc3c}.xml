@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{034d870e-29f3-47dd-b871-2eac0e72dc3c}">
+		<property name="assetPath">
+			<value>Dungeon 1 - Tier 2 (148 BPM).wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>51.891882086167797</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0665e1d9-260a-4d90-acd1-9003690a0352}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{618c48da-8942-4180-bae8-06b7c7ffaac9}">
+		<property name="assetPath">
+			<value>Town and Forest - Forest (127 BPM).wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>52.913378684807256</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0665e1d9-260a-4d90-acd1-9003690a0352}</destination>
+		</relationship>
+	</object>
+</objects>
