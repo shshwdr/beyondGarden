@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HPObject : MonoBehaviour
+public class HPObject : SerializableObject
 {
     protected AudioSource audiosource;
     public bool isAlive = true;

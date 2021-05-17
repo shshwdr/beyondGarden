@@ -25,6 +25,14 @@ public class PlantsManager : Singleton<PlantsManager>
 
     public Dictionary<HelperPlantType, float> helperPlantProdTime;
 
+    public override SerializedObject Save()
+    {
+        var res = new SerializedLevel();
+        res.water = PlantsManager.Instance.currentResource[PlantProperty.water];
+        return res;
+    }
+
+
     Dictionary<HelperPlantType, HelperPlantType> treeToUnlockFlower = new Dictionary<HelperPlantType, HelperPlantType>()
     {
         {HelperPlantType.pond, HelperPlantType.waterlily },

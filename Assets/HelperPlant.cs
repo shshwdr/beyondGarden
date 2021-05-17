@@ -2,9 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct SerializedVector
+{
+    public float x, y, z;
+    public Vector3 GetPos()
+    {
+        return new Vector3(x, y, z);
+    }
+    public SerializedVector(Vector3 v)
+    {
+        x = v.x;
+        y = v.y;
+        z = v.z;
+    }
+}
+[System.Serializable]
+public class SerializedObject { }
+[System.Serializable]
+public class SerializedHelperPlant: SerializedObject
+{
+    public SerializedVector pos;
+    public float currentHarvestTimer;
+}
+
 public class HelperPlant : HPObject
 {
-
     public AudioClip plantSound;
     public AudioClip removeSound;
     public HelperPlantType type;
@@ -26,6 +49,15 @@ public class HelperPlant : HPObject
 
     float harvestTime;
     float currentHarvestTimer;
+
+    public override SerializedObject Save()
+    {
+        var p= new SerializedHelperPlant();
+        p.pos = new SerializedVector(transform.position);
+        p.currentHarvestTimer = currentHarvestTimer;
+        return p;
+    }
+
     // Start is called before the first frame update
     protected override void Start()
     {
