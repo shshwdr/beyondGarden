@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 public enum DropboxType { unlock, resource}
-public class Dropbox : CllickToCollect
+public class Dropbox : ClickToCollect
 {
     
     

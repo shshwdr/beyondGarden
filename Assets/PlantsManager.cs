@@ -76,20 +76,39 @@ public class PlantsManager : Singleton<PlantsManager>
 
     public Dictionary<HelperPlantType, string> levelDetail;
 
-    public Transform plantsSlotParent;
-    List<PlantSlot> plantSlots;
 
-    public int unlockedSlot = 2;
+
+
 
 
     public Dictionary<HelperPlantType, bool> isPlantUnlocked; 
     public Dictionary<PlantProperty, bool> isResourceUnlocked = new Dictionary<PlantProperty, bool>();
     public List<GameObject> helperPlantList;
+    public Dictionary<HelperPlantType, GameObject> helperPlantDict;
 
     List<HelperPlant> plantedPlant = new List<HelperPlant>();
+    [HideInInspector]
+    public List<SerializedHelperPlant> serializedPlantedPlant = new List<SerializedHelperPlant>();
     float currentTime = 0;
 
-    public Transform allInTreeGame;
+
+    public void serializeData()
+    {
+        serializedPlantedPlant.Clear();
+        foreach(var plant in plantedPlant)
+        {
+            var sPlant = plant.Save() as SerializedHelperPlant;
+            serializedPlantedPlant.Add(sPlant);
+
+        }
+    }
+
+    public void gotoDungeon()
+    {
+        serializeData();
+
+    }
+
     public List<Transform> plantsList()
     {
         List<Transform> res = new List<Transform>();
@@ -376,12 +395,15 @@ public class PlantsManager : Singleton<PlantsManager>
     private void Awake()
     {
         initValues();
-        plantSlots = new List<PlantSlot>();
-        for (int i = 0; i < plantsSlotParent.childCount; i++)
-        {
-            plantSlots.Add(plantsSlotParent.GetChild(i).GetComponent<PlantSlot>());
-        }
         audiosource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(gameObject);
+
+        helperPlantDict = new Dictionary<HelperPlantType, GameObject>();
+        foreach (var plant in helperPlantList)
+        {
+            HelperPlant pScript = plant.GetComponent<HelperPlant>();
+            helperPlantDict[pScript.type] = plant;
+        }
     }
     void Start()
     {
@@ -389,18 +411,6 @@ public class PlantsManager : Singleton<PlantsManager>
         ClearResource();
     }
 
-    public int firstAvailableSlot()
-    {
-        for (int i = 0; i < unlockedSlot; i++)
-        {
-            var slot = plantSlots[i];
-            if (slot.isAvailable)
-            {
-                return i;
-            }
-        }
-        return -1;
-    }
     public void startTreePlant(HelperPlantType type)
     {
         if(treeToUnlockFlower.ContainsKey(type))
@@ -417,31 +427,12 @@ public class PlantsManager : Singleton<PlantsManager>
         }
         TutorialManager.Instance.finishPlant(type);
     }
-    public bool hasSlot()
-    {
-        return firstAvailableSlot() != -1;
-    }
+
     public bool IsResourceAvailable(PlantProperty property, int value)
     {
         return currentResource[property] >= value;
     }
 
-    [System.Obsolete("Method is obsolete.", false)]
-    public bool IsPlantable(HelperPlantType type, bool ignoreSlot = false)
-    {
-        if (!ignoreResourcePlant)
-        {
-            var prodDictionary = helperPlantCost[type];
-            foreach (var pair in prodDictionary)
-            {
-                if (currentResource[pair.Key] < pair.Value)
-                {
-                    return false;
-                }
-            }
-        }
-        return ignoreSlot || hasSlot();
-    }
     bool IsPositionValid(Collider2D col, bool isWaterPlant = false)
     {
         //if (!shadowCollider.OverlapPoint(col.transform.position))
@@ -492,6 +483,22 @@ public class PlantsManager : Singleton<PlantsManager>
         
         return collideGround&& collideShadow && !collideOtherPlant && colliderWater;
     }
+
+    public bool IsPlantable(HelperPlantType type)
+    {
+        if (!ignoreResourcePlant)
+        {
+            var prodDictionary = helperPlantCost[type];
+            foreach (var pair in prodDictionary)
+            {
+                if (currentResource[pair.Key] < pair.Value)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
     public bool IsPlantable(HelperPlantType type, Collider2D pos, bool isWaterPlant = false)
     {
         if (!ignoreResourcePlant)
@@ -519,18 +526,10 @@ public class PlantsManager : Singleton<PlantsManager>
 
     public void Purchase(GameObject plant)
     {
-        //var slotId = firstAvailableSlot();
-       // if (slotId != -1)
         {
-
-            //var slot = plantSlots[slotId];
             CollectionManager.Instance.RemoveCoins(plant.transform.position, PlantsManager.Instance.helperPlantCost[plant.GetComponent<HelperPlant>().type]);
             //ReduceCostForType(plant.GetComponent<HelperPlant>().type);
             plantedPlant.Add(plant.GetComponent<HelperPlant>());
-            //GameObject spawnInstance = Instantiate(plantPrefab, slot.transform);
-            //slot.isAvailable = false;
-            //plantedPlant[slotId] = spawnInstance.GetComponent<HelperPlant>();
-            //spawnInstance.GetComponent<HelperPlant>().slot = slotId;
         }
     }
 
@@ -598,8 +597,6 @@ public class PlantsManager : Singleton<PlantsManager>
     {
         isResourceUnlocked[type] = true;
     }
-    
-
 
     public bool isIncreasingResource(PlantProperty p)
     {

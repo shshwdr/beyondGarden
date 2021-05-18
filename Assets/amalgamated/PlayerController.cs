@@ -105,7 +105,7 @@ public class PlayerController: HPCharacterController
         //    return;
         //}
 
-        if (EnemyManager.instance.isLevelCleared && firstClear && GameManager.Instance.currentLevel != 0 && GameManager.Instance.currentLevel != 7)
+        if (EnemyManager.instance.isLevelCleared && firstClear && DungeonManager.Instance.currentLevel != 0 && DungeonManager.Instance.currentLevel != 7)
         {
             firstClear = false;
             animator.SetTrigger("victory");
@@ -152,7 +152,7 @@ public class PlayerController: HPCharacterController
         //    getDamage(1000);
         //}
 
-        if (FModSoundManager.Instance.isMerged && Input.GetKeyDown(KeyCode.Space) && GameManager.Instance.currentLevel == 6&& DialogueEventHelper.Instance.dialogueFinished)
+        if (FModSoundManager.Instance.isMerged && Input.GetKeyDown(KeyCode.Space) && DungeonManager.Instance.currentLevel == 6&& DialogueEventHelper.Instance.dialogueFinished)
         {
             var dir = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0);
             EnemyManager.instance.spawnMinions(transform.position+ dir);

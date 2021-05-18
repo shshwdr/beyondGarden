@@ -1208,8 +1208,6 @@ MonoBehaviour:
   groundCollider1: {fileID: 2006538896}
   shadowCollider: {fileID: 1918470356}
   resourceParent: {fileID: 412844853}
-  plantsSlotParent: {fileID: 159109595}
-  unlockedSlot: 2
   helperPlantList:
   - {fileID: 7671502119766076076, guid: 2e7964e1996ed6c40984b2743fbb0d39, type: 3}
   - {fileID: 2852217078021426635, guid: 329b32fd9bdf3ea4bad61687d704eba1, type: 3}
@@ -9938,6 +9936,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1677483265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1677483266}
+  - component: {fileID: 1677483267}
+  m_Layer: 0
+  m_Name: MainGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1677483266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677483265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677483267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677483265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b9d88d0efa1804daed58d58e97dfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1681147512
 GameObject:
   m_ObjectHideFlags: 0

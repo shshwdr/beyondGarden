@@ -29,7 +29,7 @@ public class ResourceAutoGeneration : Singleton<ResourceAutoGeneration>
 
         var t = Utils.RandomTransform(spawnPositionParent);
         var go = Instantiate(PlantsManager.Instance.ClickToCollect, t.position, Quaternion.identity, pestParent);
-        var box = go.GetComponent<CllickToCollect>();
+        var box = go.GetComponent<ClickToCollect>();
         PlantProperty[] dropProperties = new PlantProperty[]{
             PlantProperty.n, PlantProperty.s, PlantProperty.p, PlantProperty.water
         };

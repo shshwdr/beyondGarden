@@ -19,7 +19,7 @@ public class GameOver : Singleton<GameOver>
         gameOverAllPanel.SetActive(true);
         gameOverPanel.SetActive(true);
         gameFinishPanel.SetActive(false);
-        GameManager.Instance.isGameOver = true;
+        DungeonManager.Instance.isGameOver = true;
         Time.timeScale = 0;
 
         DialogueManager.StopConversation();
@@ -30,7 +30,7 @@ public class GameOver : Singleton<GameOver>
         gameOverAllPanel.SetActive(true);
         gameOverPanel.SetActive(false);
         gameFinishPanel.SetActive(true);
-        GameManager.Instance.isGameOver = true;
+        DungeonManager.Instance.isGameOver = true;
         Time.timeScale = 0;
 
         DialogueManager.StopConversation();
@@ -44,7 +44,7 @@ public class GameOver : Singleton<GameOver>
         DialogueLua.SetVariable("hasHelp", false);
         FModSoundManager.Instance.isMerged = false;
         gameOverAllPanel.SetActive(false);
-        GameManager.Instance.GotoLevel(0);
+        DungeonManager.Instance.GotoLevel(0);
         DialogueManager.StopConversation();
     }
 
@@ -54,10 +54,10 @@ public class GameOver : Singleton<GameOver>
 
         FModSoundManager.Instance.startEvent("");
         gameOverAllPanel.SetActive(false);
-        if(GameManager.Instance.currentLevel >= 6)
+        if(DungeonManager.Instance.currentLevel >= 6)
         {
 
-            GameManager.Instance.GotoLevel(6);
+            DungeonManager.Instance.GotoLevel(6);
 
             DialogueLua.SetVariable("merged", false);
             DialogueLua.SetVariable("hasHelp", false);
@@ -65,7 +65,7 @@ public class GameOver : Singleton<GameOver>
         }
         else
         {
-            GameManager.Instance.RestartLevel();
+            DungeonManager.Instance.RestartLevel();
         }
     }
 

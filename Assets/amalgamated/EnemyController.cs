@@ -70,7 +70,7 @@ public class EnemyController : HPCharacterController
     // Update is called once per frame
     protected override void Update()
     {
-        if(GameManager.Instance.currentLevel == 7)
+        if(DungeonManager.Instance.currentLevel == 7)
         {
             //agent.isStopped = true;
             return;

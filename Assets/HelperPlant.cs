@@ -22,7 +22,9 @@ public class SerializedObject { }
 [System.Serializable]
 public class SerializedHelperPlant: SerializedObject
 {
+    public int type;
     public SerializedVector pos;
+    public int spawnedResources;
     public float currentHarvestTimer;
 }
 
@@ -34,6 +36,8 @@ public class HelperPlant : HPObject
     [HideInInspector]
     public int slot;
     public Collider2D plantCollider;
+    public int spawnedResourceCount;
+    int maxSpawnedResourceCount;
 
     public Sprite iconSprite;
 
@@ -41,7 +45,7 @@ public class HelperPlant : HPObject
 
     public bool ignorePest = false;
 
-    protected bool isDragging = true;
+    public bool isDragging = true;
 
     public Transform resourcePositionsParent;
     int currentResourcePositionId;
@@ -53,6 +57,7 @@ public class HelperPlant : HPObject
     public override SerializedObject Save()
     {
         var p= new SerializedHelperPlant();
+        p.type = (int)type;
         p.pos = new SerializedVector(transform.position);
         p.currentHarvestTimer = currentHarvestTimer;
         return p;
@@ -65,6 +70,7 @@ public class HelperPlant : HPObject
         if (resourcePositionsParent)
         {
             resourcePositionCount = resourcePositionsParent.childCount;
+            maxSpawnedResourceCount = resourcePositionCount;
 
         }
         harvestTime = PlantsManager.Instance.helperPlantProdTime.ContainsKey(type)? PlantsManager.Instance.helperPlantProdTime[type]:10000;
@@ -195,6 +201,12 @@ public class HelperPlant : HPObject
 
     void Harvest()
     {
+        if (spawnedResourceCount >= maxSpawnedResourceCount)
+        {
+            //spawned too much
+            return;
+        }
+        spawnedResourceCount++;
         Transform spawnTransform = resourcePositionsParent.GetChild(currentResourcePositionId);
         currentResourcePositionId++;
         if (currentResourcePositionId >= resourcePositionCount)
@@ -202,12 +214,19 @@ public class HelperPlant : HPObject
             currentResourcePositionId = 0;
         }
         var go = Instantiate(PlantsManager.Instance.ClickToCollect, spawnTransform.position, Quaternion.identity,PlantsManager.Instance.resourceParent);
-        var box = go.GetComponent<CllickToCollect>();
+        ClickToCollect ctc = go.GetComponent<ClickToCollect>();
+        ctc.parentPlant = this;
+        var box = go.GetComponent<ClickToCollect>();
         box.dropboxType = DropboxType.resource;
 
 
         box.resource = PlantsManager.Instance.helperPlantProd[type];
         box.UpdateImage();
+    }
+
+    public void resourceCollect()
+    {
+        spawnedResourceCount--;
     }
 
     public void MoveToGarden()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : Singleton<GameManager>
+public class DungeonManager : Singleton<DungeonManager>
 {
     bool isCheatOn = true;
     public int currentLevel;
@@ -20,6 +20,14 @@ public class GameManager : Singleton<GameManager>
         currentLevel += 1;
         GotoLevel(currentLevel);
     }
+    public void GoToLevel(string levelName)
+    {
+        if(levelName == "")
+        {
+            //finished a level, get back
+            SceneManager.LoadScene(0);
+        }
+    }
     public void GotoLevel(int level)
     {
         currentLevel = level;
@@ -34,6 +42,11 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            GoToLevel("");
+        }
         if (isGameOver)
         {
             Time.timeScale = 0;

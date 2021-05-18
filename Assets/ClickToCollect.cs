@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CllickToCollect : MonoBehaviour
+public class ClickToCollect : MonoBehaviour
 {
     bool isClicked = false;
     public DropboxType dropboxType;
+    public HelperPlant parentPlant;
     public Dictionary<PlantProperty, int> resource;
     public HelperPlantType unlockPlant;
     public float speed = 1f;
@@ -51,6 +52,10 @@ public class CllickToCollect : MonoBehaviour
 
     void collect()
     {
+        if (parentPlant)
+        {
+            parentPlant.resourceCollect();
+        }
         if (!isClicked)
         {
             isClicked = true;

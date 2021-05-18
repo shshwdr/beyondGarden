@@ -31,7 +31,6 @@ public class MainTree : HelperPlant
         base.Start();
         //audiosource.PlayOneShot(growSound[0]);
         PlantsManager.Instance.maintree = this;
-        PlantsManager.Instance.unlockedSlot = slotCount[currentLevel];
         type = upgradeList[currentLevel];
         isDragging = false;
         flowerGeneratedPositions = new List<Transform>();
@@ -125,12 +124,12 @@ public class MainTree : HelperPlant
 
     public bool upgradable()
     {
-        return PlantsManager.Instance.IsPlantable(nextLevelType(),true);
+        return PlantsManager.Instance.IsPlantable(nextLevelType());
     }
 
     public bool canPurchaseFlower()
     {
-        return PlantsManager.Instance.IsPlantable(flowerPlantType, true);
+        return PlantsManager.Instance.IsPlantable(flowerPlantType);
     }
 
     public bool isAtMaxFlower()

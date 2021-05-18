@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    public string nextLevelName;
     public GameObject openedDoor;
     public GameObject closedDoor;
     public bool isOpened = false;
@@ -23,7 +24,7 @@ public class DoorController : MonoBehaviour
                 openedDoor.SetActive(true);
                 closedDoor.SetActive(false);
                 isOpened = true;
-                if(GameManager.Instance.currentLevel == 0)
+                if(DungeonManager.Instance.currentLevel == 0)
                 {
 
                 }
@@ -58,7 +59,8 @@ public class DoorController : MonoBehaviour
 
             if (collision.collider.GetComponent<PlayerMeleeAttack>())
             {
-                GameManager.Instance.GoToNextLevel();
+                //GameManager.Instance.GoToNextLevel();
+                DungeonManager.Instance.GoToLevel(nextLevelName);
             }
         }
     }

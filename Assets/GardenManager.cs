@@ -29,7 +29,7 @@ public class GardenManager : Singleton<GardenManager>
                     Destroy(child.gameObject);
                 }
                 //List<Transform> allPlants = new List<Transform>();
-                foreach (Transform tt in PlantsManager.Instance.allInTreeGame)
+                foreach (Transform tt in MainGameManager.Instance.allInTreeGame)
                 {
                     var go = Instantiate(tt.gameObject);
                     var t = go.transform;
@@ -61,9 +61,9 @@ public class GardenManager : Singleton<GardenManager>
     public void StartTree(GardenSlot slot)
     {
         //move all tree from garden to tree mode
-        foreach (Transform child in PlantsManager.Instance.allInTreeGame)
+        foreach (Transform child in MainGameManager.Instance.allInTreeGame)
         {
-            GameObject.Destroy(child.gameObject);
+            Destroy(child.gameObject);
         }
         PlantsManager.Instance.mainTreePrefab = slot.tree;
         //Instantiate(slot.tree, PlantsManager.Instance.allInTreeGame);

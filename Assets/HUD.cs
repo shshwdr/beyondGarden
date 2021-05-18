@@ -151,7 +151,7 @@ public class HUD : Singleton<HUD>
         treePanel.SetActive(false);
         gardenPanel.SetActive(true);
         previousSpeed = Time.timeScale;
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         isInGarden = true;
     }
 
@@ -172,7 +172,7 @@ public class HUD : Singleton<HUD>
 
     public void clearLevel()
     {
-        foreach (Transform tt in PlantsManager.Instance.allInTreeGame)
+        foreach (Transform tt in MainGameManager.Instance.allInTreeGame)
         {
 
             Destroy(tt.gameObject);
@@ -183,7 +183,7 @@ public class HUD : Singleton<HUD>
         PestManager.Instance.Clear();
         BeeManager.Instance.Clear();
         ResourceAutoGeneration.Instance.Clear();
-        Instantiate(PlantsManager.Instance.mainTreePrefab, PlantsManager.Instance.allInTreeGame);
+        Instantiate(PlantsManager.Instance.mainTreePrefab, MainGameManager.Instance.allInTreeGame);
         gameoverPanel.SetActive(false);
 
         isGameover = false;

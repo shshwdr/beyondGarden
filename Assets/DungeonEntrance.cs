@@ -19,6 +19,7 @@ public class DungeonEntrance : MonoBehaviour
 
     private void OnMouseDown()
     {
+        PlantsManager.Instance.gotoDungeon();
         SceneManager.LoadScene(1);
     }
 
