@@ -127,6 +127,7 @@ public class PlayerController: HPCharacterController
         //melee prepare
         if (speed > 0.01f)
         {
+            Time.timeScale = 1;
             meleeAttackCollider.setactive(true);
             var dir = new Vector3(movement.x, movement.y, 0)*0.08f;
             // The shortcuts way
