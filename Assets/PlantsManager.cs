@@ -106,7 +106,7 @@ public class PlantsManager : Singleton<PlantsManager>
     public void gotoDungeon()
     {
         serializeData();
-
+        Utils.ClearChildren(resourceParent);
     }
 
     public List<Transform> plantsList()

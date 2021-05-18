@@ -18,7 +18,9 @@ public struct SerializedVector
     }
 }
 [System.Serializable]
-public class SerializedObject { }
+public class SerializedObject {
+    public float serializationTime;
+}
 [System.Serializable]
 public class SerializedHelperPlant: SerializedObject
 {
@@ -37,7 +39,7 @@ public class HelperPlant : HPObject
     public int slot;
     public Collider2D plantCollider;
     public int spawnedResourceCount;
-    int maxSpawnedResourceCount;
+    int maxSpawnedResourceCount = 3;
 
     public Sprite iconSprite;
 
@@ -53,6 +55,7 @@ public class HelperPlant : HPObject
 
     float harvestTime;
     float currentHarvestTimer;
+    SerializedHelperPlant initData;
 
     public override SerializedObject Save()
     {
@@ -60,7 +63,42 @@ public class HelperPlant : HPObject
         p.type = (int)type;
         p.pos = new SerializedVector(transform.position);
         p.currentHarvestTimer = currentHarvestTimer;
+        p.serializationTime = Time.time;
+        p.spawnedResources = spawnedResourceCount;
         return p;
+    }
+
+    public void loadFromData(SerializedHelperPlant data)
+    {
+        initData = data;
+        
+    }
+
+    void loadWithInitData()
+    {
+        if (initData == null)
+        {
+            return;
+        }
+        isDragging = false;
+        float diffTime = Time.time - initData.serializationTime;
+        int harvestCount = initData.spawnedResources;
+        if (wouldHarvest())
+        {
+            var offlineHarvestCount = (int)Mathf.Floor(diffTime / getHarvestTime());
+            harvestCount += offlineHarvestCount;
+            harvestCount = Mathf.Min(harvestCount, maxSpawnedResourceCount);
+            currentHarvestTimer = diffTime - (harvestCount - initData.spawnedResources) * getHarvestTime() + initData.currentHarvestTimer;
+
+            for (int i = 0; i < harvestCount; i++)
+            {
+                if (!wouldHarvest())
+                {
+                    Debug.LogError("why would not harvest?");
+                }
+                Harvest();
+            }
+        }
     }
 
     // Start is called before the first frame update
@@ -70,10 +108,11 @@ public class HelperPlant : HPObject
         if (resourcePositionsParent)
         {
             resourcePositionCount = resourcePositionsParent.childCount;
-            maxSpawnedResourceCount = resourcePositionCount;
+            //maxSpawnedResourceCount = resourcePositionCount;
 
         }
         harvestTime = PlantsManager.Instance.helperPlantProdTime.ContainsKey(type)? PlantsManager.Instance.helperPlantProdTime[type]:10000;
+        loadWithInitData();
     }
 
     private void OnMouseEnter()
@@ -190,7 +229,7 @@ public class HelperPlant : HPObject
         }
         else
         {
-            if (resourcePositionsParent && harvestTime<100 && currentHarvestTimer > harvestTime)
+            if (resourcePositionsParent && wouldHarvest() && currentHarvestTimer > getHarvestTime())
             {
                 currentHarvestTimer = 0;
                 Harvest();
@@ -199,13 +238,24 @@ public class HelperPlant : HPObject
         }
     }
 
+    bool wouldHarvest()
+    {
+        return getHarvestTime() != float.MaxValue && spawnedResourceCount < maxSpawnedResourceCount;
+    }
+
+    
+
+    float getHarvestTime()
+    {
+        if (harvestTime > 100)
+        {
+            return float.MaxValue;
+        }
+        return harvestTime;
+    }
+
     void Harvest()
     {
-        if (spawnedResourceCount >= maxSpawnedResourceCount)
-        {
-            //spawned too much
-            return;
-        }
         spawnedResourceCount++;
         Transform spawnTransform = resourcePositionsParent.GetChild(currentResourcePositionId);
         currentResourcePositionId++;

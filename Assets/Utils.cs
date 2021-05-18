@@ -27,6 +27,14 @@ public class Utils : MonoBehaviour
         return RandomTransform(trans);
     }
 
+    public static void ClearChildren(Transform transformParent)
+    {
+        foreach(Transform c in transformParent)
+        {
+            Destroy(c.gameObject);
+        }
+    }
+
     public static Transform RandomTransform(List<Transform> transforms)
     {
         int randomValue = Random.Range(0, transforms.Count);

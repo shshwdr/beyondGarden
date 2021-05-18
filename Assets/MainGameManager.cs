@@ -18,7 +18,7 @@ public class MainGameManager : Singleton<MainGameManager>
                 var prefab = PlantsManager.Instance.helperPlantDict[(HelperPlantType) sPlant.type];
                 var go = Instantiate(prefab, sPlant.pos.GetPos(), Quaternion.identity, allInTreeGame);
                 HelperPlant hp = go.GetComponent<HelperPlant>();
-                hp.isDragging = false;
+                hp.loadFromData(sPlant);
             }
         }
     }
