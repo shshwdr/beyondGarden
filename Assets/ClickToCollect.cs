@@ -7,8 +7,8 @@ public class ClickToCollect : MonoBehaviour
     bool isClicked = false;
     public DropboxType dropboxType;
     public HelperPlant parentPlant;
-    public Dictionary<PlantProperty, int> resource;
-    public HelperPlantType unlockPlant;
+    public List<PairInfo> resource;
+    //public HelperPlantType unlockPlant;
     public float speed = 1f;
     public float amplitude = 1f;
     public bool needClick;
@@ -21,7 +21,7 @@ public class ClickToCollect : MonoBehaviour
     public void UpdateImage()
     {
 
-        PlantProperty maxP = PlantProperty.s;
+        string maxP = "";
         int maxV = 0;
         foreach (var pair in resource)
         {
@@ -31,7 +31,7 @@ public class ClickToCollect : MonoBehaviour
                 maxP = pair.Key;
             }
         }
-        GetComponent<SpriteRenderer>().sprite = HUD.Instance.propertyImage[(int)(maxP)];
+        GetComponent<SpriteRenderer>().sprite = JsonManager.Instance.getCurrency(maxP).sprite;//  HUD.Instance.propertyImage[(int)(maxP));
     }
 
     private void OnMouseDown()
@@ -62,9 +62,9 @@ public class ClickToCollect : MonoBehaviour
         }
         if (dropboxType == DropboxType.unlock)
         {
-            PlantsManager.Instance.UnlockPlant(unlockPlant);
-            BirdManager.Instance.needToUnlock[unlockPlant] = false;
-            TutorialManager.Instance.firstSeeSomething("unlock");
+            //PlantsManager.Instance.UnlockPlant(unlockPlant);
+            //BirdManager.Instance.needToUnlock[unlockPlant] = false;
+            //TutorialManager.Instance.firstSeeSomething("unlock");
             //CollectionManager.Instance.AddCoins(transform.position, resource);
         }
         else

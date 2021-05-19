@@ -18,14 +18,14 @@ public class BirdManager : Singleton<BirdManager>
     float birdShowCurrentTime;
     public bool autoResrouceStart;
 
-    Dictionary<HelperPlantType, HelperPlantType> treeToUnlockFlower = new Dictionary<HelperPlantType, HelperPlantType>()
-    {
-        {HelperPlantType.appleTree2, HelperPlantType.stawberry },
+    //Dictionary<HelperPlantType, HelperPlantType> treeToUnlockFlower = new Dictionary<HelperPlantType, HelperPlantType>()
+    //{
+    //    {HelperPlantType.appleTree2, HelperPlantType.stawberry },
 
-        {HelperPlantType.appleTree3, HelperPlantType.zinnia },
-    };
+    //    {HelperPlantType.appleTree3, HelperPlantType.zinnia },
+    //};
 
-    public Dictionary<HelperPlantType, bool> needToUnlock = new Dictionary<HelperPlantType, bool>();
+    //public Dictionary<HelperPlantType, bool> needToUnlock = new Dictionary<HelperPlantType, bool>();
     // Start is called before the first frame update
     void Start()
     {
@@ -67,39 +67,39 @@ public class BirdManager : Singleton<BirdManager>
     IEnumerator delayShow()
     {
         yield return new WaitForSeconds(1);
-        TutorialManager.Instance.firstSeeSomething("bird");
+        //TutorialManager.Instance.firstSeeSomething("bird");
     }
 
-    public void startTreePlant(HelperPlantType type)
+    public void startTreePlant(string type)
     {
-        if(treeToUnlockFlower.ContainsKey(type) && !needToUnlock.ContainsKey(type))
-        {
-            needToUnlock[treeToUnlockFlower[type]] = true;
-        }
+        //if(treeToUnlockFlower.ContainsKey(type) && !needToUnlock.ContainsKey(type))
+        //{
+        //    needToUnlock[treeToUnlockFlower[type]] = true;
+        //}
     }
 
     public void updateDropbox(Dropbox box)
     {
-        foreach (var key in needToUnlock.Keys)
-        {
-            if (needToUnlock[key] == true)
-            {
-                //needToUnlock[key] = false;
-                box.dropboxType = DropboxType.unlock;
-                box.unlockPlant = key;
-                return;
-            }
-        }
+        //foreach (var key in needToUnlock.Keys)
+        //{
+        //    if (needToUnlock[key] == true)
+        //    {
+        //        //needToUnlock[key] = false;
+        //        box.dropboxType = DropboxType.unlock;
+        //        box.unlockPlant = key;
+        //        return;
+        //    }
+        //}
 
-        box.dropboxType = DropboxType.resource;
+        //box.dropboxType = DropboxType.resource;
 
-        PlantProperty[] dropProperties = new PlantProperty[]{
-            PlantProperty.n,  PlantProperty.p, PlantProperty.water,
-        };
-        var typeRandom = Random.Range(0, 3);
+        //PlantProperty[] dropProperties = new PlantProperty[]{
+        //    PlantProperty.n,  PlantProperty.p, PlantProperty.water,
+        //};
+        //var typeRandom = Random.Range(0, 3);
 
-        box.resource = new Dictionary<PlantProperty, int>() {
-            {dropProperties[typeRandom], Random.Range(5, 10) },
-        }; 
+        //box.resource = new Dictionary<PlantProperty, int>() {
+        //    {dropProperties[typeRandom], Random.Range(5, 10) },
+        //}; 
     }
 }

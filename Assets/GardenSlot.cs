@@ -5,7 +5,7 @@ using UnityEngine;
 public class GardenSlot : MonoBehaviour
 {
     [HideInInspector]
-    public HelperPlantType finishedTreeType;
+    public string finishedTreeType;
     public GameObject tree;
     public Transform allInTreeNode;
 

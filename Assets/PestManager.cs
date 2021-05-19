@@ -76,7 +76,7 @@ public class PestManager : Singleton<PestManager>
 
     public void updateGenerateTime()
     {
-        var beeValue = PlantsManager.Instance.currentResource[PlantProperty.pest];
+        var beeValue = PlantsManager.Instance.currentResource["bee"];
         if (beeValue <= 6)
         {
             beeGenerateTime = -1;
@@ -113,6 +113,6 @@ public class PestManager : Singleton<PestManager>
     IEnumerator delayShow()
     {
         yield return new WaitForSeconds(3);
-        TutorialManager.Instance.firstSeeSomething("pest");
+        //TutorialManager.Instance.firstSeeSomething("pest");
     }
 }

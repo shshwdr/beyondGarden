@@ -12,8 +12,8 @@ public class MainTree : HelperPlant
 
     public int fruitNumberToFinish;
     int fruitNumberFinished;
-    public List<HelperPlantType> upgradeList;
-    public HelperPlantType flowerPlantType;
+    //public List<HelperPlantType> upgradeList;
+    public string flowerPlantType;
     public List<int> slotCount = new List<int>() { 2, 4, 6 };
     int currentLevel = 0;
     public GameObject treeFlowerPrefab;
@@ -23,7 +23,7 @@ public class MainTree : HelperPlant
     int totalFlowerNumber;
     int currentFlowerNumber;
 
-    public HelperPlantType finishType { get { return upgradeList[upgradeList.Count-1]; } }
+    public string finishType { get { return type; /*upgradeList[upgradeList.Count-1];*/ } }
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -31,7 +31,7 @@ public class MainTree : HelperPlant
         base.Start();
         //audiosource.PlayOneShot(growSound[0]);
         PlantsManager.Instance.maintree = this;
-        type = upgradeList[currentLevel];
+        //type = upgradeList[currentLevel];
         isDragging = false;
         flowerGeneratedPositions = new List<Transform>();
         isFlowerPositionUsed = new List<bool>();
@@ -60,7 +60,7 @@ public class MainTree : HelperPlant
                 var go = Instantiate(treeFlowerPrefab, flowerGeneratedPositions[i].position, flowerGeneratedPositions[i].rotation,transform);
                 go.GetComponent<TreeFlower>().tree = this;
 
-                CollectionManager.Instance.RemoveCoins(go.transform.position, PlantsManager.Instance.helperPlantCost[flowerPlantType]);
+                //CollectionManager.Instance.RemoveCoins(go.transform.position, PlantsManager.Instance.helperPlantCost[flowerPlantType]);
                 isFlowerPositionUsed[i] = true;
                 break;
             }
@@ -80,7 +80,7 @@ public class MainTree : HelperPlant
         if (fruitNumberFinished >= fruitNumberToFinish)
         {
             HUD.Instance.showGardenButton();
-            TutorialManager.Instance.finishTree(type);
+            //TutorialManager.Instance.finishTree(type);
         }
 
     }
@@ -94,12 +94,11 @@ public class MainTree : HelperPlant
         currentLevel += 1;
         
         audiosource.PlayOneShot(growSound[currentLevel]);
-        PlantsManager.Instance.increaseShadowSize();
-        type = upgradeList[currentLevel];
-        BirdManager.Instance.startTreePlant(type);
+        //type = upgradeList[currentLevel];
+        //BirdManager.Instance.startTreePlant(type);
         PlantsManager.Instance.startTreePlant(type);
         //PlantsManager.Instance.unlockedSlot = slotCount[currentLevel];
-        CollectionManager.Instance.RemoveCoins(transform.position, PlantsManager.Instance.helperPlantCost[type]);
+        //CollectionManager.Instance.RemoveCoins(transform.position, PlantsManager.Instance.helperPlantCost[type]);
         HUD.Instance.ShowPlantDetail(gameObject);
         GetComponent<Animator>().SetTrigger("grow");
     }
@@ -119,7 +118,7 @@ public class MainTree : HelperPlant
 
     public bool isAtMaxLevel()
     {
-        return currentLevel == upgradeList.Count - 1;
+        return true;// currentLevel == upgradeList.Count - 1;
     }
 
     public bool upgradable()
@@ -129,7 +128,7 @@ public class MainTree : HelperPlant
 
     public bool canPurchaseFlower()
     {
-        return PlantsManager.Instance.IsPlantable(flowerPlantType);
+        return false;// PlantsManager.Instance.IsPlantable(flowerPlantType);
     }
 
     public bool isAtMaxFlower()
@@ -154,9 +153,9 @@ public class MainTree : HelperPlant
         Upgrade();
     }
 
-    public HelperPlantType nextLevelType()
+    public string nextLevelType()
     {
-        return upgradeList[currentLevel + 1];
+        return "";// upgradeList[currentLevel + 1];
     }
 
     // Update is called once per frame

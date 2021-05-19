@@ -13,16 +13,16 @@ public class GardenManager : Singleton<GardenManager>
     }
 
 
-    [ContextMenu("finishTree")]
-    public void testFT()
-    {
-        finishTree(HelperPlantType.appleTree3);
-    }
-    public void finishTree(HelperPlantType treeType)
+    //[ContextMenu("finishTree")]
+    //public void testFT()
+    //{
+    //    finishTree(HelperPlantType.appleTree3);
+    //}
+    public void finishTree(string treeType)
     {
         foreach (Transform slot in gardenSlots)
         {
-            if (slot.GetComponent<GardenSlot>().tree.GetComponent<MainTree>().upgradeList[0] == treeType)
+            //if (slot.GetComponent<GardenSlot>().tree.GetComponent<MainTree>().upgradeList[0] == treeType)
             {
                 foreach (Transform child in slot.GetComponent<GardenSlot>().allInTreeNode)
                 {

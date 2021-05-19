@@ -18,13 +18,19 @@ public struct SerializedVector
     }
 }
 [System.Serializable]
-public class SerializedObject {
+public class SerializedObject
+{
     public float serializationTime;
+}
+[System.Serializable]
+public class SerializedLevel: SerializedObject
+{
+    public float water;
 }
 [System.Serializable]
 public class SerializedHelperPlant: SerializedObject
 {
-    public int type;
+    public string type;
     public SerializedVector pos;
     public int spawnedResources;
     public float currentHarvestTimer;
@@ -34,7 +40,7 @@ public class HelperPlant : HPObject
 {
     public AudioClip plantSound;
     public AudioClip removeSound;
-    public HelperPlantType type;
+    public string type;
     [HideInInspector]
     public int slot;
     public Collider2D plantCollider;
@@ -60,7 +66,7 @@ public class HelperPlant : HPObject
     public override SerializedObject Save()
     {
         var p= new SerializedHelperPlant();
-        p.type = (int)type;
+        p.type = type;
         p.pos = new SerializedVector(transform.position);
         p.currentHarvestTimer = currentHarvestTimer;
         p.serializationTime = Time.time;
@@ -111,7 +117,7 @@ public class HelperPlant : HPObject
             //maxSpawnedResourceCount = resourcePositionCount;
 
         }
-        harvestTime = PlantsManager.Instance.helperPlantProdTime.ContainsKey(type)? PlantsManager.Instance.helperPlantProdTime[type]:10000;
+        harvestTime = JsonManager.Instance.getPlant(type).harvestTime;
         loadWithInitData();
     }
 
@@ -136,7 +142,7 @@ public class HelperPlant : HPObject
     IEnumerator delayAddCoin()
     {
         yield return new WaitForSecondsRealtime(0.1f);
-        CollectionManager.Instance.AddCoins(transform.position, PlantsManager.Instance.helperPlantProd[type], false);
+        CollectionManager.Instance.AddCoins(transform.position, JsonManager.Instance.getPlant(type).produces, false);
     }
 
     private void Plant()
@@ -148,7 +154,6 @@ public class HelperPlant : HPObject
         {
             PlantsManager.Instance.startTreePlant(type);
             PlantsManager.Instance.Purchase(gameObject);
-            PlantsManager.Instance.AddPlant(this);
             StartCoroutine(delayAddCoin());
         }
         else
@@ -201,7 +206,8 @@ public class HelperPlant : HPObject
         {
             summons.clean();
         }
-        CollectionManager.Instance.RemoveCoins(transform.position, PlantsManager.Instance.helperPlantProd[type],true);
+
+        CollectionManager.Instance.RemoveCoins(transform.position, JsonManager.Instance.getPlant(type).produces, true);
         base.die();
     }
     bool canPlant()
@@ -270,7 +276,7 @@ public class HelperPlant : HPObject
         box.dropboxType = DropboxType.resource;
 
 
-        box.resource = PlantsManager.Instance.helperPlantProd[type];
+        box.resource = JsonManager.Instance.getPlant(type).produces;
         box.UpdateImage();
     }
 

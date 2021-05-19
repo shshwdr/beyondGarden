@@ -122,7 +122,7 @@ public class PlantDetail : Singleton<PlantDetail>
         healthText.text = "Health: " + plant.maxHP;
     }
 
-    void updateEntry(string title, Dictionary<PlantProperty, int> dict,bool checkValue = false)
+    void updateEntry(string title, List<PairInfo> dict,bool checkValue = false)
     {
         if (dict.Count == 0)
         {
@@ -138,7 +138,7 @@ public class PlantDetail : Singleton<PlantDetail>
             entry.stats[i].gameObject.SetActive(true);
             //var goo = Instantiate(oneState, entry.statePanel);
             var goo = entry.stats[i];
-            goo.image.sprite = HUD.Instance.propertyImage[(int)pair.Key];
+            goo.image.sprite = JsonManager.Instance.getCurrency(pair.Key).sprite;
             goo.value.text = pair.Value.ToString();
             goo.value.color = Color.black;
             if (checkValue)
@@ -165,7 +165,8 @@ public class PlantDetail : Singleton<PlantDetail>
     void getProduction(HelperPlant plant)
     {
 
-        var prodDictionary = plantManager.helperPlantProd[plant.type];
+        var prodDictionary = JsonManager.Instance.getPlant(plant.type).produces ;// plantManager.helperPlantProd[plant.type];
+
         updateEntry("Produce", prodDictionary);
     }
     void getUpgrade(MainTree plant)
@@ -175,12 +176,12 @@ public class PlantDetail : Singleton<PlantDetail>
             if (!plant.isAtMaxFlower())
             {
 
-                updateEntry("Flower Cost", plantManager.helperPlantCost[plant.flowerPlantType], true);
+                //updateEntry("Flower Cost", JsonManager.Instance.getPlant(plant.flowerPlantType).plantCost, true);
             }
             return;
 
         }
-        updateEntry("Upgrade Cost", plantManager.helperPlantCost[plant.nextLevelType()],true);
+        updateEntry("Upgrade Cost", JsonManager.Instance.getPlant(plant.nextLevelType()).plantCost,true);
         //string res = "\nUpgrade Cost:\n";
         //var prodDictionary = plantManager.helperPlantCost[plant.nextLevelType()];
         //foreach (var pair in prodDictionary)
@@ -210,12 +211,12 @@ public class PlantDetail : Singleton<PlantDetail>
 
             plantManager = PlantsManager.Instance;
         }
-        return plantManager.plantName[plant.type]+"\n";
+        return JsonManager.Instance.getPlant(plant.type).name+"\n";
     }
     void getOnetimeCost(HelperPlant plant)
     {
 
-        updateEntry("Cost", plantManager.helperPlantCost[plant.type], true);
+        updateEntry("Cost", JsonManager.Instance.getPlant(plant.type).plantCost, true);
 
         //Instantiate(oneDetailEntryPrefab, transform);
 

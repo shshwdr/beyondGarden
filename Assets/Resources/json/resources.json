@@ -1,0 +1,11 @@
+{
+    "currency":
+    [
+      {
+        "id": "water",
+        "name": "Water",
+        "desc":"just water",
+        "initialValue":40
+      }
+    ]
+  }

@@ -62,7 +62,7 @@ public class CollectionManager : Singleton<CollectionManager>
 		}
 	}
 
-	void MoveSource(Vector3 start,Vector3 end, PlantProperty property, int amount, Action action)
+	void MoveSource(Vector3 start,Vector3 end, string property, int amount, Action action)
     {
 		for (int i = 0; i < amount; i++)
 		{
@@ -71,7 +71,7 @@ public class CollectionManager : Singleton<CollectionManager>
 			{
 				//extract a coin from the pool
 				GameObject coin = coinsQueue.Dequeue();
-				coin.GetComponent<SpriteRenderer>().sprite = HUD.Instance.propertyImage[(int)(property)];
+				coin.GetComponent<SpriteRenderer>().sprite = JsonManager.Instance.getCurrency(property).sprite;
 				coin.SetActive(true);
 
 				//move coin to the collected coin pos
@@ -95,7 +95,7 @@ public class CollectionManager : Singleton<CollectionManager>
 		}
 	}
 
-	public void RemoveCoins(Vector3 removedCoinPosition, Dictionary<PlantProperty, int> resource, bool onlyForNonIncreasingResrouce = false)
+	public void RemoveCoins(Vector3 removedCoinPosition, List<PairInfo> resource, bool onlyForNonIncreasingResrouce = false)
     {
 		foreach (var pair in resource)
 		{
@@ -123,7 +123,7 @@ public class CollectionManager : Singleton<CollectionManager>
 		}
 	}
 
-	public void AddCoins(Vector3 collectedCoinPosition, Dictionary<PlantProperty, int> resource, bool isIncreasingResource = true)
+	public void AddCoins(Vector3 collectedCoinPosition, List<PairInfo> resource, bool isIncreasingResource = true)
 	{
 		foreach (var pair in resource)
         {
@@ -145,7 +145,7 @@ public class CollectionManager : Singleton<CollectionManager>
 			PlantsManager.Instance.currentResource[pair.Key] += 1;
 			BeeManager.Instance.updateGenerateTime();
 			PestManager.Instance.updateGenerateTime();
-			TutorialManager.Instance.collectResource(pair.Key);
+			//TutorialManager.Instance.collectResource(pair.Key);
 			});
 		}
 			

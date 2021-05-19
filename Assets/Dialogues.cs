@@ -5,12 +5,12 @@ using UnityEngine;
 public class Dialogues : MonoBehaviour
 {
 
-    public Dictionary<HelperPlantType, string> levelDetail = new Dictionary<HelperPlantType, string>() {
-        { HelperPlantType.appleTree1,"This is a simple tutorial level." },
-        { HelperPlantType.peachTree1,"This level has more request on P." },
-        { HelperPlantType.lemonTree1,"This level has more request on N." },
-        { HelperPlantType.cherryTree1,"This level has more request on all elements" },
-        };
+    //public Dictionary<HelperPlantType, string> levelDetail = new Dictionary<HelperPlantType, string>() {
+    //    { HelperPlantType.appleTree1,"This is a simple tutorial level." },
+    //    { HelperPlantType.peachTree1,"This level has more request on P." },
+    //    { HelperPlantType.lemonTree1,"This level has more request on N." },
+    //    { HelperPlantType.cherryTree1,"This level has more request on all elements" },
+    //    };
     //plants
     static public string PlantFlowerInst = "Drag Plant To Ground";
     static public string InsufficientResource = "Insufficient Resource";

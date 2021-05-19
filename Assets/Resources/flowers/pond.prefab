@@ -228,6 +228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1072396907640421470, guid: a8a1250397108d844a42a91938184908,
         type: 3}
+      propertyPath: type
+      value: pond
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072396907640421470, guid: a8a1250397108d844a42a91938184908,
+        type: 3}
       propertyPath: iconSprite
       value: 
       objectReference: {fileID: 21300000, guid: 139ce8784dc3f8743a4d5bfabd555f9d,

@@ -36,7 +36,7 @@ public class CheatManager : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.K))
             {
-                TutorialManager.Instance.skipTutorial = true;
+                //TutorialManager.Instance.skipTutorial = true;
             }
         }
     }

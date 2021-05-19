@@ -36,13 +36,13 @@ public class HUD : Singleton<HUD>
     List<float> speedList = new List<float>() { 0.5f, 1, 2, 4 };
     bool isPaused = false;
     PlantsManager plantManager;
-    public Dictionary<PlantProperty, OneStatHud> hudByProperty;
+    public Dictionary<string, OneStatHud> hudByProperty;
     // Start is called before the first frame update
     void Start()
     {
         plantManager = PlantsManager.Instance;
         //init stats
-        hudByProperty = new Dictionary<PlantProperty, OneStatHud>();
+        hudByProperty = new Dictionary<string, OneStatHud>();
         foreach (var pair in plantManager.currentResource)
         {
             GameObject oneStatInstance = Instantiate(oneStatPrefab, statsContent.transform);
@@ -59,18 +59,20 @@ public class HUD : Singleton<HUD>
         {
             Destroy(go.gameObject);
         }
-            foreach (var go in plantManager.helperPlantList)
+            foreach (var pair in plantManager.helperPlantDict)
         {
-            if ((!plantManager.isPlantUnlocked.ContainsKey(go.GetComponent<HelperPlant>().type) || plantManager.isPlantUnlocked[go.GetComponent<HelperPlant>().type]) || plantManager.unlockAllFlowers)
+            var type = pair.Key;
+
+            if ((!plantManager.isPlantUnlocked.ContainsKey(type) || plantManager.isPlantUnlocked[type]) || plantManager.unlockAllFlowers)
             {
-                foreach (var plantType in plantManager.levelToPlants[plantManager.mainTreePrefab.GetComponent<MainTree>().upgradeList[0]])
+                //foreach (var plantType in plantManager.levelToPlants[plantManager.mainTreePrefab.GetComponent<MainTree>().upgradeList[0]])
                 {
-                    if(plantType == go.GetComponent<HelperPlant>().type)
+                    //if(plantType == go.GetComponent<HelperPlant>().type)
                     {
 
                         GameObject buttonInstance = Instantiate(plantButtonPrefab, plantsContent.transform);
                         PlantsButton plantButtonInstance = buttonInstance.GetComponent<PlantsButton>();
-                        plantButtonInstance.init(go, this);
+                        plantButtonInstance.init(pair.Value, this);
                     }
                 }
 
@@ -143,7 +145,7 @@ public class HUD : Singleton<HUD>
         
         if (PlantsManager.Instance.maintree.isFinished() || GardenManager.Instance.alwaysUpdateTree)
         {
-            GardenManager.Instance.finishTree(PlantsManager.Instance.maintree.upgradeList[0]);
+            //GardenManager.Instance.finishTree(PlantsManager.Instance.maintree.upgradeList[0]);
         }
 
         DOTween.To(() => Camera.main.orthographicSize, x => Camera.main.orthographicSize = x, gardenCamera.orthographicSize, cameraMoveTime).SetUpdate(true);
@@ -157,7 +159,7 @@ public class HUD : Singleton<HUD>
 
 
 
-    public void showLevelInfo(HelperPlantType type)
+    public void showLevelInfo(string type)
     {
         levelInfoPanel.SetActive(true);
 
@@ -182,7 +184,7 @@ public class HUD : Singleton<HUD>
         BirdManager.Instance.ResetBird();
         PestManager.Instance.Clear();
         BeeManager.Instance.Clear();
-        ResourceAutoGeneration.Instance.Clear();
+        //ResourceAutoGeneration.Instance.Clear();
         Instantiate(PlantsManager.Instance.mainTreePrefab, MainGameManager.Instance.allInTreeGame);
         gameoverPanel.SetActive(false);
 
@@ -235,7 +237,7 @@ public class HUD : Singleton<HUD>
 
                 oneStatHud.gameObject.SetActive(true);
             }
-            oneStatHud.init(plantManager.resourceName[pair.Key], propertyImage[(int)pair.Key], pair.Value);
+            oneStatHud.init(pair.Key, pair.Value);
         }
     }
 }

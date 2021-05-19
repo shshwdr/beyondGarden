@@ -25,7 +25,7 @@ public class PlantsButton : MonoBehaviour
     {
         spawnPlantPrefab = plant;
         helperPlant = plant.GetComponent<HelperPlant>();
-        name.text = PlantsManager.Instance.plantName[helperPlant.type];
+        name.text = JsonManager.Instance.getPlant(helperPlant.type).name;
         image.sprite = plant.GetComponent<HelperPlant>().iconSprite;
         image.color = plant.GetComponent<SpriteRenderer>().color;
         hud = h;
@@ -69,7 +69,7 @@ public class PlantsButton : MonoBehaviour
             if (!previousPlantableState)
             {
 
-                TutorialManager.Instance.canPurchasePlant(helperPlant.type);
+                //TutorialManager.Instance.canPurchasePlant(helperPlant.type);
             }
         }
         else

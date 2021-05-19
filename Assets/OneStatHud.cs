@@ -19,10 +19,11 @@ public class OneStatHud : MonoBehaviour
         
     }
 
-    public void init(string n, Sprite t, float v)
+    public void init(string key, float v)
     {
-        name.text = n;
-        image.sprite = t;
+        CurrencyInfo info = JsonManager.Instance.getCurrency(key);
+        name.text = info.name;
+        image.sprite = info.sprite;
         value.text = v.ToString();
     }
     // Update is called once per frame

@@ -41,7 +41,7 @@ public class BeeManager : Singleton<BeeManager>
 
     public void updateGenerateTime()
     {
-        var beeValue = PlantsManager.Instance.currentResource[PlantProperty.bee];
+        var beeValue = PlantsManager.Instance.currentResource["bee"];
         if(beeValue <=2)
         {
             beeGenerateTime = -1;
@@ -83,6 +83,6 @@ public class BeeManager : Singleton<BeeManager>
     IEnumerator delayShow()
     {
         yield return new WaitForSeconds(2);
-        TutorialManager.Instance.firstSeeSomething("bee");
+       // TutorialManager.Instance.firstSeeSomething("bee");
     }
 }
