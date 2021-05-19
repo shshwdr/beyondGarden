@@ -7,7 +7,7 @@
         "latinName":"",
         "locked":false,
         "desc":"Get the first book you saw from library and start reading it.",
-        "harvestTime":10,
+        "harvestTime":1,
         "produces":[{"Key":"water", "Value":10}],
         "plantCost":[]
       },{

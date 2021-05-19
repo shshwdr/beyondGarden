@@ -380,6 +380,10 @@ public class PlantsManager : Singleton<PlantsManager>
             plant.GetComponent<HelperPlant>().type = type;
             helperPlantDict[type] = plant;
         }
+        foreach (var pair in JsonManager.Instance.currencyDict)
+        {
+            currentResource[pair.Key] = pair.Value.initialValue;
+        }
 
 
         //UpdateRate();
@@ -394,11 +398,11 @@ public class PlantsManager : Singleton<PlantsManager>
         //}
         //if (helperPlantProd.ContainsKey(type))
         //{
-            
-        //foreach(var product in helperPlantProd[type].Keys)
-        //{
-        //    UnlockResource(product);
-        //}
+
+        foreach (var product in JsonManager.Instance.getPlant(plantId).produces)
+        {
+            UnlockResource(product.Key);
+        }
         //}
         //TutorialManager.Instance.finishPlant(type);
     }
@@ -528,7 +532,7 @@ public class PlantsManager : Singleton<PlantsManager>
     //{
     //    foreach (var pair in resource)
     //        currentResource[pair.Key] += pair.Value;
-        
+
     //}
 
     //public void UnlockPlant(HelperPlantType type)
@@ -536,10 +540,10 @@ public class PlantsManager : Singleton<PlantsManager>
     //    isPlantUnlocked[type] = true;
     //    HUD.Instance.UpdatePlantButtons();
     //}
-    //public void UnlockResource(PlantProperty type)
-    //{
-    //    isResourceUnlocked[type] = true;
-    //}
+    public void UnlockResource(string type)
+    {
+        isResourceUnlocked[type] = true;
+    }
 
     public bool isIncreasingResource(string p)
     {
