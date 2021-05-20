@@ -7,5 +7,20 @@
         "desc":"just water",
         "initialValue":40
       }
+    ],
+    "seed":
+    [
+      {
+        "id": "pond",
+        "name": "Pond",
+        "desc":"Build pond",
+        "initialValue":3
+      },
+      {
+        "id": "waterlily",
+        "name": "Waterlily Seed",
+        "desc":"Grow waterlily",
+        "initialValue":2
+      }
     ]
   }

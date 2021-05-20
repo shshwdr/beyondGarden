@@ -9,7 +9,7 @@ public class PlantsButton : MonoBehaviour
     [HideInInspector]
     public GameObject spawnPlantPrefab;
 
-    public TMP_Text name;
+    public TMP_Text countText;
     public Image image;
     [HideInInspector]
     public HelperPlant helperPlant;
@@ -25,7 +25,7 @@ public class PlantsButton : MonoBehaviour
     {
         spawnPlantPrefab = plant;
         helperPlant = plant.GetComponent<HelperPlant>();
-        name.text = JsonManager.Instance.getPlant(helperPlant.type).name;
+        countText.text = Inventory.Instance.getSeedAmount(helperPlant.type).ToString();
         image.sprite = plant.GetComponent<HelperPlant>().iconSprite;
         image.color = plant.GetComponent<SpriteRenderer>().color;
         hud = h;
@@ -51,6 +51,11 @@ public class PlantsButton : MonoBehaviour
 
     }
 
+    public void updateButton()
+    {
+
+    }
+
     public void PointerEnter()
     {
         hud.ShowPlantDetail(gameObject);
@@ -62,6 +67,8 @@ public class PlantsButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        countText.text = Inventory.Instance.getSeedAmount(helperPlant.type).ToString();
         var currentPlantableState = PlantsManager.Instance.IsPlantable(helperPlant.type);
         if (currentPlantableState)
         {

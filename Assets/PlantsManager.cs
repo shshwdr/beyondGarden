@@ -475,23 +475,18 @@ public class PlantsManager : Singleton<PlantsManager>
                     return false;
                 }
             }
+
+            //has seed
+            if (!Inventory.Instance.hasEnoughSeed(type))
+            {
+                return false;
+            }
         }
         return true;
     }
     public bool IsPlantable(string type, Collider2D pos, bool isWaterPlant = false)
     {
-        if (!ignoreResourcePlant)
-        {
-            var prodDictionary = JsonManager.Instance.getPlant(type).plantCost;
-            foreach (var pair in prodDictionary)
-            {
-                if (currentResource[pair.Key] < pair.Value)
-                {
-                    return false;
-                }
-            }
-        }
-        return IsPositionValid(pos, isWaterPlant);
+        return IsPlantable(type) && IsPositionValid(pos, isWaterPlant);
     }
 
 
@@ -502,6 +497,8 @@ public class PlantsManager : Singleton<PlantsManager>
             CollectionManager.Instance.RemoveCoins(plant.transform.position, JsonManager.Instance.getPlant(type).plantCost);
             //ReduceCostForType(plant.GetComponent<HelperPlant>().type);
             plantedPlant.Add(plant.GetComponent<HelperPlant>());
+
+            Inventory.Instance.useSeed(type);
         }
     }
 

@@ -12,17 +12,31 @@ public class PairInfo
 [Serializable]
 public class InfoObject { }
 [Serializable]
-public class CurrencyInfo
+
+
+public class ItemInfo
 {
     public string id;
     public string name;
     public string desc;
     public int initialValue;
-    public Sprite sprite { get {
+}
+[Serializable]
+public class CurrencyInfo : ItemInfo
+{
+    public Sprite sprite
+    {
+        get
+        {
             var str = "art/currency/Icon " + id;
-                    Sprite t = Resources.Load<Sprite>(str);
+            Sprite t = Resources.Load<Sprite>(str);
             return t;// Resources.Load("art/currency/Icon " + id) as Sprite;
-        } }
+        }
+    }
+}
+[Serializable]
+public class SeedInfo:ItemInfo
+{
 }
 [Serializable]
 public class PlantInfo
@@ -55,12 +69,14 @@ public class AllFlowersInfo
 public class AllResourcesInfo
 {
     public List<CurrencyInfo> currency;
+    public List<SeedInfo> seed;
 }
 public class JsonManager : Singleton<JsonManager>
 {
     public Dictionary<string, FlowerInfo> flowerDict;
     public Dictionary<string, TreeInfo> treeDict;
     public Dictionary<string, CurrencyInfo> currencyDict;
+    public Dictionary<string, SeedInfo> seedDict;
     private void Awake()
     {
         //flowers
@@ -74,6 +90,7 @@ public class JsonManager : Singleton<JsonManager>
         text = Resources.Load<TextAsset>("json/resources").text;
         AllResourcesInfo allResourcesInfoList = JsonUtility.FromJson<AllResourcesInfo>(text);
         currencyDict = allResourcesInfoList.currency.ToDictionary(x => x.id, x => x);
+        seedDict = allResourcesInfoList.seed.ToDictionary(x => x.id, x => x);
     }
 
     public PlantInfo getPlant(string type)
