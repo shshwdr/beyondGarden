@@ -445,7 +445,7 @@ public class PlantsManager : Singleton<PlantsManager>
             {
                 if (isWaterPlant)
                 {
-                    if (collided.GetComponentInParent<HelperPlant>().type == "water")
+                    if (collided.GetComponentInParent<HelperPlant>().type == "pond")
                     {
                         continue;
                     }

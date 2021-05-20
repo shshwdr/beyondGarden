@@ -17,8 +17,8 @@
         "locked":false,
         "desc":"Get the first book you saw from library and start reading it.",
         "harvestTime":10,
-        "produces":[{"Key":"water", "Value":10}],
-        "plantCost":[]
+        "produces":[{"Key":"frog", "Value":1}],
+        "plantCost":[{"Key":"water", "Value":50}]
       }
       
     ],

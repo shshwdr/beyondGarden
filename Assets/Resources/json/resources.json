@@ -6,6 +6,11 @@
         "name": "Water",
         "desc":"just water",
         "initialValue":40
+      },{
+        "id": "frog",
+        "name": "Frog",
+        "desc":"just frog",
+        "initialValue":0
       }
     ],
     "seed":
