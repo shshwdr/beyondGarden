@@ -20,23 +20,31 @@ public class ItemInfo
     public string name;
     public string desc;
     public int initialValue;
+    public virtual Sprite sprite
+    {
+        get
+        {
+            return null;
+        }
+    }
 }
 [Serializable]
 public class CurrencyInfo : ItemInfo
 {
-    public Sprite sprite
+    public override Sprite sprite
     {
         get
         {
             var str = "art/currency/Icon " + id;
             Sprite t = Resources.Load<Sprite>(str);
-            return t;// Resources.Load("art/currency/Icon " + id) as Sprite;
+            return t;
         }
     }
 }
 [Serializable]
 public class SeedInfo:ItemInfo
 {
+    public override Sprite sprite { get { return Resources.Load<Sprite>("art/seed/" + id) as Sprite; } }
 }
 [Serializable]
 public class PlantInfo
@@ -50,7 +58,7 @@ public class PlantInfo
     public List<PairInfo> produces;
     public List<PairInfo> plantCost;
 
-    public Sprite sprite { get { return Resources.Load("art/flowers/" + id) as Sprite; } }
+    public Sprite sprite { get { return Resources.Load<Sprite>("art/flowers/" + id) as Sprite; } }
 }
 
 [Serializable]
@@ -102,6 +110,20 @@ public class JsonManager : Singleton<JsonManager>
         if (treeDict.ContainsKey(type))
         {
             return treeDict[type];
+        }
+        Debug.LogError(type + " does not exist");
+        return null;
+    }
+
+    public ItemInfo getItemInfo(string type)
+    {
+        if (currencyDict.ContainsKey(type))
+        {
+            return currencyDict[type];
+        }
+        if (seedDict.ContainsKey(type))
+        {
+            return seedDict[type];
         }
         Debug.LogError(type + " does not exist");
         return null;

@@ -26,6 +26,7 @@ public class DungeonManager : Singleton<DungeonManager>
         {
             //finished a level, get back
             SceneManager.LoadScene(0);
+            GameManager.Instance.leaveBattle();
         }
     }
     public void GotoLevel(int level)

@@ -577,7 +577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &749665343
 Transform:
   m_ObjectHideFlags: 0
@@ -5003,6 +5003,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 18227394701027441, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2174674611672211872, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
         type: 3}
       propertyPath: m_RootOrder
@@ -5063,5 +5068,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2174674611672211881, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970226693808808630, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518781109692891495, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535976431579448158, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799171559823450980, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87fc9dfd1b99a9044af44c207ff7a71b, type: 3}
+--- !u!1 &2174674612621603305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2174674611672211881, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2174674612621603304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2174674612621603306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2174674612621603305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ba4a7bfb649c0438c2a776f48a4085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 0.5
+  hitEffect: {fileID: 2062981873138372108, guid: bbe6afd63e48a1847b8284ee53dfa64f,
+    type: 3}
+  bulletPrefab: {fileID: 9081703958680354631, guid: da0551e8c1c228847b0337c429d0c9c5,
+    type: 3}
+  bulletSpeed: 10

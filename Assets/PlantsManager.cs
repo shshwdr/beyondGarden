@@ -57,12 +57,9 @@ public class PlantsManager : Singleton<PlantsManager>
 
     public Collider2D groundCollider2;
     public Collider2D groundCollider1;
-    public Collider2D shadowCollider;
 
     public Transform resourceParent;
 
-    int currentShadowSizeId = 0;
-    float[] shadowColliderSize = new float[] { 30, 37, 43, 50 };
 
     //public Dictionary<HelperPlantType, string> levelDetail;
 
@@ -93,6 +90,7 @@ public class PlantsManager : Singleton<PlantsManager>
     {
         serializeData();
         Utils.ClearChildren(resourceParent);
+        GameManager.Instance.getIntoBattle();
     }
 
     public List<Transform> plantsList()
@@ -414,15 +412,10 @@ public class PlantsManager : Singleton<PlantsManager>
 
     bool IsPositionValid(Collider2D col, bool isWaterPlant = false)
     {
-        //if (!shadowCollider.OverlapPoint(col.transform.position))
-        //{
-        //    return false;
-        //}
         Collider2D[] colliders = new Collider2D[20];
         ContactFilter2D contactFilter = new ContactFilter2D();
         col.OverlapCollider(contactFilter, colliders);
         bool collideGround = true;
-        bool collideShadow = true;
         bool collideOtherPlant = false;
         bool colliderWater = !isWaterPlant;
         foreach(var collided in colliders)
@@ -436,10 +429,6 @@ public class PlantsManager : Singleton<PlantsManager>
             {
                 collideGround = false;
                 //break;
-            }
-            if (collided == shadowCollider)
-            {
-                collideShadow = true;
             }
             if(collided.name == "plant" && collided.GetComponentInParent<HelperPlant>())
             {
@@ -460,7 +449,7 @@ public class PlantsManager : Singleton<PlantsManager>
         }
 
         
-        return collideGround&& collideShadow && !collideOtherPlant && colliderWater;
+        return collideGround&& !collideOtherPlant && colliderWater;
     }
 
     public bool IsPlantable(string type)

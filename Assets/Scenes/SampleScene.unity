@@ -1075,6 +1075,7 @@ GameObject:
   - component: {fileID: 204554945}
   - component: {fileID: 204554946}
   - component: {fileID: 204554947}
+  - component: {fileID: 204554948}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1124,7 +1125,6 @@ MonoBehaviour:
     type: 3}
   groundCollider2: {fileID: 1459423074}
   groundCollider1: {fileID: 2006538896}
-  shadowCollider: {fileID: 1918470356}
   resourceParent: {fileID: 412844853}
   serializedPlantedPlant: []
 --- !u!114 &204554935
@@ -1394,6 +1394,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5c34a0db71d5814b8c7b7382a1d94d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &204554948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204554932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7863ad7b06b42443af674378c1075cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &206228028
@@ -6026,7 +6038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b8015002db3a547a633fcefd946e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: apple
 --- !u!850595691 &1248644167
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -6905,7 +6916,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -654604301
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 31256cb313c246c48879339741a2e0ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7569,7 +7580,7 @@ GameObject:
   - component: {fileID: 1459423073}
   - component: {fileID: 1459423074}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: groundCollider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10435,7 +10446,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1501188177
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.21960784}
@@ -10938,7 +10949,7 @@ GameObject:
   - component: {fileID: 2006538895}
   - component: {fileID: 2006538896}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: groundCollider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11247,7 +11258,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1501188177
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: c5d9116cc269f5240abaab5e7b9ee496, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

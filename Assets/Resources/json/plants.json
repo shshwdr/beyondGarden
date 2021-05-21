@@ -16,7 +16,7 @@
         "latinName":"Nymphaea Mayla",
         "locked":false,
         "desc":"Get the first book you saw from library and start reading it.",
-        "harvestTime":10,
+        "harvestTime":10000,
         "produces":[{"Key":"frog", "Value":1}],
         "plantCost":[{"Key":"water", "Value":50}]
       }

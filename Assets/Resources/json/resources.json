@@ -19,7 +19,7 @@
         "id": "pond",
         "name": "Pond",
         "desc":"Build pond",
-        "initialValue":3
+        "initialValue":2
       },
       {
         "id": "waterlily",

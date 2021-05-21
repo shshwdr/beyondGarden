@@ -21,6 +21,9 @@ public class MainGameManager : Singleton<MainGameManager>
                 hp.loadFromData(sPlant);
             }
         }
+
+        PlantsManager.Instance.groundCollider1 = GameObject.Find("groundCollider1").GetComponent<Collider2D>();
+        PlantsManager.Instance.groundCollider2 = GameObject.Find("groundCollider2").GetComponent<Collider2D>();
     }
 
     // Update is called once per frame

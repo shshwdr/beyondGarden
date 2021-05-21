@@ -6,6 +6,7 @@ using UnityEngine.Assertions;
 public class Inventory : Singleton<Inventory>
 {
     Dictionary<string, int> seed = new Dictionary<string, int>();
+    Dictionary<string, int> resources = new Dictionary<string, int>();
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,22 @@ public class Inventory : Singleton<Inventory>
         
     }
 
+    public void addItem(List<PairInfo> resource)
+    {
+        foreach(var pair in resource)
+        {
+            var type = pair.Key;
+            var value = pair.Value;
+            if (JsonManager.Instance.seedDict.ContainsKey(type))
+            {
+                addSeed(type, value);
+            }
+            else
+            {
+                Debug.LogError("type does not support");
+            }
+        }
+    }
     public void addSeed(string type, int amount = 1)
     {
         Assert.IsTrue(seed.ContainsKey(type));
