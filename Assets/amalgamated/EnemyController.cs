@@ -264,9 +264,7 @@ public class EnemyController : HPCharacterController
         //always generate items
         //generate seed
 
-        var pairInfo = new PairInfo();
-        pairInfo.Key = "pond";
-        pairInfo.Value = 1;
+        var pairInfo = new PairInfo("pond", 1);
         var res = new List<PairInfo>() { pairInfo };
         ClickToCollect.createClickToCollectItem(res, transform);
 

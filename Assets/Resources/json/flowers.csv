@@ -1,0 +1,3 @@
+id,name,latinName,locked,desc,harvestTime,produces,plantCost
+pond,Pond,,FALSE,,1,water:10,
+waterlily,Waterlily,Nymphaea Mayla,,,10000,frog:1|water:1,water:50

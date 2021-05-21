@@ -97,6 +97,10 @@ public class CollectionManager : Singleton<CollectionManager>
 
 	public void RemoveCoins(Vector3 removedCoinPosition, List<PairInfo> resource, bool onlyForNonIncreasingResrouce = false)
     {
+		if(resource == null)
+        {
+			return;
+        }
 		foreach (var pair in resource)
 		{
 			if(onlyForNonIncreasingResrouce && PlantsManager.Instance.isIncreasingResource(pair.Key))

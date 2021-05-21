@@ -124,7 +124,7 @@ public class PlantDetail : Singleton<PlantDetail>
 
     void updateEntry(string title, List<PairInfo> dict,bool checkValue = false)
     {
-        if (dict.Count == 0)
+        if (dict == null || dict.Count == 0)
         {
             return;
         }

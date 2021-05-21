@@ -8,6 +8,11 @@ public class PairInfo
 {
     public string Key;
     public int Value;
+    public PairInfo(string k, int v)
+    {
+        Key = k;
+        Value = v;
+    }
 }
 [Serializable]
 public class InfoObject { }
@@ -66,6 +71,12 @@ public class FlowerInfo : PlantInfo
 {
 }
 [Serializable]
+public class FlowerInfo2
+{
+    public List<PairInfo> produces;
+    public List<PairInfo> plantCost;
+}
+[Serializable]
 public class TreeInfo : PlantInfo
 {
 }
@@ -91,14 +102,20 @@ public class JsonManager : Singleton<JsonManager>
 
         string text = Resources.Load<TextAsset>("json/plants").text;
         AllFlowersInfo allFlowersInfoList = JsonUtility.FromJson<AllFlowersInfo>(text);
-        flowerDict = allFlowersInfoList.flowers.ToDictionary(x => x.id, x => x);
+       // flowerDict = allFlowersInfoList.flowers.ToDictionary(x => x.id, x => x);
         treeDict = allFlowersInfoList.trees.ToDictionary(x => x.id, x => x);
-        //resource
+        ////resource
 
         text = Resources.Load<TextAsset>("json/resources").text;
         AllResourcesInfo allResourcesInfoList = JsonUtility.FromJson<AllResourcesInfo>(text);
         currencyDict = allResourcesInfoList.currency.ToDictionary(x => x.id, x => x);
         seedDict = allResourcesInfoList.seed.ToDictionary(x => x.id, x => x);
+
+        //C: \Users\csviv\Desktop\unity\beyondGarden\Assets\Resources\json
+        string t = true.ToString();
+        var flowers = Sinbad.CsvUtil.LoadObjects<FlowerInfo>("Assets/Resources/json/flowers.csv");
+        flowerDict = flowers.ToDictionary(x => x.id, x => x);
+        //objs = objs;
     }
 
     public PlantInfo getPlant(string type)

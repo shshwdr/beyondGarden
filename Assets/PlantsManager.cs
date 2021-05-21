@@ -457,11 +457,15 @@ public class PlantsManager : Singleton<PlantsManager>
         if (!ignoreResourcePlant)
         {
             var prodDictionary = JsonManager.Instance.getPlant(type).plantCost;
-            foreach (var pair in prodDictionary)
+            if (prodDictionary != null)
             {
-                if (currentResource[pair.Key] < pair.Value)
+
+                foreach (var pair in prodDictionary)
                 {
-                    return false;
+                    if (currentResource[pair.Key] < pair.Value)
+                    {
+                        return false;
+                    }
                 }
             }
 

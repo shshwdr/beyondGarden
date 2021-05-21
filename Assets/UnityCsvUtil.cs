@@ -317,6 +317,29 @@ namespace Sinbad
 
         private static object ParseString(string strValue, Type t)
         {
+            if (t == typeof(bool))
+            {
+                return strValue.ToLower() == "true";
+            }
+            if (t == typeof(List<PairInfo>))
+            {
+                List<PairInfo> res = new List<PairInfo>();
+                var arr = strValue.Split('|');
+                foreach(var pair in arr)
+                {
+                    var splitedPair =  pair.Split(':');
+                    if (splitedPair.Length == 2)
+                    {
+                        PairInfo info = new PairInfo(splitedPair[0], int.Parse(splitedPair[1]));
+                        res.Add(info);
+                    }
+                    else
+                    {
+                        Debug.LogError(pair + " can not be splited into two");
+                    }
+                }
+                return res;
+            }
             var cv = TypeDescriptor.GetConverter(t);
             return cv.ConvertFromInvariantString(strValue);
         }
