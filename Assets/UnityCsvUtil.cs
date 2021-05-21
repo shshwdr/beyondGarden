@@ -60,6 +60,12 @@ namespace Sinbad
             string line;
             while ((line = rdr.ReadLine()) != null)
             {
+                if (line.StartsWith("#"))
+                    continue;
+                if (line.StartsWith(","))
+                {
+                    continue;
+                }
                 var obj = new T();
                 // box manually to avoid issues with structs
                 object boxed = obj;
@@ -110,7 +116,10 @@ namespace Sinbad
                 // Ignore optional header lines
                 if (line.StartsWith("#"))
                     continue;
-
+                if(line.StartsWith(","))
+                {
+                    continue;
+                }
                 string[] vals = EnumerateCsvLine(line).ToArray();
                 if (vals.Length >= 2)
                 {
@@ -324,6 +333,10 @@ namespace Sinbad
             if (t == typeof(List<PairInfo>))
             {
                 List<PairInfo> res = new List<PairInfo>();
+                if(strValue.Length == 0)
+                {
+                    return res;
+                }
                 var arr = strValue.Split('|');
                 foreach(var pair in arr)
                 {
@@ -341,7 +354,13 @@ namespace Sinbad
                 return res;
             }
             var cv = TypeDescriptor.GetConverter(t);
-            return cv.ConvertFromInvariantString(strValue);
+            try
+            {
+                return cv.ConvertFromInvariantString(strValue);
+            }catch(Exception e)
+            {
+                return null;
+            }
         }
 
         private static IEnumerable<string> EnumerateCsvLine(string line)

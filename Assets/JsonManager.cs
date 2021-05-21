@@ -69,12 +69,14 @@ public class PlantInfo
 [Serializable]
 public class FlowerInfo : PlantInfo
 {
-}
-[Serializable]
-public class FlowerInfo2
-{
-    public List<PairInfo> produces;
-    public List<PairInfo> plantCost;
+    public float attack;
+    public float attackIncrease;
+    public int upgradeExpNeeded;
+    public string spell;
+    public float spellCoolDown;
+    public float spellAttack;
+    public float spellAttackIncrease;
+    public float seedDropRate;
 }
 [Serializable]
 public class TreeInfo : PlantInfo

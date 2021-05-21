@@ -11,6 +11,31 @@
         "name": "Frog",
         "desc":"just frog",
         "initialValue":0
+      },{
+        "id": "n",
+        "name": "Nitrogen",
+        "desc":"just frog",
+        "initialValue":0
+      },{
+        "id": "mulch",
+        "name": "Mulch",
+        "desc":"just frog",
+        "initialValue":0
+      },{
+        "id": "p",
+        "name": "P",
+        "desc":"just frog",
+        "initialValue":0
+      },{
+        "id": "bee",
+        "name": "Bee",
+        "desc":"just frog",
+        "initialValue":0
+      },{
+        "id": "pest",
+        "name": "Pest",
+        "desc":"just frog",
+        "initialValue":0
       }
     ],
     "seed":

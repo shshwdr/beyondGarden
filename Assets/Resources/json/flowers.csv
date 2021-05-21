@@ -1,3 +1,24 @@
-id,name,latinName,locked,desc,harvestTime,produces,plantCost
-pond,Pond,,FALSE,,1,water:10,
-waterlily,Waterlily,Nymphaea Mayla,,,10000,frog:1|water:1,water:50
+id,name,latinName,locked,desc,harvestTime,produces,seedDropRate,plantCost,attack,attackIncrease,upgradeExpNeeded,spell,spellCoolDown,spellAttack,spellAttackIncrease
+pond,Pond,,,,10,water:10,100,,0,0,0,,0,0,0
+,,,,,,,,,,,,,,,
+#frog generator,,,,,,,,,,,,,,,
+waterlily,Waterlily,Nymphaea Mayla,,,10000,frog:1,100,water:50,1,1,10,waterSplash,10,5,2
+#marshMarigold,Marsh Marigold,,,,10000,frog:1,100,water:50,1,1,10,waterSplash,10,5,2
+#waterHyacinth,Water Hyacinth,,,,10000,frog:1,100,water:50,1,1,10,waterSplash,10,5,2
+#lutos,Lotus,,,,10000,frog:1,100,water:50,1,1,10,waterSplash,10,5,2
+,,,,,,,100,,1,1,10,waterSplash,10,5,2
+#N generator,,,,,,,100,,1,1,10,waterSplash,10,5,2
+crimsonClover,Crimson Clover,,,,10,n:4|pest:2,100,water:50,1,1,10,waterSplash,10,5,2
+lupin,Lupin,,,,15,n:12|pest:6,100,water:50,1,1,10,waterSplash,10,5,2
+,,,,,,,100,,1,1,10,waterSplash,10,5,2
+#mulch generator,,,,,,,100,,1,1,10,waterSplash,10,5,2
+lavender,Lavender,,,,12,p:4|pest:2,100,water:50,1,1,10,waterSplash,10,5,2
+strawberry,Strawberry,,,,15,p:8|pest:4,100,water:50,1,1,10,waterSplash,10,5,2
+,,,,,,,100,,1,1,10,waterSplash,10,5,2
+,,,,,,,100,,1,1,10,waterSplash,10,5,2
+#bird,,,,,,,100,,1,1,10,waterSplash,10,5,2
+,,,,,,,100,,1,1,10,waterSplash,10,5,2
+,,,,,,,100,,1,1,10,waterSplash,10,5,2
+#bees,,,,,,,100,,1,1,10,waterSplash,10,5,2
+zinnia,Zinnia,,,,100000,bee:2|pest:3,100,water:50,1,1,10,waterSplash,10,5,2
+marigold,Marigold,,,,100000,bee:1|pest:2,100,water:50,1,1,10,waterSplash,10,5,2

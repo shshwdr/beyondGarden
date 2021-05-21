@@ -65,7 +65,6 @@ public class PlantsManager : Singleton<PlantsManager>
 
 
     public Dictionary<string, bool> isResourceUnlocked = new Dictionary<string, bool>();
-    //public List<GameObject> helperPlantList;
     public Dictionary<string, GameObject> helperPlantDict = new Dictionary<string, GameObject>();
 
     List<HelperPlant> plantedPlant = new List<HelperPlant>();
@@ -112,37 +111,15 @@ public class PlantsManager : Singleton<PlantsManager>
     }
     void initValues()
     {
-        //    resourceName = new Dictionary<PlantProperty, string>() {
-        //    { PlantProperty.s, "K" },
-        //    { PlantProperty.p, "P"  },
-        //    { PlantProperty.n, "N" },
-        //    { PlantProperty.water, "Water" },
-        //    { PlantProperty.bee, "Bee Attrack" },
-        //    { PlantProperty.pest, "Pest Attrack" },
-        //    { PlantProperty.frog, "Frog Count" },
-        //};
         //    levelDetail = new Dictionary<HelperPlantType, string>() {
         //    { HelperPlantType.appleTree1,"This is a simple tutorial level." },
         //    { HelperPlantType.peachTree1,"This level has more request on P." },
         //    { HelperPlantType.lemonTree1,"This level has more request on N." },
         //    { HelperPlantType.cherryTree1,"This is level has more request on all elements" },
         //    };
-        //    baseResource = new Dictionary<PlantProperty, int>() {
-        //    { PlantProperty.p, 0 },
-        //    { PlantProperty.s, 0 },
-        //    { PlantProperty.n, 0 },
-        //    { PlantProperty.water, 40 },
-        //    { PlantProperty.bee, 0 },
-        //    { PlantProperty.pest, 0 },
-        //    { PlantProperty.frog, 0 },
-        //};
 
 
         //    plantName = new Dictionary<HelperPlantType, string>() {
-        //    { HelperPlantType.crimson, "Crimson Clover" },
-        //    { HelperPlantType.marigold, "Marigold" },
-        //    { HelperPlantType.pond, "Pond" },
-        //    { HelperPlantType.lavender, "Lavender" },
 
 
         //    { HelperPlantType.appleTree1, "Apple Tree - Sprout" },
@@ -151,10 +128,6 @@ public class PlantsManager : Singleton<PlantsManager>
         //    { HelperPlantType.appleTree4, "Apple Tree - Adult" },
         //    { HelperPlantType.appleTreeFlower, "Apple Tree - flower" },
 
-        //    { HelperPlantType.waterlily, "Water Lily" },
-        //    { HelperPlantType.lupin, "Lupin" },
-        //    { HelperPlantType.zinnia, "Zinnia" },
-        //    { HelperPlantType.stawberry, "Stawberry" },
 
         //    { HelperPlantType.peachTree1, "Peach Tree - Sprout" },
         //    { HelperPlantType.peachTree2, "Peach Tree - Sapling" },
@@ -190,23 +163,15 @@ public class PlantsManager : Singleton<PlantsManager>
         //};
         //helperPlantProdTime = new Dictionary<HelperPlantType, float>() {
         //    //N
-        //    {HelperPlantType.crimson, 10},
         //    {HelperPlantType.sweat, 12},
         //    {HelperPlantType.indigo, 9},
         //    {HelperPlantType.lupin, 15},
 
         //    //P
-        //    {HelperPlantType.lavender, 12},
         //    {HelperPlantType.sun, 12},
         //    {HelperPlantType.cone, 15},
-        //    {HelperPlantType.stawberry, 15},
 
         //    {HelperPlantType.pond, 10},
-        //    //frog
-        //    {HelperPlantType.waterlily, 100000},
-        //    {HelperPlantType.marsh, 100000},
-        //    {HelperPlantType.water, 100000},
-        //    {HelperPlantType.lutos, 100000},
 
         //    //bee
         //    {HelperPlantType.marigold, 100000},
@@ -219,10 +184,6 @@ public class PlantsManager : Singleton<PlantsManager>
         //    helperPlantProd = new Dictionary<HelperPlantType, Dictionary<PlantProperty, int>>()
         //{
         //        //n
-        //    {HelperPlantType.crimson,new Dictionary<PlantProperty, int>() {
-        //        { PlantProperty.n, 4 },
-        //        { PlantProperty.pest, 2 },
-        //    }},
 
         //    {HelperPlantType.sweat,new Dictionary<PlantProperty, int>() {
         //        { PlantProperty.n, 6 },
@@ -232,21 +193,8 @@ public class PlantsManager : Singleton<PlantsManager>
         //        { PlantProperty.n, 3 },
         //        { PlantProperty.pest, 2 },
         //    }},
-        //    {HelperPlantType.lupin,new Dictionary<PlantProperty, int>() {
-        //        { PlantProperty.n, 12 },
-        //        { PlantProperty.pest, 6 },
-        //    }},
 
         //    //p
-
-        //    {HelperPlantType.lavender,new Dictionary<PlantProperty, int>() {
-        //        { PlantProperty.p, 3 },
-        //        { PlantProperty.pest, 2 },
-        //    } },
-        //        {HelperPlantType.stawberry,new Dictionary<PlantProperty, int>() {
-        //        { PlantProperty.p, 8 },
-        //        { PlantProperty.pest, 4 },
-        //    }},
         //    {HelperPlantType.sun,new Dictionary<PlantProperty, int>() {
         //        { PlantProperty.p, 3 },
         //        { PlantProperty.n, 1 },
@@ -259,14 +207,6 @@ public class PlantsManager : Singleton<PlantsManager>
         //    }},
 
         //        //bee
-        //    {HelperPlantType.zinnia,new Dictionary<PlantProperty, int>() {
-        //        { PlantProperty.bee, 2 },
-        //        { PlantProperty.pest, 3 },
-        //    }},
-        //    {HelperPlantType.marigold,new Dictionary<PlantProperty, int>() {
-        //        { PlantProperty.bee, 1 },
-        //        { PlantProperty.pest, 2 },
-        //    } },
 
         //    {HelperPlantType.viola,new Dictionary<PlantProperty, int>() {
         //        { PlantProperty.bee, 2 },
@@ -300,11 +240,12 @@ public class PlantsManager : Singleton<PlantsManager>
         //    {HelperPlantType.appleTree3,new Dictionary<PlantProperty, int>() { } },
         //    {HelperPlantType.appleTree4,new Dictionary<PlantProperty, int>() { } },
         //}; 
+
+
+
         //    helperPlantCost = new Dictionary<HelperPlantType, Dictionary<PlantProperty, int>>()
         //{
-        //    {HelperPlantType.pond,new Dictionary<PlantProperty, int>() { { PlantProperty.water, 0 } } },
 
-        //    {HelperPlantType.waterlily,new Dictionary<PlantProperty, int>() { { PlantProperty.water, 50 } } },
         //    {HelperPlantType.crimson,new Dictionary<PlantProperty, int>() { { PlantProperty.water, 40 } } },
         //    {HelperPlantType.stawberry,new Dictionary<PlantProperty, int>() { { PlantProperty.water, 100 }, { PlantProperty.n, 20 } } },
         //    {HelperPlantType.zinnia,new Dictionary<PlantProperty, int>() { { PlantProperty.water, 50 }, { PlantProperty.n, 24 }, { PlantProperty.p, 30 } } },
@@ -375,8 +316,16 @@ public class PlantsManager : Singleton<PlantsManager>
         foreach (var type in JsonManager.Instance.flowerDict.Keys)
         {
             GameObject plant = Resources.Load("flowers/" + type) as GameObject;
-            plant.GetComponent<HelperPlant>().type = type;
-            helperPlantDict[type] = plant;
+            if (plant)
+            {
+
+                plant.GetComponent<HelperPlant>().type = type;
+                helperPlantDict[type] = plant;
+            }
+            else
+            {
+                Debug.LogError("plant prefab does not existed " + type);
+            }
         }
         foreach (var pair in JsonManager.Instance.currencyDict)
         {
