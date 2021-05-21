@@ -26,7 +26,7 @@ public class PlantsButton : MonoBehaviour
         spawnPlantPrefab = plant;
         helperPlant = plant.GetComponent<HelperPlant>();
         countText.text = Inventory.Instance.getSeedAmount(helperPlant.type).ToString();
-        image.sprite = plant.GetComponent<HelperPlant>().iconSprite;
+        image.sprite = JsonManager.Instance.getPlant(helperPlant.type).sprite;
         image.color = plant.GetComponent<SpriteRenderer>().color;
         hud = h;
 

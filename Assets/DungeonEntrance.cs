@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class DungeonEntrance : MonoBehaviour
 {
+    WeaponSelection weaponSelection;
     // Start is called before the first frame update
     void Start()
     {
-        
+        weaponSelection = GameObject.FindObjectOfType<WeaponSelection>();
+        weaponSelection.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,8 +21,7 @@ public class DungeonEntrance : MonoBehaviour
 
     private void OnMouseDown()
     {
-        PlantsManager.Instance.gotoDungeon();
-        SceneManager.LoadScene(1);
+        weaponSelection.showMenu();
     }
 
 }

@@ -11,6 +11,17 @@ using System.Linq;
 //    cherryTree1, cherryTree2, cherryTree3, cherryTree4, cherryTreeFlower,
 //    marsh, sweat, sun, viola, water , indigo, snapdragon, lutos, cone,
 //};
+
+public class UpgradeInfo
+{
+    public int level;
+    public int exp;
+    public UpgradeInfo(int l,int e)
+    {
+        level = l;
+        exp = e;
+    }
+}
 public class PlantsManager : Singleton<PlantsManager>
 {
     public  AudioSource audiosource;
@@ -20,6 +31,7 @@ public class PlantsManager : Singleton<PlantsManager>
     public MainTree maintree;
     public GameObject mainTreePrefab;
     public Dictionary<string, bool>  isPlantUnlocked =  new Dictionary<string, bool>();
+    public Dictionary<string, UpgradeInfo> plantUpgradeStatusDict = new Dictionary<string, UpgradeInfo>();
     public override SerializedObject Save()
     {
         var res = new SerializedLevel();
@@ -441,6 +453,11 @@ public class PlantsManager : Singleton<PlantsManager>
             plantedPlant.Add(plant.GetComponent<HelperPlant>());
 
             Inventory.Instance.useSeed(type);
+
+            if(type != "pond")
+            {
+                plantUpgradeStatusDict[type] = new UpgradeInfo(1, 0);
+            }
         }
     }
 

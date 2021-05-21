@@ -32,13 +32,45 @@ namespace Sinbad
         //   fields as per the header. If false, ignores and just fills what it can
         public static List<T> LoadObjects<T>(string filename, bool strict = true) where T : new()
         {
-            using (var stream = File.OpenRead(filename))
+            //using (var stream = File.OpenRead(filename))
+            //{
+            //    using (var rdr = new StreamReader(stream))
+            //    {
+                    //return LoadObjects<T>(rdr, strict);
+            //    }
+            //}
+
+            string[] fLines = Regex.Split(filename, "\n|\r|\r\n");
+
+            var ret = new List<T>();
+            var fieldDefs = ParseHeader(fLines[0]);
+            for (int i = 1; i < fLines.Length; i++)
             {
-                using (var rdr = new StreamReader(stream))
+                FieldInfo[] fi = typeof(T).GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                PropertyInfo[] pi = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                bool isValueType = typeof(T).IsValueType;
+                string line = fLines[i] ;
                 {
-                    return LoadObjects<T>(rdr, strict);
+                    if (line.StartsWith("#"))
+                        continue;
+                    if (line.StartsWith(","))
+                    {
+                        continue;
+                    }
+                    var obj = new T();
+                    // box manually to avoid issues with structs
+                    object boxed = obj;
+                    if (ParseLineToObject(line, fieldDefs, fi, pi, boxed, strict))
+                    {
+                        // unbox value types
+                        if (isValueType)
+                            obj = (T)boxed;
+                        ret.Add(obj);
+                    }
                 }
             }
+            return ret;
+
         }
 
         // Load a CSV into a list of struct/classes from a stream where each line = 1 object

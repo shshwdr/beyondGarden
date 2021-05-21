@@ -11,7 +11,7 @@ public class Inventory : Singleton<Inventory>
     void Start()
     {
         //if no saved data, read origin data
-        foreach(var pair in JsonManager.Instance.seedDict)
+        foreach(var pair in JsonManager.Instance.flowerDict)
         {
             seed[pair.Key] = pair.Value.initialValue;
         }
@@ -29,7 +29,7 @@ public class Inventory : Singleton<Inventory>
         {
             var type = pair.Key;
             var value = pair.Value;
-            if (JsonManager.Instance.seedDict.ContainsKey(type))
+            if (JsonManager.Instance.flowerDict.ContainsKey(type))
             {
                 addSeed(type, value);
             }

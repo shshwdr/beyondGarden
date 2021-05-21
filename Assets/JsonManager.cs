@@ -46,24 +46,17 @@ public class CurrencyInfo : ItemInfo
         }
     }
 }
+
 [Serializable]
-public class SeedInfo:ItemInfo
+public class PlantInfo: ItemInfo
 {
-    public override Sprite sprite { get { return Resources.Load<Sprite>("art/seed/" + id) as Sprite; } }
-}
-[Serializable]
-public class PlantInfo
-{
-    public string id;
-    public string name;
     public string latinName;
-    public string desc;
     public bool locked;
     public float harvestTime;
     public List<PairInfo> produces;
     public List<PairInfo> plantCost;
 
-    public Sprite sprite { get { return Resources.Load<Sprite>("art/flowers/" + id) as Sprite; } }
+    public override Sprite sprite { get { return Resources.Load<Sprite>("art/flowers/" + id) as Sprite; } }
 }
 
 [Serializable]
@@ -90,14 +83,12 @@ public class AllFlowersInfo
 public class AllResourcesInfo
 {
     public List<CurrencyInfo> currency;
-    public List<SeedInfo> seed;
 }
 public class JsonManager : Singleton<JsonManager>
 {
     public Dictionary<string, FlowerInfo> flowerDict;
     public Dictionary<string, TreeInfo> treeDict;
     public Dictionary<string, CurrencyInfo> currencyDict;
-    public Dictionary<string, SeedInfo> seedDict;
     private void Awake()
     {
         //flowers
@@ -111,13 +102,11 @@ public class JsonManager : Singleton<JsonManager>
         text = Resources.Load<TextAsset>("json/resources").text;
         AllResourcesInfo allResourcesInfoList = JsonUtility.FromJson<AllResourcesInfo>(text);
         currencyDict = allResourcesInfoList.currency.ToDictionary(x => x.id, x => x);
-        seedDict = allResourcesInfoList.seed.ToDictionary(x => x.id, x => x);
 
-        //C: \Users\csviv\Desktop\unity\beyondGarden\Assets\Resources\json
         string t = true.ToString();
-        var flowers = Sinbad.CsvUtil.LoadObjects<FlowerInfo>("Assets/Resources/json/flowers.csv");
+        text = Resources.Load<TextAsset>("json/flowers").text;
+        var flowers = Sinbad.CsvUtil.LoadObjects<FlowerInfo>(text);
         flowerDict = flowers.ToDictionary(x => x.id, x => x);
-        //objs = objs;
     }
 
     public PlantInfo getPlant(string type)
@@ -140,9 +129,9 @@ public class JsonManager : Singleton<JsonManager>
         {
             return currencyDict[type];
         }
-        if (seedDict.ContainsKey(type))
+        if (flowerDict.ContainsKey(type))
         {
-            return seedDict[type];
+            return flowerDict[type];
         }
         Debug.LogError(type + " does not exist");
         return null;
