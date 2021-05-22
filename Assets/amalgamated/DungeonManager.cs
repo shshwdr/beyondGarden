@@ -27,6 +27,8 @@ public class DungeonManager : Singleton<DungeonManager>
             //finished a level, get back
             SceneManager.LoadScene(0);
             GameManager.Instance.leaveBattle();
+
+            Utils.setChildrenToInactive(PlantsManager.Instance. resourceParent);
         }
     }
     public void GotoLevel(int level)

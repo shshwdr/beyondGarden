@@ -12,16 +12,17 @@ public class ClickToCollect : MonoBehaviour
     public float speed = 1f;
     public float amplitude = 1f;
     public bool needClick;
+    public GameObject fullGameobject;
+
     // Start is called before the first frame update
     void Start()
     {
     }
-    static public GameObject createClickToCollectItem(List<PairInfo> r, Transform t,bool needClick = true)
+    static public GameObject createClickToCollectItem(List<PairInfo> r, Vector3 pos,bool needClick = true)
     {
         GameObject collectInBattlePrefab = Resources.Load<GameObject>("prefabs/clickToCollectBattle");
-        var go = Instantiate(collectInBattlePrefab, t.position, Quaternion.identity, PlantsManager.Instance.resourceParent);
-        go.transform.localScale = collectInBattlePrefab.transform.localScale;
-        var box = go.GetComponent<ClickToCollect>();
+        var go = Instantiate(collectInBattlePrefab, pos, Quaternion.identity, PlantsManager.Instance.resourceParent);
+        var box = go.GetComponentInChildren<ClickToCollect>();
         box.dropboxType = DropboxType.resource;
         box.resource = r;
         box.UpdateImage();
@@ -89,7 +90,7 @@ public class ClickToCollect : MonoBehaviour
                 CollectionManager.Instance.AddCoins(transform.position, resource);
             }
         }
-        Destroy(gameObject);
+        Destroy(fullGameobject);
     }
 
     void Update()

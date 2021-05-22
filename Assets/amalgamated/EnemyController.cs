@@ -263,10 +263,11 @@ public class EnemyController : HPCharacterController
         //spawn drops if lucky!
         //always generate items
         //generate seed
+        var randId = Random.Range(0, ResourceManager.Instance.unlockedSeed().Count);
 
-        var pairInfo = new PairInfo("pond", 1);
+        var pairInfo = new PairInfo(ResourceManager.Instance.unlockedSeed()[randId], 1);
         var res = new List<PairInfo>() { pairInfo };
-        ClickToCollect.createClickToCollectItem(res, transform);
+        ClickToCollect.createClickToCollectItem(res, transform.position);
 
 
         if (EnemyManager.instance.bossController)

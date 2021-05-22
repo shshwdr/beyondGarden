@@ -35,11 +35,20 @@ public class Utils : MonoBehaviour
         }
     }
 
+    public static void setChildrenToInactive(Transform transformParent)
+    {
+        foreach (Transform c in transformParent)
+        {
+            c.gameObject.SetActive(false);
+        }
+    }
+
     public static Transform RandomTransform(List<Transform> transforms)
     {
         int randomValue = Random.Range(0, transforms.Count);
         return transforms[randomValue];
     }
+
 
         // Update is called once per frame
         void Update()

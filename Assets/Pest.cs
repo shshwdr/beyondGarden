@@ -43,7 +43,7 @@ public class Pest : Animal
     {
         if (!target)
         {
-            target = getClosestTransform(PlantsManager.Instance.plantsList());
+            target = getClosestTransform(MainGameManager.Instance.plantsList());
         }
         base.Update();
     }

@@ -6,11 +6,12 @@ public class MainGameManager : Singleton<MainGameManager>
 {
     [HideInInspector]
     public Transform allInTreeGame;
+    public List<HelperPlant> plantedPlant = new List<HelperPlant>();
     // put trees to the correct position
     void Start()
     {
         allInTreeGame = GameObject.Find("allInTreeGame").transform;
-        if (PlantsManager.Instance.serializedPlantedPlant.Count>0)
+        if (PlantsManager.Instance. serializedPlantedPlant.Count>0)
         {
             //move tree to correct position
             foreach(var sPlant in PlantsManager.Instance.serializedPlantedPlant)
@@ -24,6 +25,35 @@ public class MainGameManager : Singleton<MainGameManager>
 
         PlantsManager.Instance.groundCollider1 = GameObject.Find("groundCollider1").GetComponent<Collider2D>();
         PlantsManager.Instance.groundCollider2 = GameObject.Find("groundCollider2").GetComponent<Collider2D>();
+    }
+
+    public List<Transform> plantsList()
+    {
+        List<Transform> res = new List<Transform>();
+        foreach (var plantValue in plantedPlant)
+        {
+            if (plantValue && plantValue.isAlive && !plantValue.ignorePest)
+            {
+                res.Add(plantValue.transform);
+
+            }
+        }
+        //if (maintree && maintree.isAlive)
+        //{
+        //    res.Add(maintree.transform);
+        //}
+        return res;
+    }
+
+    public void serializeData()
+    {
+        PlantsManager.Instance.serializedPlantedPlant.Clear();
+        foreach (var plant in plantedPlant)
+        {
+            var sPlant = plant.Save() as SerializedHelperPlant;
+            PlantsManager.Instance.serializedPlantedPlant.Add(sPlant);
+
+        }
     }
 
     // Update is called once per frame

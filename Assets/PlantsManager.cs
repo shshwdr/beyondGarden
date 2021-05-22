@@ -32,6 +32,8 @@ public class PlantsManager : Singleton<PlantsManager>
     public GameObject mainTreePrefab;
     public Dictionary<string, bool>  isPlantUnlocked =  new Dictionary<string, bool>();
     public Dictionary<string, UpgradeInfo> plantUpgradeStatusDict = new Dictionary<string, UpgradeInfo>();
+    [HideInInspector]
+    public List<SerializedHelperPlant> serializedPlantedPlant = new List<SerializedHelperPlant>();
     public override SerializedObject Save()
     {
         var res = new SerializedLevel();
@@ -79,48 +81,18 @@ public class PlantsManager : Singleton<PlantsManager>
     public Dictionary<string, bool> isResourceUnlocked = new Dictionary<string, bool>();
     public Dictionary<string, GameObject> helperPlantDict = new Dictionary<string, GameObject>();
 
-    List<HelperPlant> plantedPlant = new List<HelperPlant>();
-    [HideInInspector]
-    public List<SerializedHelperPlant> serializedPlantedPlant = new List<SerializedHelperPlant>();
     float currentTime = 0;
 
     public Dictionary<string, int>  currentResource = new Dictionary<string, int>();
 
-    public void serializeData()
-    {
-        serializedPlantedPlant.Clear();
-        foreach(var plant in plantedPlant)
-        {
-            var sPlant = plant.Save() as SerializedHelperPlant;
-            serializedPlantedPlant.Add(sPlant);
-
-        }
-    }
 
     public void gotoDungeon()
     {
-        serializeData();
-        Utils.ClearChildren(resourceParent);
+        MainGameManager.Instance. serializeData();
+        Utils.setChildrenToInactive(resourceParent);
         GameManager.Instance.getIntoBattle();
     }
 
-    public List<Transform> plantsList()
-    {
-        List<Transform> res = new List<Transform>();
-        foreach(var plantValue in plantedPlant)
-        {
-            if(plantValue && plantValue.isAlive && !plantValue.ignorePest)
-            {
-                res.Add(plantValue.transform);
-
-            }
-        }
-        if (maintree && maintree.isAlive)
-        {
-            res.Add(maintree.transform);
-        }
-        return res;
-    }
     void initValues()
     {
         //    levelDetail = new Dictionary<HelperPlantType, string>() {
@@ -450,7 +422,7 @@ public class PlantsManager : Singleton<PlantsManager>
         {
             CollectionManager.Instance.RemoveCoins(plant.transform.position, JsonManager.Instance.getPlant(type).plantCost);
             //ReduceCostForType(plant.GetComponent<HelperPlant>().type);
-            plantedPlant.Add(plant.GetComponent<HelperPlant>());
+            MainGameManager.Instance. plantedPlant.Add(plant.GetComponent<HelperPlant>());
 
             Inventory.Instance.useSeed(type);
 

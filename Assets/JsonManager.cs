@@ -70,7 +70,13 @@ public class FlowerInfo : PlantInfo
     public float spellAttack;
     public float spellAttackIncrease;
     public float seedDropRate;
+    public string weaponType { get { return JsonManager.productToWeaponType[produces[0].Key]; } }
+    public int getAttack
+    {
+        get { return (int)Math.Floor(attack); }
+    }
 }
+
 [Serializable]
 public class TreeInfo : PlantInfo
 {
@@ -86,6 +92,16 @@ public class AllResourcesInfo
 }
 public class JsonManager : Singleton<JsonManager>
 {
+
+    static public Dictionary<string, string> productToWeaponType = new Dictionary<string, string>()
+    {
+        {"frog","Water" },
+        {"bee","Dark" },
+        {"tree","Light" },
+        {"n","Fire" },
+        {"mulch","Earth" },
+
+    };
     public Dictionary<string, FlowerInfo> flowerDict;
     public Dictionary<string, TreeInfo> treeDict;
     public Dictionary<string, CurrencyInfo> currencyDict;
