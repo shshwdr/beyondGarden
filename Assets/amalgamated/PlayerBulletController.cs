@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlayerBulletController : MonoBehaviour
 {
+    float damage = 1;
+    string element = "";
+
+    public void init(float d,string e)
+    {
+        damage = d;
+        element = e;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -17,17 +25,27 @@ public class PlayerBulletController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.GetComponent<EnemyController>())
+        var enemyController = collision.collider.GetComponent<EnemyController>();
+        if (enemyController)
         {
-            collision.collider.GetComponent<EnemyController>().getDamage();
+            var scale = BattleManager.elementAdvantageScale(element, enemyController.elementType);
+            var finalDamage = BattleManager.finalDamage(element, enemyController.elementType, damage);
+            enemyController.getDamage(finalDamage);
+
+            PopupTextManager.Instance.ShowPopupNumber(transform.position, finalDamage, scale);
         }
         Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<EnemyController>())
-        {
-            collision.GetComponent<EnemyController>().getDamage();
-        }
+        //var enemyController = collision.GetComponent<EnemyController>();
+        //if (collision.GetComponent<EnemyController>())
+        //{
+        //    var scale = BattleManager.elementAdvantageScale(element, enemyController.elementType);
+        //    var finalDamage = BattleManager.finalDamage(element, enemyController.elementType, damage);
+        //    enemyController.getDamage(finalDamage);
+
+        //    PopupTextManager.Instance.ShowPopupNumber(transform.position, finalDamage, scale);
+        //}
     }
 }

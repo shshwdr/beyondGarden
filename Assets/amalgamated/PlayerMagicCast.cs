@@ -59,6 +59,8 @@ public class PlayerMagicCast : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, transform.position, quat) as GameObject;
             //bullet.GetComponent<EnemyBullet>().GetPlayer(player.transform);
             bullet.GetComponent<Rigidbody2D>().velocity = dir * bulletSpeed;
+            var weaponInfo = BattleManager.Instance.getCurrentWeapon();
+            bullet.GetComponent<PlayerBulletController>().init(weaponInfo.attack, weaponInfo.weaponType);
         }
     }
     }

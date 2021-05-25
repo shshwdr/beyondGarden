@@ -76,3 +76,6 @@ TagManager:
   - name: wall
     uniqueID: 2110354965
     locked: 0
+  - name: number
+    uniqueID: 2889470263
+    locked: 0

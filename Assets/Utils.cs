@@ -55,4 +55,86 @@ public class Utils : MonoBehaviour
     {
         
     }
+
+    //public static string randomList<T>(List<PairInfo<T>> infoList,T t)
+    //{
+
+    //    List<T> incrementRateList = new List<T>();
+    //    dynamic incrementRate = 0;
+    //    foreach (var info in infoList)
+    //    {
+    //        dynamic value = info.Value;
+    //        incrementRate += value;
+    //        incrementRateList.Add(incrementRate);
+    //    }
+    //    dynamic total = t;
+    //    if(total.Equals(0))
+    //    {
+    //        total = incrementRate;
+    //    }
+    //    var randValue = Random.Range(0, total);
+    //    for(int i = 0;i< incrementRateList.Count; i++)
+    //    {
+    //        if (randValue < incrementRateList[i])
+    //        {
+
+    //            return infoList[i].Key;
+    //        }
+    //    }
+    //    Debug.Log("should not reach here");
+    //    return infoList[0].Key;
+    //}
+
+    public static string randomList(List<PairInfo<int>> infoList, int t)
+    {
+
+        List <int > incrementRateList = new List<int>();
+        int incrementRate = 0;
+        foreach (var info in infoList)
+        {
+            incrementRate += info.Value;
+            incrementRateList.Add(incrementRate);
+        }
+        int total = t;
+        if (total.Equals(0))
+        {
+            total = incrementRate;
+        }
+        var randValue = Random.Range(0, total);
+        for (int i = 0; i < incrementRateList.Count; i++)
+        {
+            if (randValue < incrementRateList[i])
+            {
+
+                return infoList[i].Key;
+            }
+        }
+        Debug.Log("should not reach here");
+        return infoList[0].Key;
+    }
+
+    public static string randomList(List<PairInfo<float>> infoList)
+    {
+
+        List<float> incrementRateList = new List<float>();
+        float incrementRate = 0;
+        foreach (var info in infoList)
+        {
+            incrementRate += info.Value;
+            incrementRateList.Add(incrementRate);
+        }
+        float total = 1;
+        var randValue = Random.Range(0, total);
+        for (int i = 0; i < incrementRateList.Count; i++)
+        {
+            if (randValue < incrementRateList[i])
+            {
+
+                return infoList[i].Key;
+            }
+        }
+        Debug.Log("should not reach here");
+        return infoList[0].Key;
+    }
+
 }

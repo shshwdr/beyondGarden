@@ -1,0 +1,5 @@
+id,name,latinName,locked,desc,upgradeCost,nextLevel,flowerId
+appleTree1,Apple Tree,,FALSE,First tree,water:50|n:50,appleTree2,
+appleTree2,Apple Tree,,FALSE,First tree,water:50|n:51,appleTree3,
+appleTree3,Apple Tree,,FALSE,First tree,water:50|n:52,appleTree4,
+appleTree4,Apple Tree,,FALSE,First tree,water:50|n:52,,appleFlower

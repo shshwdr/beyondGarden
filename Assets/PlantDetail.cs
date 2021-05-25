@@ -122,7 +122,7 @@ public class PlantDetail : Singleton<PlantDetail>
         healthText.text = "Health: " + plant.maxHP;
     }
 
-    void updateEntry(string title, List<PairInfo> dict,bool checkValue = false)
+    void updateEntry(string title, List<PairInfo<int>> dict,bool checkValue = false)
     {
         if (dict == null || dict.Count == 0)
         {

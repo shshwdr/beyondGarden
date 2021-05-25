@@ -362,20 +362,43 @@ namespace Sinbad
             {
                 return strValue.ToLower() == "true";
             }
-            if (t == typeof(List<PairInfo>))
+            if (t == typeof(List<PairInfo<int>>))
             {
-                List<PairInfo> res = new List<PairInfo>();
-                if(strValue.Length == 0)
+                List<PairInfo<int>> res = new List<PairInfo<int>>();
+                if (strValue.Length == 0)
                 {
                     return res;
                 }
                 var arr = strValue.Split('|');
-                foreach(var pair in arr)
+                foreach (var pair in arr)
                 {
-                    var splitedPair =  pair.Split(':');
+                    var splitedPair = pair.Split(':');
                     if (splitedPair.Length == 2)
                     {
-                        PairInfo info = new PairInfo(splitedPair[0], int.Parse(splitedPair[1]));
+                        PairInfo<int> info = new PairInfo<int>(splitedPair[0], int.Parse(splitedPair[1]));
+                        res.Add(info);
+                    }
+                    else
+                    {
+                        Debug.LogError(pair + " can not be splited into two");
+                    }
+                }
+                return res;
+            }
+            if (t == typeof(List<PairInfo<float>>))
+            {
+                List<PairInfo<float>> res = new List<PairInfo<float>>();
+                if (strValue.Length == 0)
+                {
+                    return res;
+                }
+                var arr = strValue.Split('|');
+                foreach (var pair in arr)
+                {
+                    var splitedPair = pair.Split(':');
+                    if (splitedPair.Length == 2)
+                    {
+                        PairInfo<float> info = new PairInfo<float>(splitedPair[0], float.Parse(splitedPair[1]));
                         res.Add(info);
                     }
                     else

@@ -23,7 +23,7 @@ public class Inventory : Singleton<Inventory>
         
     }
 
-    public void addItem(List<PairInfo> resource)
+    public void addItem(List<PairInfo<int>> resource)
     {
         foreach(var pair in resource)
         {
@@ -33,12 +33,22 @@ public class Inventory : Singleton<Inventory>
             {
                 addSeed(type, value);
             }
+            else if (JsonManager.Instance.currencyDict.ContainsKey(type))
+            {
+                addResource(type, value);
+            }
             else
             {
-                Debug.LogError("type does not support");
+                Debug.LogError(type + " type oes not support");
             }
         }
     }
+
+    public void addResource(string type, int amount = 1)
+    {
+        PlantsManager.Instance.currentResource[type] += amount;
+    }
+
     public void addSeed(string type, int amount = 1)
     {
         Assert.IsTrue(seed.ContainsKey(type));

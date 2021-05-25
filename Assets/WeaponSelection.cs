@@ -16,6 +16,7 @@ public class WeaponSelection : MonoBehaviour
     public Image detailImage;
     public InfoPair detailType;
     public InfoPair detailLevel;
+    public InfoPair detailExp;
     public InfoPair detailAttack;
     public InfoPair detailSpell;
 
@@ -82,11 +83,13 @@ public class WeaponSelection : MonoBehaviour
     public void updateDetailInfo(string type)
     {
         var weaponInfo = JsonManager.Instance.getPlant(type) as FlowerInfo;
+        var weaponUpgradeInfo = PlantsManager.Instance.plantUpgradeStatusDict[type];
         if (weaponInfo!=null)
         {
             detailTitle.text = weaponInfo.name;
             detailImage.sprite = weaponInfo.sprite;
-            detailLevel.updateValue("1");
+            detailLevel.updateValue(weaponUpgradeInfo.level.ToString());
+            detailExp.updateValue(weaponUpgradeInfo.exp.ToString());
             detailType.updateValue(weaponInfo.weaponType);
             detailAttack.updateValue(weaponInfo.getAttack.ToString());
             detailSpell.updateValue(weaponInfo.spell);

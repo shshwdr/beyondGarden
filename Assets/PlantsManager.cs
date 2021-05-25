@@ -14,10 +14,27 @@ using System.Linq;
 
 public class UpgradeInfo
 {
+    public string id;
     public int level;
+    public int nextLevel { get { return level + 1; } }
     public int exp;
-    public UpgradeInfo(int l,int e)
+    FlowerInfo flowerInfo()
     {
+        return JsonManager.Instance.getFlower(id);
+    }
+
+    public void addExp(int e)
+    {
+        exp += e;
+        int expNeeded = flowerInfo().expForLevel(nextLevel);
+        if (exp >= expNeeded)
+        {
+            level += 1;
+        }
+    }
+    public UpgradeInfo(string i,int l,int e)
+    {
+        id = i;
         level = l;
         exp = e;
     }
@@ -299,16 +316,20 @@ public class PlantsManager : Singleton<PlantsManager>
     {
         foreach (var type in JsonManager.Instance.flowerDict.Keys)
         {
-            GameObject plant = Resources.Load("flowers/" + type) as GameObject;
-            if (plant)
+            if (!JsonManager.Instance.flowerDict[type].isTreeFlower)
             {
 
-                plant.GetComponent<HelperPlant>().type = type;
-                helperPlantDict[type] = plant;
-            }
-            else
-            {
-                Debug.LogError("plant prefab does not existed " + type);
+                GameObject plant = Resources.Load("flowers/" + type) as GameObject;
+                if (plant)
+                {
+
+                    plant.GetComponent<HelperPlant>().type = type;
+                    helperPlantDict[type] = plant;
+                }
+                else
+                {
+                    Debug.LogError("plant prefab does not existed " + type);
+                }
             }
         }
         foreach (var pair in JsonManager.Instance.currencyDict)
@@ -428,7 +449,20 @@ public class PlantsManager : Singleton<PlantsManager>
 
             if(type != "pond")
             {
-                plantUpgradeStatusDict[type] = new UpgradeInfo(1, 0);
+                var weaponInfo = JsonManager.Instance.getFlower(type);
+                if (plantUpgradeStatusDict.ContainsKey(type))
+                {
+                    plantUpgradeStatusDict[type].addExp(1);
+                    PopupTextManager.Instance.ShowPopupString(plant.transform.position, weaponInfo.name+" exp +1", 3);
+                }
+                else
+                {
+
+                    PopupTextManager.Instance.ShowPopupString(plant.transform.position, "unlock weapon "+ weaponInfo.name, 3);
+                    plantUpgradeStatusDict[type] = new UpgradeInfo(type, 1, 0);
+                }
+                
+
             }
         }
     }

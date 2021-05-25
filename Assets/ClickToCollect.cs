@@ -7,7 +7,7 @@ public class ClickToCollect : MonoBehaviour
     bool isClicked = false;
     public DropboxType dropboxType;
     public HelperPlant parentPlant;
-    public List<PairInfo> resource;
+    public List<PairInfo<int>> resource;
     //public HelperPlantType unlockPlant;
     public float speed = 1f;
     public float amplitude = 1f;
@@ -18,7 +18,7 @@ public class ClickToCollect : MonoBehaviour
     void Start()
     {
     }
-    static public GameObject createClickToCollectItem(List<PairInfo> r, Vector3 pos,bool needClick = true)
+    static public GameObject createClickToCollectItem(List<PairInfo<int>> r, Vector3 pos,bool needClick = true)
     {
         GameObject collectInBattlePrefab = Resources.Load<GameObject>("prefabs/clickToCollectBattle");
         var go = Instantiate(collectInBattlePrefab, pos, Quaternion.identity, PlantsManager.Instance.resourceParent);

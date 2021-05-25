@@ -74,6 +74,8 @@ public class HPCharacterController : MonoBehaviour
         {
             return;
         }
+
+
         currentInvinsibleTimer = 0;
         hp -= damage;
         playHurtSound();

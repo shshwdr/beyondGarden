@@ -21,6 +21,12 @@ public class ResourceManager : Singleton<ResourceManager>
         return new List<string>(seed.Keys);
     }
 
+    public List<string> dropableResource()
+    {
+        return new List<string>() { "p", "n", "mulch","water" };
+    }
+
+
     // Update is called once per frame
     void Update()
     {

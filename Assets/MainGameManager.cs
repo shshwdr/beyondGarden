@@ -20,6 +20,7 @@ public class MainGameManager : Singleton<MainGameManager>
                 var go = Instantiate(prefab, sPlant.pos.GetPos(), Quaternion.identity, allInTreeGame);
                 HelperPlant hp = go.GetComponent<HelperPlant>();
                 hp.loadFromData(sPlant);
+                plantedPlant.Add(go.GetComponent<HelperPlant>());
             }
         }
 

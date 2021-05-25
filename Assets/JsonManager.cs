@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 [Serializable]
-public class PairInfo
+public class PairInfo<T>
 {
     public string Key;
-    public int Value;
-    public PairInfo(string k, int v)
+    public T Value;
+    public PairInfo(string k, T v)
     {
         Key = k;
         Value = v;
@@ -53,13 +53,26 @@ public class PlantInfo: ItemInfo
     public string latinName;
     public bool locked;
     public float harvestTime;
-    public List<PairInfo> produces;
-    public List<PairInfo> plantCost;
+    public List<PairInfo<int>> produces;
+    public List<PairInfo<int>> plantCost;
 
     public override Sprite sprite { get { return Resources.Load<Sprite>("art/flowers/" + id) as Sprite; } }
 }
 
 [Serializable]
+public class EnemyInfo
+{
+    public string id;
+    public string name;
+    public string type;
+    public float attack;
+    public float attackIncrease;
+    public float hp;
+    public float hpIncrease;
+    public List<PairInfo<float>> drop;
+}
+
+    [Serializable]
 public class FlowerInfo : PlantInfo
 {
     public float attack;
@@ -70,6 +83,11 @@ public class FlowerInfo : PlantInfo
     public float spellAttack;
     public float spellAttackIncrease;
     public float seedDropRate;
+    public bool isTreeFlower;
+    public int expForLevel(int level)
+    {
+        return upgradeExpNeeded * level*2;
+    }
     public string weaponType { get { return JsonManager.productToWeaponType[produces[0].Key]; } }
     public int getAttack
     {
@@ -103,6 +121,7 @@ public class JsonManager : Singleton<JsonManager>
 
     };
     public Dictionary<string, FlowerInfo> flowerDict;
+    public Dictionary<string, EnemyInfo> enemyDict;
     public Dictionary<string, TreeInfo> treeDict;
     public Dictionary<string, CurrencyInfo> currencyDict;
     private void Awake()
@@ -119,10 +138,36 @@ public class JsonManager : Singleton<JsonManager>
         AllResourcesInfo allResourcesInfoList = JsonUtility.FromJson<AllResourcesInfo>(text);
         currencyDict = allResourcesInfoList.currency.ToDictionary(x => x.id, x => x);
 
-        string t = true.ToString();
         text = Resources.Load<TextAsset>("json/flowers").text;
         var flowers = Sinbad.CsvUtil.LoadObjects<FlowerInfo>(text);
         flowerDict = flowers.ToDictionary(x => x.id, x => x);
+
+        //enemy
+
+        text = Resources.Load<TextAsset>("json/enemies").text;
+        var enemies = Sinbad.CsvUtil.LoadObjects<EnemyInfo>(text);
+        enemyDict = enemies.ToDictionary(x => x.id, x => x);
+    }
+
+    public EnemyInfo getEnemy(string id)
+    {
+        if (enemyDict.ContainsKey(id))
+        {
+            return enemyDict[id];
+        }
+
+        Debug.LogError(id  + " enemy does not exist");
+        return null;
+    }
+
+    public FlowerInfo getFlower(string type)
+    {
+        if (flowerDict.ContainsKey(type))
+        {
+            return flowerDict[type];
+        }
+        Debug.LogError(type + " flower does not exist");
+        return null;
     }
 
     public PlantInfo getPlant(string type)
@@ -135,7 +180,7 @@ public class JsonManager : Singleton<JsonManager>
         {
             return treeDict[type];
         }
-        Debug.LogError(type + " does not exist");
+        Debug.LogError(type + " plant does not exist");
         return null;
     }
 
@@ -149,7 +194,7 @@ public class JsonManager : Singleton<JsonManager>
         {
             return flowerDict[type];
         }
-        Debug.LogError(type + " does not exist");
+        Debug.LogError(type + " item does not exist");
         return null;
     }
 
@@ -159,7 +204,7 @@ public class JsonManager : Singleton<JsonManager>
         {
             return currencyDict[type];
         }
-        Debug.LogError(type + " does not exist");
+        Debug.LogError(type + " currency does not exist");
         return null;
     }
 }

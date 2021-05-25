@@ -24,6 +24,10 @@ public class EnemyController : HPCharacterController
 
     float offMergeDistance = 0;
 
+    public string enemyId = "deamon0";
+    public string elementType;
+    EnemyInfo enemyInfo;
+
     //Rigidbody2D rb;
     // Start is called before the first frame update
     protected override void Start()
@@ -50,6 +54,9 @@ public class EnemyController : HPCharacterController
             FModSoundManager.Instance.getHelpDialogue = true;
             DialogueManager.StartConversation("getHelp", null, null);
         }
+
+        enemyInfo = JsonManager.Instance.getEnemy(enemyId);
+        elementType = enemyInfo.type;
     }
 
     bool isBoss()
@@ -258,16 +265,40 @@ public class EnemyController : HPCharacterController
 
     }
 
+    void generateDrop()
+    {
+        List<PairInfo<float>> drops = enemyInfo.drop;
+        var selectedDrop = Utils.randomList(drops);
+        List<PairInfo<int>> res  = new List<PairInfo<int>>();
+        int randId;
+        switch (selectedDrop)
+        {
+            case "seed":
+
+                randId = Random.Range(0, ResourceManager.Instance.unlockedSeed().Count);
+
+                var pairInfo = new PairInfo<int>(ResourceManager.Instance.unlockedSeed()[randId], 1);
+                res = new List<PairInfo<int>>() { pairInfo };
+                break;
+            case "resource":
+
+                randId = Random.Range(0, ResourceManager.Instance.dropableResource().Count);
+
+                var pairInfo2 = new PairInfo<int>(ResourceManager.Instance.dropableResource()[randId], 1);
+                res = new List<PairInfo<int>>() { pairInfo2 };
+                break;
+        }
+
+        ClickToCollect.createClickToCollectItem(res, transform.position);
+    }
+
     protected override void Die()
     {
         //spawn drops if lucky!
         //always generate items
         //generate seed
-        var randId = Random.Range(0, ResourceManager.Instance.unlockedSeed().Count);
 
-        var pairInfo = new PairInfo(ResourceManager.Instance.unlockedSeed()[randId], 1);
-        var res = new List<PairInfo>() { pairInfo };
-        ClickToCollect.createClickToCollectItem(res, transform.position);
+        generateDrop();
 
 
         if (EnemyManager.instance.bossController)

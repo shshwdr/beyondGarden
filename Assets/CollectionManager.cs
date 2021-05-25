@@ -95,7 +95,7 @@ public class CollectionManager : Singleton<CollectionManager>
 		}
 	}
 
-	public void RemoveCoins(Vector3 removedCoinPosition, List<PairInfo> resource, bool onlyForNonIncreasingResrouce = false)
+	public void RemoveCoins(Vector3 removedCoinPosition, List<PairInfo<int>> resource, bool onlyForNonIncreasingResrouce = false)
     {
 		if(resource == null)
         {
@@ -127,7 +127,7 @@ public class CollectionManager : Singleton<CollectionManager>
 		}
 	}
 
-	public void AddCoins(Vector3 collectedCoinPosition, List<PairInfo> resource, bool isIncreasingResource = true)
+	public void AddCoins(Vector3 collectedCoinPosition, List<PairInfo<int>> resource, bool isIncreasingResource = true)
 	{
 		foreach (var pair in resource)
         {
