@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7215051778566856671
+--- !u!1001 &4346026518154962260
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -48,17 +48,17 @@ PrefabInstance:
     - target: {fileID: 3281820176807701799, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.71085286
+      value: 0.082
       objectReference: {fileID: 0}
     - target: {fileID: 3281820176807701799, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44951624
+      value: -0.687
       objectReference: {fileID: 0}
     - target: {fileID: 3281820176807701799, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3979492
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3281820176807701799, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
@@ -68,17 +68,17 @@ PrefabInstance:
     - target: {fileID: 3281820176807701799, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3281820176807701799, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3281820176807701799, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3281820176807701799, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
@@ -98,7 +98,7 @@ PrefabInstance:
     - target: {fileID: 3281820176807701804, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
       propertyPath: m_Name
-      value: mushroom1 (1)
+      value: mushroom1
       objectReference: {fileID: 0}
     - target: {fileID: 5503615570830460806, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}

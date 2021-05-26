@@ -182,8 +182,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1184272079
-  m_SortingLayer: 0
+  m_SortingLayerID: 733055241
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: adfcf83b842419c498bda8d2dbaa3053, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -278,6 +278,8 @@ MonoBehaviour:
   mergedToMonster: {fileID: 0}
   invincibleSpeedScale: 0.05
   deathAnimator: {fileID: 0}
+  enemyId: deamon0
+  elementType: 
 --- !u!195 &1337939136942657034
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -443,7 +445,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1822039905
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: adfcf83b842419c498bda8d2dbaa3053, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
