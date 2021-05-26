@@ -6,33 +6,27 @@ public class GardenManager : Singleton<GardenManager>
 {
     public Transform gardenSlots;
     public bool alwaysUpdateTree;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
 
-    //[ContextMenu("finishTree")]
-    //public void testFT()
-    //{
-    //    finishTree(HelperPlantType.appleTree3);
-    //}
-    public void finishTree(string treeType)
+    public void CopyTreeToGarden(string treeType)
     {
         foreach (Transform slot in gardenSlots)
         {
-            //if (slot.GetComponent<GardenSlot>().tree.GetComponent<MainTree>().upgradeList[0] == treeType)
+            var slotTreeId = slot.GetComponent<GardenSlot>().tree.GetComponent<MainTree>().type;
+            var slotTreeType = JsonManager.Instance.getTree(slotTreeId).treeType;
+            if (slotTreeType == treeType)
             {
+                //1. clear original garden info
                 foreach (Transform child in slot.GetComponent<GardenSlot>().allInTreeNode)
                 {
                     Destroy(child.gameObject);
                 }
                 //List<Transform> allPlants = new List<Transform>();
-                foreach (Transform tt in MainGameManager.Instance.allInTreeGame)
+                foreach (Transform plant in MainGameManager.Instance.allInTreeGame)
                 {
-                    var go = Instantiate(tt.gameObject);
-                    var t = go.transform;
+                    var newPlant = Instantiate(plant.gameObject);
+                    var t = newPlant.transform;
                     var localP = t.localPosition;
                     t.SetParent(slot.GetComponent<GardenSlot>().allInTreeNode);
                     t.localPosition = localP;
@@ -42,6 +36,7 @@ public class GardenManager : Singleton<GardenManager>
                         {
                             foreach (Transform c3 in c2)
                             {
+                                //this is to remove.. resource?
                                 //foreach (Transform c4 in c)
                                 {
                                     if (c3.GetComponent<HelperInsect>())

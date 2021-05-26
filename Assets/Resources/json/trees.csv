@@ -1,5 +1,14 @@
-id,name,latinName,locked,desc,upgradeCost,nextLevel,flowerId
-appleTree1,Apple Tree,,FALSE,First tree,water:50|n:50,appleTree2,
-appleTree2,Apple Tree,,FALSE,First tree,water:50|n:51,appleTree3,
-appleTree3,Apple Tree,,FALSE,First tree,water:50|n:52,appleTree4,
-appleTree4,Apple Tree,,FALSE,First tree,water:50|n:52,,appleFlower
+id,name,latinName,locked,desc,plantCost,nextLevel,flowerId,fruitCountToFinish,treeType,effect,levelOfTree
+appleTree1,Apple Tree - Sprout,,FALSE,First tree,,appleTree2,,3,appleTree,,0
+appleTree2,Apple Tree - Sapling,,FALSE,First tree,water:50|n:50,appleTree3,,3,appleTree,,1
+appleTree3,Apple Tree - Juvenile,,FALSE,First tree,water:50|n:50,appleTree4,,3,appleTree,,2
+appleTree4,Apple Tree - Adult,,FALSE,First tree,water:50|n:50,,AppleTreeFlower,3,appleTree,,3
+lemonTree1,Apple Tree - Sprout,,FALSE,First tree,,appleTree2,,3,lemonTree,,0
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+peachTree1,Apple Tree - Sprout,,FALSE,First tree,,appleTree2,,3,peachTree,,0
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+cherryTree1,Apple Tree - Sprout,,FALSE,First tree,,appleTree2,,3,cherryTree,,0

@@ -21,6 +21,7 @@ public struct SerializedVector
 public class SerializedObject
 {
     public float serializationTime;
+    public bool isValid = false;
 }
 [System.Serializable]
 public class SerializedLevel: SerializedObject
@@ -80,8 +81,10 @@ public class HelperPlant : HPObject
         
     }
 
-    void loadWithInitData()
+    protected virtual void loadWithInitData()
     {
+
+        harvestTime = JsonManager.Instance.getFlower(type).harvestTime;
         if (initData == null)
         {
             return;
@@ -117,7 +120,7 @@ public class HelperPlant : HPObject
             //maxSpawnedResourceCount = resourcePositionCount;
 
         }
-        harvestTime = JsonManager.Instance.getPlant(type).harvestTime;
+        
         loadWithInitData();
     }
 
@@ -142,7 +145,7 @@ public class HelperPlant : HPObject
     IEnumerator delayAddCoin()
     {
         yield return new WaitForSecondsRealtime(0.1f);
-        CollectionManager.Instance.AddCoins(transform.position, JsonManager.Instance.getPlant(type).produces, false);
+        CollectionManager.Instance.AddCoins(transform.position, JsonManager.Instance.getFlower(type).produces, false);
     }
 
     private void Plant()
@@ -207,7 +210,7 @@ public class HelperPlant : HPObject
             summons.clean();
         }
 
-        CollectionManager.Instance.RemoveCoins(transform.position, JsonManager.Instance.getPlant(type).produces, true);
+        CollectionManager.Instance.RemoveCoins(transform.position, JsonManager.Instance.getFlower(type).produces, true);
         base.die();
     }
     bool canPlant()
@@ -276,7 +279,7 @@ public class HelperPlant : HPObject
         box.dropboxType = DropboxType.resource;
 
 
-        box.resource = JsonManager.Instance.getPlant(type).produces;
+        box.resource = JsonManager.Instance.getFlower(type).produces;
         box.UpdateImage();
     }
 

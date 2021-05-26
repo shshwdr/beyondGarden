@@ -1212,6 +1212,12 @@ MonoBehaviour:
   mainTreePrefab: {fileID: 6984865398421117964, guid: ec275effd023f264abcea41a25a7b042,
     type: 3}
   serializedPlantedPlant: []
+  serializedMainTree:
+    serializationTime: 0
+    isValid: 0
+    type: 
+    isFlowerPositionSpawned: 
+    isFlowerPositionPollinated: 
   ClickToCollect: {fileID: 4418941831928530925, guid: 78dc610f33f8ada46aeca6464421562c,
     type: 3}
   groundCollider2: {fileID: 1459423074}
@@ -6861,6 +6867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gardenSlot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4612926042656937928, guid: 1899e341267b810499981b0f2c50cadc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4612926042656937930, guid: 1899e341267b810499981b0f2c50cadc,
         type: 3}
       propertyPath: m_RootOrder
@@ -11271,6 +11282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gardenSlot (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4612926042656937928, guid: 1899e341267b810499981b0f2c50cadc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4612926042656937930, guid: 1899e341267b810499981b0f2c50cadc,
         type: 3}
       propertyPath: m_RootOrder
@@ -12469,6 +12485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: gardenSlot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612926042656937928, guid: 1899e341267b810499981b0f2c50cadc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4612926042656937930, guid: 1899e341267b810499981b0f2c50cadc,
         type: 3}
@@ -15194,6 +15215,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6984865398421117967, guid: ec275effd023f264abcea41a25a7b042,
         type: 3}
+      propertyPath: type
+      value: appleTree1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984865398421117967, guid: ec275effd023f264abcea41a25a7b042,
+        type: 3}
       propertyPath: flowerPositionParent
       value: 
       objectReference: {fileID: 1704650120}
@@ -15210,7 +15236,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tree
       value: 
-      objectReference: {fileID: 4874449614502067322, guid: 725cfdcee35a9a2469b8887c91d4f29d,
+      objectReference: {fileID: 6984865398421117964, guid: ec275effd023f264abcea41a25a7b042,
         type: 3}
     - target: {fileID: 4612926042656937928, guid: 1899e341267b810499981b0f2c50cadc,
         type: 3}

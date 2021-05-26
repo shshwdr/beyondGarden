@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-//public enum PlantProperty { s, p, n, water, bee, pest, frog };
+
 //public enum HelperPlantType { crimson, marigold, pond, lavender,
 //    appleTree1, appleTree2, appleTree3, appleTree4, appleTreeFlower,
 //    waterlily, lupin, zinnia, stawberry,
@@ -51,6 +51,8 @@ public class PlantsManager : Singleton<PlantsManager>
     public Dictionary<string, UpgradeInfo> plantUpgradeStatusDict = new Dictionary<string, UpgradeInfo>();
     [HideInInspector]
     public List<SerializedHelperPlant> serializedPlantedPlant = new List<SerializedHelperPlant>();
+    public SerializedMainTree serializedMainTree;
+
     public override SerializedObject Save()
     {
         var res = new SerializedLevel();
@@ -350,10 +352,12 @@ public class PlantsManager : Singleton<PlantsManager>
         //}
         //if (helperPlantProd.ContainsKey(type))
         //{
-
-        foreach (var product in JsonManager.Instance.getPlant(plantId).produces)
+        if (JsonManager.Instance.isFlower(plantId))
         {
-            UnlockResource(product.Key);
+            foreach (var product in JsonManager.Instance.getFlower(plantId).produces)
+            {
+                UnlockResource(product.Key);
+            }
         }
         //}
         //TutorialManager.Instance.finishPlant(type);
@@ -449,21 +453,26 @@ public class PlantsManager : Singleton<PlantsManager>
 
             if(type != "pond")
             {
-                var weaponInfo = JsonManager.Instance.getFlower(type);
-                if (plantUpgradeStatusDict.ContainsKey(type))
-                {
-                    plantUpgradeStatusDict[type].addExp(1);
-                    PopupTextManager.Instance.ShowPopupString(plant.transform.position, weaponInfo.name+" exp +1", 3);
-                }
-                else
-                {
 
-                    PopupTextManager.Instance.ShowPopupString(plant.transform.position, "unlock weapon "+ weaponInfo.name, 3);
-                    plantUpgradeStatusDict[type] = new UpgradeInfo(type, 1, 0);
-                }
-                
-
+                addExpForFlowerWeapon(type, plant.transform);
             }
+        }
+    }
+
+    public void addExpForFlowerWeapon(string type, Transform textTransform)
+    {
+
+        var weaponInfo = JsonManager.Instance.getFlower(type);
+        if (plantUpgradeStatusDict.ContainsKey(type))
+        {
+            plantUpgradeStatusDict[type].addExp(1);
+            PopupTextManager.Instance.ShowPopupString(textTransform.position, weaponInfo.name + " exp +1", 3);
+        }
+        else
+        {
+
+            PopupTextManager.Instance.ShowPopupString(textTransform.position, "unlock weapon " + weaponInfo.name, 3);
+            plantUpgradeStatusDict[type] = new UpgradeInfo(type, 1, 0);
         }
     }
 

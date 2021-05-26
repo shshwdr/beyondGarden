@@ -74,6 +74,9 @@ public class PlantDetail : Singleton<PlantDetail>
                     }
                     else
                     {
+
+                        updateEntry("Cost", JsonManager.Instance.getPlant(maintree.treeInfo.flowerId).plantCost, true);
+                       // getOnetimeCost(maintree.treeInfo.flowerId);
                         actionUI.GetComponent<TMP_Text>().text = Dialogues.SpawnTreeFlowerInst;
                     }
                 }
@@ -165,7 +168,7 @@ public class PlantDetail : Singleton<PlantDetail>
     void getProduction(HelperPlant plant)
     {
 
-        var prodDictionary = JsonManager.Instance.getPlant(plant.type).produces ;// plantManager.helperPlantProd[plant.type];
+        var prodDictionary = JsonManager.Instance.getFlower(plant.type).produces;// plantManager.helperPlantProd[plant.type];
 
         updateEntry("Produce", prodDictionary);
     }

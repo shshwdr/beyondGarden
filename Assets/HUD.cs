@@ -65,9 +65,7 @@ public class HUD : Singleton<HUD>
 
             if ((!plantManager.isPlantUnlocked.ContainsKey(type) || plantManager.isPlantUnlocked[type]) || plantManager.unlockAllFlowers)
             {
-                //foreach (var plantType in plantManager.levelToPlants[plantManager.mainTreePrefab.GetComponent<MainTree>().upgradeList[0]])
                 {
-                    //if(plantType == go.GetComponent<HelperPlant>().type)
                     {
 
                         GameObject buttonInstance = Instantiate(plantButtonPrefab, plantsContent.transform);
@@ -143,10 +141,8 @@ public class HUD : Singleton<HUD>
     public void MoveToGargen()
     {
         
-        if (PlantsManager.Instance.maintree.isFinished() || GardenManager.Instance.alwaysUpdateTree)
-        {
-            //GardenManager.Instance.finishTree(PlantsManager.Instance.maintree.upgradeList[0]);
-        }
+        GardenManager.Instance.CopyTreeToGarden(PlantsManager.Instance.maintree.treeInfo.treeType);
+        
 
         DOTween.To(() => Camera.main.orthographicSize, x => Camera.main.orthographicSize = x, gardenCamera.orthographicSize, cameraMoveTime).SetUpdate(true);
         DOTween.To(() => Camera.main.transform.position, x => Camera.main.transform.position = x, gardenCamera.transform.position, cameraMoveTime).SetUpdate(true);

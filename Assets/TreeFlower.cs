@@ -11,10 +11,14 @@ public class TreeFlower : MonoBehaviour
     public MainTree tree;
     bool isPollinated;
     bool isDragging;
-    // Start is called before the first frame update
-    void Start()
+    int indexOnTree;
+    string type;
+
+    public void init(MainTree t,int i)
     {
-        
+        tree = t;
+        type = t.treeInfo.flowerId;
+        indexOnTree = i;
     }
 
     private void OnMouseDown()
@@ -25,6 +29,7 @@ public class TreeFlower : MonoBehaviour
         flowerScent.GetComponent<FlowerScent>().treeFlower = this;
     }
 
+
     public void GetPollinate()
     {
         if (isPollinated)
@@ -33,7 +38,8 @@ public class TreeFlower : MonoBehaviour
         }
         isPollinated = true;
         Instantiate(fruitPrefab, transform.position, Quaternion.identity,transform.parent);
-        tree.createFruit();
+        tree.createFruit(indexOnTree);
+        PlantsManager.Instance.addExpForFlowerWeapon(type, transform);
         Destroy(gameObject);
     }
 

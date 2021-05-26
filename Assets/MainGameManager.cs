@@ -24,6 +24,7 @@ public class MainGameManager : Singleton<MainGameManager>
             }
         }
 
+
         PlantsManager.Instance.groundCollider1 = GameObject.Find("groundCollider1").GetComponent<Collider2D>();
         PlantsManager.Instance.groundCollider2 = GameObject.Find("groundCollider2").GetComponent<Collider2D>();
     }
@@ -39,10 +40,10 @@ public class MainGameManager : Singleton<MainGameManager>
 
             }
         }
-        //if (maintree && maintree.isAlive)
-        //{
-        //    res.Add(maintree.transform);
-        //}
+        if (PlantsManager.Instance. maintree && PlantsManager.Instance.maintree.isAlive)
+        {
+            res.Add(PlantsManager.Instance.maintree.transform);
+        }
         return res;
     }
 
@@ -55,6 +56,8 @@ public class MainGameManager : Singleton<MainGameManager>
             PlantsManager.Instance.serializedPlantedPlant.Add(sPlant);
 
         }
+        PlantsManager.Instance.serializedMainTree = PlantsManager.Instance.maintree.serialize();
+
     }
 
     // Update is called once per frame
