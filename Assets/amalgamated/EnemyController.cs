@@ -25,7 +25,6 @@ public class EnemyController : HPCharacterController
     float offMergeDistance = 0;
 
     public string enemyId = "deamon0";
-    public string elementType;
     EnemyInfo enemyInfo;
 
     //Rigidbody2D rb;
@@ -274,17 +273,25 @@ public class EnemyController : HPCharacterController
         switch (selectedDrop)
         {
             case "seed":
-
-                randId = Random.Range(0, ResourceManager.Instance.unlockedSeed().Count);
-
-                var pairInfo = new PairInfo<int>(ResourceManager.Instance.unlockedSeed()[randId], 1);
+                var unlockedSeeds = ResourceManager.Instance.unlockedSeed();
+                if(unlockedSeeds.Count == 0)
+                {
+                    return;
+                }
+                randId = Random.Range(0, unlockedSeeds.Count);
+                
+                var pairInfo = new PairInfo<int>(unlockedSeeds[randId], 1);
                 res = new List<PairInfo<int>>() { pairInfo };
                 break;
             case "resource":
+                var dropableResource = ResourceManager.Instance.unlockedSeed();
+                if (dropableResource.Count == 0)
+                {
+                    return;
+                }
+                randId = Random.Range(0, dropableResource.Count);
 
-                randId = Random.Range(0, ResourceManager.Instance.dropableResource().Count);
-
-                var pairInfo2 = new PairInfo<int>(ResourceManager.Instance.dropableResource()[randId], 1);
+                var pairInfo2 = new PairInfo<int>(dropableResource[randId], 1);
                 res = new List<PairInfo<int>>() { pairInfo2 };
                 break;
         }

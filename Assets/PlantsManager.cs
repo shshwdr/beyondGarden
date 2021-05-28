@@ -53,7 +53,7 @@ public class PlantsManager : Singleton<PlantsManager>
     public List<SerializedHelperPlant> serializedPlantedPlant = new List<SerializedHelperPlant>();
     public SerializedMainTree serializedMainTree;
 
-    public override SerializedObject Save()
+    public override CSSerializedObject Save()
     {
         var res = new SerializedLevel();
         res.water = PlantsManager.Instance.currentResource["water"];
@@ -492,6 +492,10 @@ public class PlantsManager : Singleton<PlantsManager>
         //{
         //    currentResource[key] = baseResource[key];
         //}
+        if(resourceParent== null)
+        {
+            return;
+        }
         foreach(Transform child in resourceParent)
         {
             child.gameObject.SetActive(false);

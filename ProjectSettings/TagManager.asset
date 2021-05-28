@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - PlayerBullet
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -81,4 +82,7 @@ TagManager:
     locked: 0
   - name: number
     uniqueID: 2889470263
+    locked: 0
+  - name: spell
+    uniqueID: 2656735197
     locked: 0

@@ -18,18 +18,18 @@ public struct SerializedVector
     }
 }
 [System.Serializable]
-public class SerializedObject
+public class CSSerializedObject
 {
     public float serializationTime;
     public bool isValid = false;
 }
 [System.Serializable]
-public class SerializedLevel: SerializedObject
+public class SerializedLevel: CSSerializedObject
 {
     public float water;
 }
 [System.Serializable]
-public class SerializedHelperPlant: SerializedObject
+public class SerializedHelperPlant: CSSerializedObject
 {
     public string type;
     public SerializedVector pos;
@@ -64,7 +64,7 @@ public class HelperPlant : HPObject
     float currentHarvestTimer;
     SerializedHelperPlant initData;
 
-    public override SerializedObject Save()
+    public override CSSerializedObject Save()
     {
         var p= new SerializedHelperPlant();
         p.type = type;

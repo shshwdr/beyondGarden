@@ -23,6 +23,7 @@ public class HPCharacterController : MonoBehaviour
     float currentInvinsibleTimer;
     protected EmotesController emotesController;
     protected GameObject spriteObject;
+    public string elementType;
     // Start is called before the first frame update
     virtual protected void Awake()
     {
@@ -60,7 +61,7 @@ public class HPCharacterController : MonoBehaviour
     {
 
     }
-    public void getDamage(int damage = 1)
+    public void getDamage(float damage = 1, string element = "")
     {
         if (isDead)
         {
@@ -76,8 +77,13 @@ public class HPCharacterController : MonoBehaviour
         }
 
 
+        var scale = BattleManager.elementAdvantageScale(element, elementType);
+        int finalDamage = BattleManager.finalDamage(element, elementType, damage);
+        PopupTextManager.Instance.ShowPopupNumber(transform.position, finalDamage, scale);
+
+
         currentInvinsibleTimer = 0;
-        hp -= damage;
+        hp -= finalDamage;
         playHurtSound();
         updateHP();
         if (hp == 0)

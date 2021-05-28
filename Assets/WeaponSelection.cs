@@ -20,6 +20,8 @@ public class WeaponSelection : MonoBehaviour
     public InfoPair detailAttack;
     public InfoPair detailSpell;
 
+    public int selectWeaponCountMax = 5;
+    int selectedWeaponCount = 0;
 
     List<string> selectedWeapon = new List<string>();
     // Start is called before the first frame update
@@ -45,13 +47,22 @@ public class WeaponSelection : MonoBehaviour
         {
             cell.transform.SetParent(flowersContent);
             selectedWeapon.Remove(cell.flowerType);
+            selectedWeaponCount--;
         }
         else
         {
-            //todo support multiple weapons
-            Utils.ClearChildren(selectedContent);
-            cell.transform.SetParent(selectedContent);
-            selectedWeapon.Add(cell.flowerType);
+            if (selectedWeaponCount < selectWeaponCountMax)
+            {
+                selectedWeaponCount++;
+                //Utils.ClearChildren(selectedContent);
+                cell.transform.SetParent(selectedContent);
+                selectedWeapon.Add(cell.flowerType);
+
+            }
+            else
+            {
+                return;
+            }
 
         }
         cell.isSelected = !cell.isSelected;

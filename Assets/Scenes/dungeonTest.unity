@@ -5855,3 +5855,15 @@ MonoBehaviour:
   bulletPrefab: {fileID: 9081703958680354631, guid: da0551e8c1c228847b0337c429d0c9c5,
     type: 3}
   bulletSpeed: 10
+--- !u!114 &2174674612621603307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2174674612621603305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84cab39fc8d01d74293cefe9f2bfe6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

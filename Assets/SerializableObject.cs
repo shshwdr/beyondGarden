@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SerializableObject : MonoBehaviour
 {
-    public virtual SerializedObject Save()
+    public virtual CSSerializedObject Save()
     {
-        return new SerializedObject();
+        return new CSSerializedObject();
     }
-    public virtual void Load(SerializedObject serializedObject)
+    public virtual void Load(CSSerializedObject serializedObject)
     {
 
     }

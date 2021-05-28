@@ -56,12 +56,12 @@ public class DungeonManager : Singleton<DungeonManager>
         }
         for (int i = 0; i < 9; i++)
         {
-            if (isCheatOn && Input.GetKeyDown(KeyCode.Alpha1 + i))
-            {
-                GotoLevel(i);
+            //if (isCheatOn && Input.GetKeyDown(KeyCode.Alpha1 + i))
+            //{
+            //    GotoLevel(i);
 
-                //SceneManager.LoadScene(i);
-            }
+            //    //SceneManager.LoadScene(i);
+            //}
         }
         //if ((!EnemyManager.instance.player || EnemyManager.instance.player.isDead) && Input.GetKeyDown(KeyCode.R))
         //{

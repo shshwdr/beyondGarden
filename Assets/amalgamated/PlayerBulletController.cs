@@ -28,11 +28,8 @@ public class PlayerBulletController : MonoBehaviour
         var enemyController = collision.collider.GetComponent<EnemyController>();
         if (enemyController)
         {
-            var scale = BattleManager.elementAdvantageScale(element, enemyController.elementType);
-            var finalDamage = BattleManager.finalDamage(element, enemyController.elementType, damage);
-            enemyController.getDamage(finalDamage);
+            enemyController.getDamage(damage,element);
 
-            PopupTextManager.Instance.ShowPopupNumber(transform.position, finalDamage, scale);
         }
         Destroy(gameObject);
     }

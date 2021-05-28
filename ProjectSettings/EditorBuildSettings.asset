@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/amalgamated/Scenes/dungeonTest.unity
+    path: Assets/Scenes/dungeonTest.unity
     guid: 2718a21f229b803418e767a2baf1cecc
   m_configObjects: {}

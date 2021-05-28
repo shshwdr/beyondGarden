@@ -10,7 +10,7 @@ public class SaveLoadManager : Singleton<SaveLoadManager>
     {
         // 1
         //Save save = CreateSaveGameObject();
-        SerializedObject save = PlantsManager.Instance.Save();
+        CSSerializedObject save = PlantsManager.Instance.Save();
         // 2
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");

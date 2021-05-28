@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class SerializedMainTree : SerializedObject
+public class SerializedMainTree : CSSerializedObject
 {
     public string type;
     public List<bool> isFlowerPositionSpawned;
