@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 2
-  element: Water
+  element: Dark
 --- !u!1001 &567298332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ PrefabInstance:
     - target: {fileID: 7857300472760094565, guid: 1886f2f33dfd948408d1cb54222b3f44,
         type: 3}
       propertyPath: m_Name
-      value: circleSpell Variant
+      value: virus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1886f2f33dfd948408d1cb54222b3f44, type: 3}

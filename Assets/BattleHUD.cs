@@ -5,15 +5,30 @@ using UnityEngine.UI;
 
 public class BattleHUD : MonoBehaviour
 {
-    public Image currentImage;
+    public Transform weaponList;
     // Start is called before the first frame update
     void Start()
     {
-        if (BattleManager.Instance.getSelectedWeapons().Count > 0)
+        var selectWeapons = BattleManager.Instance.getSelectedWeapons();
+        //test
+        selectWeapons = new List<string>() { "waterlily", "lupin", "lavender", "marigold", "AppleTreeFlower" };
+        if (selectWeapons.Count > 0)
         {
-            var currentWeaponType = BattleManager.Instance.getSelectedWeapons()[0];
-            var currentWeapon = JsonManager.Instance.getPlant(currentWeaponType);
-            currentImage.sprite = currentWeapon.sprite;
+            int i = 0;
+            for (;i< selectWeapons.Count; i++)
+            {
+                var currentWeaponType = selectWeapons[i];
+                var child = weaponList.GetChild(i);
+                child.GetComponent<BattleWeaponCell>().init(currentWeaponType,i);
+                child.gameObject.SetActive(true);
+                //var currentWeapon = JsonManager.Instance.getPlant(currentWeaponType);
+                //currentImage.sprite = currentWeapon.sprite;
+            }
+            for(;i< weaponList.childCount; i++)
+            {
+                var child = weaponList.GetChild(i);
+                child.gameObject.SetActive(false);
+            }
         }
     }
 

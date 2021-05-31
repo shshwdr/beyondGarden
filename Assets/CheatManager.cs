@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheatManager : MonoBehaviour
+public class CheatManager : Singleton<CheatManager>
 {
     public bool isOn = false;
+    public bool unlockAllWeapon = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,10 @@ public class CheatManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.U))
             {
                 PlantsManager.Instance.ignoreResourcePlant = true;
+            }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                unlockAllWeapon = true;
             }
             if (Input.GetKeyDown(KeyCode.I))
             {

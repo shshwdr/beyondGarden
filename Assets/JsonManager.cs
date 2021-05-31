@@ -84,6 +84,9 @@ public class FlowerInfo : PlantInfo
     public float spellAttackIncrease;
     public float seedDropRate;
     public bool isTreeFlower;
+
+
+    public Sprite spellSprite { get { return Resources.Load<Sprite>("art/spells/" + spell) as Sprite; } }
     public int expForLevel(int level)
     {
         return upgradeExpNeeded * level*2;

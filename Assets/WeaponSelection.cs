@@ -77,33 +77,58 @@ public class WeaponSelection : MonoBehaviour
     {
         gameObject.SetActive(true);
         int i = 0;
-        foreach(var k in PlantsManager.Instance.plantUpgradeStatusDict.Keys)
-        {
 
-            flowersContent.GetChild(i).gameObject.SetActive(true);
-            var script = flowersContent.GetChild(i).gameObject.GetComponent<SelectFlowerWeaponCell>();
-            script.UpdateInfo(k,this);
-            i++;
+        foreach (var k in PlantsManager.Instance.helperPlantDict.Keys)
+        {
+            if (k != "pond")
+            {
+                if(PlantsManager.Instance.plantUpgradeStatusDict.ContainsKey(k) || CheatManager.Instance.unlockAllWeapon) { 
+                flowersContent.GetChild(i).gameObject.SetActive(true);
+                var script = flowersContent.GetChild(i).gameObject.GetComponent<SelectFlowerWeaponCell>();
+                script.UpdateInfo(k, this);
+                i++;
+                }
+            }
         }
+        //    foreach (var k in PlantsManager.Instance.plantUpgradeStatusDict.Keys)
+        //{
+
+        //    flowersContent.GetChild(i).gameObject.SetActive(true);
+        //    var script = flowersContent.GetChild(i).gameObject.GetComponent<SelectFlowerWeaponCell>();
+        //    script.UpdateInfo(k,this);
+        //    i++;
+        //}
         for(;i< flowersContent.childCount; i++)
         {
             flowersContent.GetChild(i).gameObject.SetActive(false);
         }
     }
-
     public void updateDetailInfo(string type)
     {
         var weaponInfo = JsonManager.Instance.getPlant(type) as FlowerInfo;
-        var weaponUpgradeInfo = PlantsManager.Instance.plantUpgradeStatusDict[type];
         if (weaponInfo!=null)
         {
             detailTitle.text = weaponInfo.name;
             detailImage.sprite = weaponInfo.sprite;
-            detailLevel.updateValue(weaponUpgradeInfo.level.ToString());
-            detailExp.updateValue(weaponUpgradeInfo.exp.ToString());
             detailType.updateValue(weaponInfo.weaponType);
             detailAttack.updateValue(weaponInfo.getAttack.ToString());
             detailSpell.updateValue(weaponInfo.spell);
+
+            UpgradeInfo upgradeInfo = null;
+            PlantsManager.Instance.plantUpgradeStatusDict.TryGetValue(type, out upgradeInfo);
+            if (upgradeInfo!=null)
+            {
+
+                detailLevel.updateValue(upgradeInfo.level.ToString());
+                detailExp.updateValue(upgradeInfo.exp.ToString());
+            }
+            else
+            {
+
+                detailLevel.updateValue(0.ToString());
+                detailExp.updateValue(0.ToString());
+            }
+
         }
         else
         {
