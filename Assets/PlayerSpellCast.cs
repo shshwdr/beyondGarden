@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSpellCast : MonoBehaviour
+public class PlayerSpellCast : Singleton<PlayerSpellCast>
 {
-    int nextSpell = -1;
+    public string nextSpell = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -14,26 +14,13 @@ public class PlayerSpellCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for(int i = 1; i <=2; i++)
-        {
-
-            if (Input.GetKeyDown(KeyCode.Alpha0+i)){
-                nextSpell = i;
-            }
-        }
         if (Input.GetMouseButtonDown(1))
         {
             GameObject spellPrefab = null;
-            switch (nextSpell)
+            if(nextSpell!=null && nextSpell.Length > 0)
             {
-                case 1:
-                    spellPrefab = Resources.Load<GameObject>("spells/fireball");
-                    break;
-                case 2:
 
-
-                    spellPrefab = Resources.Load<GameObject>("spells/virus");
-                    break;
+                spellPrefab = Resources.Load<GameObject>("spells/"+nextSpell);
             }
             if (spellPrefab!=null)
             {
@@ -42,7 +29,7 @@ public class PlayerSpellCast : MonoBehaviour
                 Instantiate(spellPrefab, mousePosition, spellPrefab.transform.rotation);
 
             }
-        nextSpell = -1;
+        nextSpell = "";
         }
     }
 }

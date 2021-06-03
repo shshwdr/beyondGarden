@@ -11,7 +11,7 @@ public class BattleHUD : MonoBehaviour
     {
         var selectWeapons = BattleManager.Instance.getSelectedWeapons();
         //test
-        selectWeapons = new List<string>() { "waterlily", "lupin", "lavender", "marigold", "AppleTreeFlower" };
+        //selectWeapons = new List<string>() { "waterlily", "lupin", "lavender", "marigold", "AppleTreeFlower" };
         if (selectWeapons.Count > 0)
         {
             int i = 0;
@@ -19,7 +19,7 @@ public class BattleHUD : MonoBehaviour
             {
                 var currentWeaponType = selectWeapons[i];
                 var child = weaponList.GetChild(i);
-                child.GetComponent<BattleWeaponCell>().init(currentWeaponType,i);
+                child.GetComponent<BattleWeaponCell>().init(currentWeaponType,i+1);
                 child.gameObject.SetActive(true);
                 //var currentWeapon = JsonManager.Instance.getPlant(currentWeaponType);
                 //currentImage.sprite = currentWeapon.sprite;

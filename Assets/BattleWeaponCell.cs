@@ -8,7 +8,7 @@ public class BattleWeaponCell : MonoBehaviour
 {
     string flowerId;
     int index;
-
+    string spellId;
     public TMP_Text indexText;
     public Image spellSprite;
     public Image flowerSprite;
@@ -23,6 +23,7 @@ public class BattleWeaponCell : MonoBehaviour
         flowerId = id;
         index = i;
         var currentWeapon = JsonManager.Instance.getFlower(flowerId);
+        spellId = currentWeapon.spell;
 
         flowerSprite.sprite = currentWeapon.sprite;
         spellSprite.sprite = currentWeapon.spellSprite;
@@ -32,6 +33,9 @@ public class BattleWeaponCell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha0 + index))
+        {
+            PlayerSpellCast.Instance.nextSpell = spellId;
+        }
     }
 }

@@ -18,7 +18,16 @@ public class ResourceManager : Singleton<ResourceManager>
 
     public List<string> unlockedSeed()
     {
-        return new List<string>(seed.Keys);
+        var res = new List<string>();
+        foreach(var key in seed.Keys)
+        {
+            var flowerInfo = JsonManager.Instance.getFlower(key);
+            if (!flowerInfo.isTreeFlower)
+            {
+                res.Add(key);
+            }
+        }
+        return res;
     }
 
     public List<string> dropableResource()
