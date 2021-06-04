@@ -14,6 +14,7 @@ public class SelectFlowerWeaponCell : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
     }
     public void UpdateInfo(string key, WeaponSelection ws)
     {

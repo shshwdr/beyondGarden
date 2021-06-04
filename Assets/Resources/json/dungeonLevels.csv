@@ -1,0 +1,4 @@
+id,dungeonId,enemies,levels,enemyTypeCount,enemyCount,keyElement
+dungeon1Level1,dungeon1,"deamon0,stone0,water0","1,1",1,1,
+dungeon1Level2,dungeon1,"deamon0,stone0,water0","1,2",1,4,
+dungeon1Level3,dungeon1,"deamon0,stone0,water0","2,2",2,"4,4",

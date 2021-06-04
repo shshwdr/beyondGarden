@@ -9,6 +9,8 @@ public class DungeonManager : Singleton<DungeonManager>
     public int currentLevel;
     public bool isGameOver;
 
+    public string currentDungeonId;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,18 @@ public class DungeonManager : Singleton<DungeonManager>
             Utils.setChildrenToInactive(PlantsManager.Instance. resourceParent);
         }
     }
+
+    public void GetIntoDungeon()
+    {
+        SceneManager.LoadScene(currentDungeonId);
+    }
+    public void GetToNextDungeonLevel() { }
+
+    public bool hasNextDungeonLevel()
+    {
+        return true;
+    }
+
     public void GotoLevel(int level)
     {
         currentLevel = level;

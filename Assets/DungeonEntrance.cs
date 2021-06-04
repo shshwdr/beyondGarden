@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DungeonEntrance : MonoBehaviour
 {
+    public string dungeonName;
     WeaponSelection weaponSelection;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class DungeonEntrance : MonoBehaviour
 
     private void OnMouseDown()
     {
+        DungeonManager.Instance.currentDungeonId = dungeonName;
         weaponSelection.showMenu();
     }
 

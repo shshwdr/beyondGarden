@@ -9415,6 +9415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae5dcbca4de7ab4ca351f726eac4b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dungeonName: dungeon1
 --- !u!61 &1382281627
 BoxCollider2D:
   m_ObjectHideFlags: 0

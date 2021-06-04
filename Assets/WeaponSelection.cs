@@ -32,13 +32,13 @@ public class WeaponSelection : MonoBehaviour
             {
                 BattleManager.Instance.setSelectedWeapons(selectedWeapon);
                 PlantsManager.Instance.gotoDungeon();
-                SceneManager.LoadScene(1);
+                DungeonManager.Instance.GetIntoDungeon();
             }
         });
         returnButton.onClick.AddListener(delegate {
             gameObject.SetActive(false);
         });
-
+        gameObject.SetActive(false);
     }
 
     public void selectWeapon(SelectFlowerWeaponCell cell)

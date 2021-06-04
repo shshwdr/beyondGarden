@@ -15,13 +15,13 @@ public class PairInfo<T>
     }
 }
 [Serializable]
-public class InfoObject { }
-[Serializable]
-
-
-public class ItemInfo
+public class InfoObject
 {
     public string id;
+}
+[Serializable]
+public class ItemInfo:InfoObject
+{
     public string name;
     public string desc;
     public int initialValue;
@@ -58,9 +58,8 @@ public class PlantInfo: ItemInfo
 }
 
 [Serializable]
-public class EnemyInfo
+public class EnemyInfo:InfoObject
 {
-    public string id;
     public string name;
     public string type;
     public float attack;
@@ -69,8 +68,26 @@ public class EnemyInfo
     public float hpIncrease;
     public List<PairInfo<float>> drop;
 }
+[Serializable]
+public class DungeonInfo : InfoObject
+{
 
-    [Serializable]
+    public string name;
+    public string keyElement;
+}
+
+[Serializable]
+public class DungeonLevelInfo : InfoObject
+{
+    public string dungeonId;
+    public List<string> enemies;
+    public List<int> levels;
+    public int enemyTypeCount;
+    public List<int> enemyCount;
+    public string keyElement;
+}
+
+[Serializable]
 public class FlowerInfo : PlantInfo
 {
     public float harvestTime;
@@ -135,6 +152,8 @@ public class JsonManager : Singleton<JsonManager>
     public Dictionary<string, EnemyInfo> enemyDict;
     public Dictionary<string, TreeInfo> treeDict;
     public Dictionary<string, CurrencyInfo> currencyDict;
+    public Dictionary<string, DungeonInfo> dungeonDict;
+    public Dictionary<string, List<DungeonLevelInfo>> dungeonLevelDict;
     private void Awake()
     {
         //flowers
@@ -165,7 +184,29 @@ public class JsonManager : Singleton<JsonManager>
         text = Resources.Load<TextAsset>("json/enemies").text;
         var enemies = Sinbad.CsvUtil.LoadObjects<EnemyInfo>(text);
         enemyDict = enemies.ToDictionary(x => x.id, x => x);
+
+        //dungeon
+        text = Resources.Load<TextAsset>("json/dungeons").text;
+        var dungeons = Sinbad.CsvUtil.LoadObjects<DungeonInfo>(text);
+        dungeonDict = dungeons.ToDictionary(x => x.id, x => x);
+
+        //dungeon levels
+        text = Resources.Load<TextAsset>("json/dungeonLevels").text;
+        var dungeonLevels = Sinbad.CsvUtil.LoadObjects<DungeonLevelInfo>(text);
+        dungeonLevelDict = new Dictionary<string, List<DungeonLevelInfo>>();
+        foreach (var level in dungeonLevels)
+        {
+            var dungeonId = level.dungeonId;
+            if (!dungeonLevelDict.ContainsKey(dungeonId))
+            {
+                dungeonLevelDict[dungeonId] = new List<DungeonLevelInfo>();
+            }
+
+            dungeonLevelDict[dungeonId].Add(level);
+        }
     }
+
+    //public DungeonLevelInfo
 
     public EnemyInfo getEnemy(string id)
     {
