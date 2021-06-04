@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System;
 using System.Reflection;
 using System.ComponentModel;
+using System.Collections;
 
 namespace Sinbad
 {
@@ -362,7 +363,8 @@ namespace Sinbad
             {
                 return strValue.ToLower() == "true";
             }
-            if (t == typeof(List<PairInfo<int>>))
+            
+            else if (t == typeof(List<PairInfo<int>>))
             {
                 List<PairInfo<int>> res = new List<PairInfo<int>>();
                 if (strValue.Length == 0)
@@ -385,7 +387,7 @@ namespace Sinbad
                 }
                 return res;
             }
-            if (t == typeof(List<PairInfo<float>>))
+            else if (t == typeof(List<PairInfo<float>>))
             {
                 List<PairInfo<float>> res = new List<PairInfo<float>>();
                 if (strValue.Length == 0)
@@ -404,6 +406,33 @@ namespace Sinbad
                     else
                     {
                         Debug.LogError(pair + " can not be splited into two");
+                    }
+                }
+                return res;
+            }
+            else if (t.IsGenericType && (t.GetGenericTypeDefinition() == typeof(List<>)))
+            {
+                Type type = Utils.GetInnerListType(t);
+
+                Type listType = typeof(List<>).MakeGenericType(new[] { type });
+                IList res = (IList)Activator.CreateInstance(listType);
+                //List<T> res = new List<type>();
+                if (strValue.Length == 0)
+                {
+                    return res;
+                }
+                var arr = strValue.Split('|');
+                foreach (var value in arr)
+                {
+                    var newCV = TypeDescriptor.GetConverter(type);
+                    try
+                    {
+                        var newValue = newCV.ConvertFromInvariantString(value);
+                        res.Add(newValue);
+                    }
+                    catch (Exception e)
+                    {
+                        return null;
                     }
                 }
                 return res;

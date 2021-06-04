@@ -20,7 +20,7 @@ public class InfoObject
     public string id;
 }
 [Serializable]
-public class ItemInfo:InfoObject
+public class ItemInfo : InfoObject
 {
     public string name;
     public string desc;
@@ -48,7 +48,7 @@ public class CurrencyInfo : ItemInfo
 }
 
 [Serializable]
-public class PlantInfo: ItemInfo
+public class PlantInfo : ItemInfo
 {
     public string latinName;
     public bool locked;
@@ -58,7 +58,7 @@ public class PlantInfo: ItemInfo
 }
 
 [Serializable]
-public class EnemyInfo:InfoObject
+public class EnemyInfo : InfoObject
 {
     public string name;
     public string type;
@@ -106,7 +106,7 @@ public class FlowerInfo : PlantInfo
     public Sprite spellSprite { get { return Resources.Load<Sprite>("art/spells/" + spell) as Sprite; } }
     public int expForLevel(int level)
     {
-        return upgradeExpNeeded * level*2;
+        return upgradeExpNeeded * level * 2;
     }
     public string weaponType { get { return JsonManager.productToWeaponType[produces[0].Key]; } }
     public int getAttack
@@ -156,13 +156,6 @@ public class JsonManager : Singleton<JsonManager>
     public Dictionary<string, List<DungeonLevelInfo>> dungeonLevelDict;
     private void Awake()
     {
-        //flowers
-
-        //string text = Resources.Load<TextAsset>("json/plants").text;
-        //AllFlowersInfo allFlowersInfoList = JsonUtility.FromJson<AllFlowersInfo>(text);
-       // flowerDict = allFlowersInfoList.flowers.ToDictionary(x => x.id, x => x);
-        //treeDict = allFlowersInfoList.trees.ToDictionary(x => x.id, x => x);
-        ////resource
 
         string text = Resources.Load<TextAsset>("json/resources").text;
         AllResourcesInfo allResourcesInfoList = JsonUtility.FromJson<AllResourcesInfo>(text);
@@ -215,7 +208,7 @@ public class JsonManager : Singleton<JsonManager>
             return enemyDict[id];
         }
 
-        Debug.LogError(id  + " enemy does not exist");
+        Debug.LogError(id + " enemy does not exist");
         return null;
     }
 
@@ -271,7 +264,31 @@ public class JsonManager : Singleton<JsonManager>
         Debug.LogError(type + " item does not exist");
         return null;
     }
+    public List<DungeonLevelInfo> getDungeonLevels(string dungeonId)
+    {
+        if (dungeonLevelDict.ContainsKey(dungeonId))
+        {
+            var dungeonLevelList = dungeonLevelDict[dungeonId];
+            return dungeonLevelList;
 
+        }
+        else
+        {
+            Debug.LogError(dungeonId + " dungeon id does not exist");
+            return null;
+        }
+    }
+    public DungeonLevelInfo getDungeonLevel(string dungeonId, int level)
+    {
+        var dungeonLevelList = getDungeonLevels(dungeonId);
+        if (dungeonLevelList != null && level < dungeonLevelList.Count)
+        {
+            return dungeonLevelList[level];
+        }
+
+        Debug.LogError(level + " does not exist in dungeon " + dungeonId);
+        return null;
+    }
     public CurrencyInfo getCurrency(string type)
     {
         if (currencyDict.ContainsKey(type))

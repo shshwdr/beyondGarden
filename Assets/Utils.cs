@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Utils : MonoBehaviour
@@ -45,7 +47,7 @@ public class Utils : MonoBehaviour
 
     public static Transform RandomTransform(List<Transform> transforms)
     {
-        int randomValue = Random.Range(0, transforms.Count);
+        int randomValue = UnityEngine.Random.Range(0, transforms.Count);
         return transforms[randomValue];
     }
 
@@ -100,7 +102,7 @@ public class Utils : MonoBehaviour
         {
             total = incrementRate;
         }
-        var randValue = Random.Range(0, total);
+        var randValue = UnityEngine.Random.Range(0, total);
         for (int i = 0; i < incrementRateList.Count; i++)
         {
             if (randValue < incrementRateList[i])
@@ -124,7 +126,7 @@ public class Utils : MonoBehaviour
             incrementRateList.Add(incrementRate);
         }
         float total = 1;
-        var randValue = Random.Range(0, total);
+        var randValue = UnityEngine.Random.Range(0, total);
         for (int i = 0; i < incrementRateList.Count; i++)
         {
             if (randValue < incrementRateList[i])
@@ -137,4 +139,53 @@ public class Utils : MonoBehaviour
         return infoList[0].Key;
     }
 
+        /// <summary>
+        /// Gets the inner type of the given type, if it is an Array or has generic arguments. 
+        /// Otherwise NULL.
+        /// </summary>
+        public static Type GetInnerListType(Type source)
+        {
+            Type innerType = null;
+
+            if (source.IsArray)
+            {
+                innerType = source.GetElementType();
+            }
+            else if (source.GetGenericArguments().Any())
+            {
+                innerType = source.GetGenericArguments()[0];
+            }
+
+            return innerType;
+        }
+    static public List<Transform> reservoirSamplingTransformChild(Transform parent, int k)
+    {
+        List<Transform> transforms = new List<Transform>();
+        foreach(Transform child in parent)
+        {
+            transforms.Add(child);
+        }
+        return reservoirSampling<Transform>(transforms, k);
+    }
+    static public List<T> reservoirSampling<T>(List<T> input, int k)
+    {
+        List<T> res = new List<T>();
+        if (k >= input.Count)
+        {
+            return input;
+        }
+        for(int i = 0; i < k; i++)
+        {
+            res.Add(input[i]);
+        }
+        for(int i = k;i< input.Count; i++)
+        {
+            int r = UnityEngine.Random.Range(0, i + 1);
+            if (r < k)
+            {
+                res[r] = input[i];
+            }
+        }
+        return res;
+    }
 }

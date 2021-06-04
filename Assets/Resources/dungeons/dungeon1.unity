@@ -653,7 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 328299302}
   m_Layer: 0
-  m_Name: 2
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,7 +1160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 591864874}
-  - component: {fileID: 591864875}
   - component: {fileID: 591864876}
   - component: {fileID: 591864877}
   - component: {fileID: 591864878}
@@ -1186,20 +1185,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &591864875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591864873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5aaff9fc1df0d547a57e2d7195085d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentLevel: 2
-  isGameOver: 0
 --- !u!114 &591864876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,7 +1983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1366378689}
   m_Layer: 0
-  m_Name: 3
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6536,6 +6521,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6710796386657291510, guid: e50f67259467c544aaa3f0fc252094c7,
+        type: 3}
+      propertyPath: isInDungeon
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e50f67259467c544aaa3f0fc252094c7, type: 3}
 --- !u!1001 &1827399583
@@ -6845,7 +6835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1927386198}
   m_Layer: 0
-  m_Name: 1
+  m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
