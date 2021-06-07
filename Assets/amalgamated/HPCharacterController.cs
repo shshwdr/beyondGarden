@@ -35,6 +35,7 @@ public class HPCharacterController : MonoBehaviour
     virtual protected void Start()
     {
         hp = maxHp;
+        updateHP();
     }
 
     // Update is called once per frame
@@ -53,9 +54,9 @@ public class HPCharacterController : MonoBehaviour
 
     public void updateHP()
     {
-
         hp = Mathf.Clamp(hp, 0, maxHp);
-        hpBar.SetHealthBarValue(hp / (float)(maxHp));
+        hpBar.SetMaxHpValue(maxHp);
+        hpBar.SetHealthBarValue(hp);
     }
     virtual protected void playHurtSound()
     {

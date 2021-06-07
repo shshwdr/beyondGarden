@@ -47,7 +47,7 @@ public class PlayerController: HPCharacterController
     {
 
         EnemyManager.instance.player = this;
-        originMeleeAttackPosition = meleeAttackCollider.transform.localPosition;
+        //originMeleeAttackPosition = meleeAttackCollider.transform.localPosition;
         base.Start();
 
         animator = transform.Find("Sprites").GetComponent<Animator>();
@@ -124,27 +124,27 @@ public class PlayerController: HPCharacterController
         base.Update();
 
 
-        //melee prepare
-        if (speed > 0.01f)
-        {
-            Time.timeScale = 1;
-            meleeAttackCollider.setactive(true);
-            var dir = new Vector3(movement.x, movement.y, 0)*0.08f;
-            // The shortcuts way
-            //meleeAttackCollider. transform.DOMove(transform.position + dir, 1);
-            // The generic way
-            DOTween.To(() => meleeAttackCollider.transform.localPosition, x => meleeAttackCollider.transform.localPosition = x, dir, 0.5f);
+        ////melee prepare
+        //if (speed > 0.01f)
+        //{
+        //    Time.timeScale = 1;
+        //    meleeAttackCollider.setactive(true);
+        //    var dir = new Vector3(movement.x, movement.y, 0)*0.08f;
+        //    // The shortcuts way
+        //    //meleeAttackCollider. transform.DOMove(transform.position + dir, 1);
+        //    // The generic way
+        //    DOTween.To(() => meleeAttackCollider.transform.localPosition, x => meleeAttackCollider.transform.localPosition = x, dir, 0.5f);
 
-            //DOTween.To(() => transform.position, x => transform.position = x, new Vector3(2, 2, 2), 1);
+        //    //DOTween.To(() => transform.position, x => transform.position = x, new Vector3(2, 2, 2), 1);
 
-        }
-        else
-        {
+        //}
+        //else
+        //{
 
-            meleeAttackCollider.setactive(false);
-            meleeAttackCollider.transform.localPosition = Vector3.zero;
-            stopAttackAnim();
-        }
+        //    meleeAttackCollider.setactive(false);
+        //    meleeAttackCollider.transform.localPosition = Vector3.zero;
+        //    stopAttackAnim();
+        //}
         // transform
 
         //if (Input.GetKeyDown(KeyCode.L))

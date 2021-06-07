@@ -26,13 +26,8 @@ public class DungeonLevelManager : MonoBehaviour
         enemyParent.transform.parent = parent.transform;
         var levelInfo = JsonManager.Instance.getDungeonLevel(dm.currentDungeonId, dm.currentLevel);
         //for each enemy type, find all posible positions, put enemy there.
-        if (levelInfo.enemyTypeCount != levelInfo.enemyCount.Count)
-        {
-            Debug.LogError("enemy count " + levelInfo.enemyCount.Count + " does not match enemy type " + levelInfo.enemyTypeCount);
-            return;
-        }
         Transform enemySpawnParent = GameObject.Find("enemySpawns").transform;
-        for (int i = 0; i < levelInfo.enemyTypeCount; i++)
+        for (int i = 0; i < levelInfo.enemyCount.Count; i++)
         {
             if (i >= levelInfo.enemies.Count)
             {
@@ -47,6 +42,8 @@ public class DungeonLevelManager : MonoBehaviour
             foreach (Transform trans in spawnTransforms)
             {
                 GameObject go = Instantiate(prefab, trans.position, Quaternion.identity, enemyParent.transform);
+                EnemyController ec = go.GetComponent<EnemyController>();
+                ec.Init(levelInfo,i);
             }
         }
 

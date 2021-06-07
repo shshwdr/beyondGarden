@@ -82,7 +82,7 @@ public class DungeonLevelInfo : InfoObject
     public string dungeonId;
     public List<string> enemies;
     public List<int> levels;
-    public int enemyTypeCount;
+    //public int enemyTypeCount;
     public List<int> enemyCount;
     public string keyElement;
 }

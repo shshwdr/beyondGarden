@@ -135,8 +135,8 @@ public class Utils : MonoBehaviour
                 return infoList[i].Key;
             }
         }
-        Debug.Log("should not reach here");
-        return infoList[0].Key;
+        //Debug.Log("should not reach here");
+        return null;
     }
 
         /// <summary>

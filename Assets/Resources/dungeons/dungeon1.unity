@@ -6958,6 +6958,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1178258541600116105, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 2174674611672211872, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
         type: 3}
       propertyPath: m_RootOrder
@@ -7038,12 +7043,19 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5651503750927383219, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6799171559823450980, guid: 87fc9dfd1b99a9044af44c207ff7a71b,
         type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1314329013, guid: 87fc9dfd1b99a9044af44c207ff7a71b, type: 3}
+    - {fileID: 1314329022, guid: 87fc9dfd1b99a9044af44c207ff7a71b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 87fc9dfd1b99a9044af44c207ff7a71b, type: 3}
 --- !u!1 &2174674612621603305 stripped
 GameObject:

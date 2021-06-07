@@ -1,12 +1,15 @@
 ﻿using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyController : HPCharacterController
 {
     NavMeshAgent agent;
+
+    public TMP_Text levelText;
 
     public EnemyType enemyType;
 
@@ -26,6 +29,14 @@ public class EnemyController : HPCharacterController
 
     public string enemyId = "deamon0";
     EnemyInfo enemyInfo;
+    int level = 0;
+
+    public void Init(DungeonLevelInfo dungeonInfo,int index)
+    {
+        enemyId = dungeonInfo.enemies[index];
+        level = Random.Range(dungeonInfo.levels[0], dungeonInfo.levels[1]+1);
+
+    }
 
     protected override void Awake()
     {
@@ -60,6 +71,17 @@ public class EnemyController : HPCharacterController
 
         enemyInfo = JsonManager.Instance.getEnemy(enemyId);
         elementType = enemyInfo.type;
+        maxHp = getMapHP();
+        hp = maxHp;
+        updateHP();
+        levelText.text = "LvL " + level;
+    }
+
+    int getMapHP()
+    {
+        var res = enemyInfo.hp;
+        var levelIncrease = enemyInfo.hpIncrease*(level-1);
+        return Mathf.CeilToInt(res);
     }
 
     bool isBoss()
@@ -132,32 +154,32 @@ public class EnemyController : HPCharacterController
                 shortestTarget = transform;
                 shortestDistance = float.MaxValue;
             }
-            foreach (EnemyController enemy in EnemyManager.instance.enemiesDictionary[enemyType])
-            {
-                if (!enemy || enemy.isDead)
-                {
-                    continue;
-                }
-                    if (enemy == this)
-                {
-                    continue;
-                }
-                if (!enemy.canBePaired())
-                {
-                    continue;
-                }
-                if (enemy.mergeLevel != mergeLevel)
-                {
-                    continue;
-                }
-                float distance = getDistanceToTarget(enemy.transform);
-                if (distance < shortestDistance)
-                {
-                    shortestTarget = enemy.transform;
-                    shortestDistance = distance;
-                    foundTarget = true;
-                }
-            }
+            //foreach (EnemyController enemy in EnemyManager.instance.enemiesDictionary[enemyType])
+            //{
+            //    if (!enemy || enemy.isDead)
+            //    {
+            //        continue;
+            //    }
+            //        if (enemy == this)
+            //    {
+            //        continue;
+            //    }
+            //    if (!enemy.canBePaired())
+            //    {
+            //        continue;
+            //    }
+            //    if (enemy.mergeLevel != mergeLevel)
+            //    {
+            //        continue;
+            //    }
+            //    float distance = getDistanceToTarget(enemy.transform);
+            //    if (distance < shortestDistance)
+            //    {
+            //        shortestTarget = enemy.transform;
+            //        shortestDistance = distance;
+            //        foundTarget = true;
+            //    }
+            //}
             if (foundTarget)
             {
 
@@ -272,6 +294,10 @@ public class EnemyController : HPCharacterController
     {
         List<PairInfo<float>> drops = enemyInfo.drop;
         var selectedDrop = Utils.randomList(drops);
+        if(selectedDrop == null)
+        {
+            return;
+        }
         List<PairInfo<int>> res  = new List<PairInfo<int>>();
         int randId;
         switch (selectedDrop)
