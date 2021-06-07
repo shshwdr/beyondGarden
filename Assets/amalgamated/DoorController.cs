@@ -60,7 +60,8 @@ public class DoorController : MonoBehaviour
             if (collision.collider.GetComponent<PlayerMeleeAttack>())
             {
                 //GameManager.Instance.GoToNextLevel();
-                DungeonManager.Instance.GoToLevel(nextLevelName);
+                // DungeonManager.Instance.GoToLevel(nextLevelName);
+                DungeonManager.Instance.GetToNextDungeonLevel();
             }
         }
     }

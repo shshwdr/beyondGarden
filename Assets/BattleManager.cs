@@ -21,6 +21,10 @@ public class BattleManager : Singleton<BattleManager>
 
     public FlowerInfo getCurrentWeapon()
     {
+        if(selectWeapons == null || selectWeapons.Count == 0)
+        {
+            return null;
+        }
         return JsonManager.Instance.getFlower( selectWeapons[0]);
     }
     // Update is called once per frame

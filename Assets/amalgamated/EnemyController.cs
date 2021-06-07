@@ -27,17 +27,21 @@ public class EnemyController : HPCharacterController
     public string enemyId = "deamon0";
     EnemyInfo enemyInfo;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
     //Rigidbody2D rb;
     // Start is called before the first frame update
     protected override void Start()
     {
 
         //rb = GetComponent<Rigidbody2D>();
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        
 
+        //transform.rotation = Quaternion.identity;
         EnemyManager.instance.enemiesDictionary[enemyType].Add(this);
         base.Start();
 

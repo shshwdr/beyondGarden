@@ -15,34 +15,35 @@ public class DungeonManager : Singleton<DungeonManager>
     // Start is called before the first frame update
     void Start()
     {
-        if (isInDungeon)
-        {
-            LoadDungeonLevel();
-        }
+        //if (isInDungeon)
+        //{
+        //    LoadDungeonLevel();
+        //}
+        DontDestroyOnLoad(gameObject);
     }
 
-    public void GoToNextLevel()
-    {
-        currentLevel += 1;
-        GotoLevel(currentLevel);
-    }
-    public void GoToLevel(string levelName)
-    {
-        if(levelName == "")
-        {
-            //finished a level, get back
-            SceneManager.LoadScene(0);
-            GameManager.Instance.leaveBattle();
+    //public void GoToNextLevel()
+    //{
+    //    currentLevel += 1;
+    //    GotoLevel(currentLevel);
+    //}
+    //public void GoToLevel(string levelName)
+    //{
+    //    if(levelName == "")
+    //    {
+    //        //finished a level, get back
+    //        SceneManager.LoadScene(0);
+    //        GameManager.Instance.leaveBattle();
 
-            Utils.setChildrenToInactive(PlantsManager.Instance. resourceParent);
-        }
-    }
+    //        Utils.setChildrenToInactive(PlantsManager.Instance. resourceParent);
+    //    }
+    //}
 
     public void GetIntoDungeon()
     {
         currentLevel = 0;
         SceneManager.LoadScene(currentDungeonId);
-        LoadDungeonLevel();
+        //LoadDungeonLevel();
     }
     public void ClearPreviousLevel()
     {
@@ -52,53 +53,32 @@ public class DungeonManager : Singleton<DungeonManager>
             Destroy(go);
         }
     }
-    public void LoadDungeonLevel()
-    {
-        ClearPreviousLevel();
-        GameObject parent = new GameObject("dungeonLevel");
-        GameObject enemyParent = new GameObject("enemy");
-        enemyParent.transform.parent = parent.transform;
-        var levelInfo = JsonManager.Instance.getDungeonLevel(currentDungeonId, currentLevel);
-        //for each enemy type, find all posible positions, put enemy there.
-        if (levelInfo.enemyTypeCount != levelInfo.enemyCount.Count)
-        {
-            Debug.LogError("enemy count " + levelInfo.enemyCount.Count + " does not match enemy type " + levelInfo.enemyTypeCount);
-            return;
-        }
-        Transform enemySpawnParent = GameObject.Find("enemySpawns").transform;
-        for (int i = 0;i< levelInfo.enemyTypeCount; i++)
-        {
-            if (i >= levelInfo.enemies.Count)
-            {
-                Debug.LogError("too many enemy type, want " + i + " has " + levelInfo.enemies.Count);
-                break;
-            }
-            GameObject prefab = Resources.Load<GameObject>("enemies/" + levelInfo.enemies[i]);
-
-            Transform currentTypeSpawnParent = enemySpawnParent.Find(i.ToString());
-
-            List<Transform> spawnTransforms= Utils.reservoirSamplingTransformChild(currentTypeSpawnParent, levelInfo.enemyCount[i]);
-            foreach (Transform trans in spawnTransforms)
-            {
-                GameObject go = Instantiate(prefab, trans.position, Quaternion.identity, enemyParent.transform);
-            }
-        }
-
-    }
+    
     public void GetToNextDungeonLevel() {
+        currentLevel++;
         if (hasNextDungeonLevel())
         {
-
+            SceneManager.LoadScene(currentDungeonId);
+            //LoadDungeonLevel();
         }
         else
         {
-
+            //win dungeon
+            LeaveDungeon();
         }
+    }
+
+    public void LeaveDungeon()
+    {
+        SceneManager.LoadScene(0);
+        GameManager.Instance.leaveBattle();
+
+        Utils.setChildrenToInactive(PlantsManager.Instance.resourceParent);
     }
 
     public bool hasNextDungeonLevel()
     {
-        return true;
+        return currentLevel<JsonManager.Instance.getDungeonLevels(currentDungeonId).Count;
     }
 
     public void GotoLevel(int level)
@@ -115,10 +95,20 @@ public class DungeonManager : Singleton<DungeonManager>
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            //kill all enemies
 
+            GameObject enemyParent = GameObject.Find("enemy");
+            foreach(Transform child in enemyParent.transform)
+            {
+                var e = child.GetComponent<EnemyController>();
+                e.getDamage(10000);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            GoToLevel("");
+            LeaveDungeon();
         }
         if (isGameOver)
         {

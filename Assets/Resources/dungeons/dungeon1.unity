@@ -868,6 +868,49 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 382710435}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &406980510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406980511}
+  - component: {fileID: 406980512}
+  m_Layer: 0
+  m_Name: dungeonLevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406980511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406980510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.29548556, y: -0.3652907, z: 1.2608546}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406980512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406980510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7e685e4c458e449be32941691ac758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &506659378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,7 +2110,7 @@ GameObject:
   - component: {fileID: 1387772270}
   - component: {fileID: 1387772272}
   - component: {fileID: 1387772273}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4803,7 +4846,7 @@ GameObject:
   - component: {fileID: 1486437453}
   - component: {fileID: 1486437455}
   - component: {fileID: 1486437456}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
