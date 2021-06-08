@@ -5,10 +5,15 @@ using UnityEngine;
 public class BattleManager : Singleton<BattleManager>
 {
     List<string> selectWeapons = new List<string>();
+    int currentWeaponId = 1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
+    }
+    public void initBattleManager()
+    {
+        currentWeaponId = 1;
     }
     public void setSelectedWeapons(List<string> s)
     {
@@ -16,6 +21,11 @@ public class BattleManager : Singleton<BattleManager>
     }
     public List<string> getSelectedWeapons()
     {
+        if (selectWeapons == null || selectWeapons.Count == 0)
+        {
+            //test
+            selectWeapons = new List<string>() { "waterlily", "lupin", "lavender", "marigold", "AppleTreeFlower" };
+        }
         return selectWeapons;
     }
 
@@ -25,8 +35,33 @@ public class BattleManager : Singleton<BattleManager>
         {
             return null;
         }
-        return JsonManager.Instance.getFlower( selectWeapons[0]);
+        return JsonManager.Instance.getFlower( selectWeapons[currentWeaponId-1]);
     }
+
+    public void selectWeapon(int index)
+    {
+        currentWeaponId = index;
+    }
+
+    public void selectNextWeapon()
+    {
+
+        if (selectWeapons == null || selectWeapons.Count == 0)
+        {
+            return;
+        }
+        currentWeaponId = (currentWeaponId + 1) % selectWeapons.Count;
+    }
+    public void selectPreviousWeapon()
+    {
+
+        if (selectWeapons == null || selectWeapons.Count == 0)
+        {
+            return;
+        }
+        currentWeaponId = (currentWeaponId - 1) % selectWeapons.Count;
+    }
+
     // Update is called once per frame
     void Update()
     {

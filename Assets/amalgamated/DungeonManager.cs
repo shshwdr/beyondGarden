@@ -42,6 +42,7 @@ public class DungeonManager : Singleton<DungeonManager>
     public void GetIntoDungeon()
     {
         currentLevel = 0;
+        BattleManager.Instance.initBattleManager();
         SceneManager.LoadScene(currentDungeonId);
         //LoadDungeonLevel();
     }

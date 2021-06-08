@@ -35,7 +35,8 @@ public class BattleWeaponCell : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0 + index))
         {
-            PlayerSpellCast.Instance.nextSpell = spellId;
+            BattleManager.Instance.selectWeapon(index);
+            //PlayerSpellCast.Instance.nextSpell = spellId;
         }
     }
 }

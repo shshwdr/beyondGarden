@@ -6,7 +6,6 @@ public class PlayerSpellCast : Singleton<PlayerSpellCast>
 {
     float cooldownTime = 1f;
     float currentCooldownTimer;
-    public string nextSpell = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +16,15 @@ public class PlayerSpellCast : Singleton<PlayerSpellCast>
     void Update()
     {
         currentCooldownTimer += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+            BattleManager.Instance.selectNextWeapon();
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            BattleManager.Instance.selectPreviousWeapon();
+        }
         if (Input.GetMouseButtonDown(1))
         {
             if (currentCooldownTimer < cooldownTime)
@@ -25,11 +33,8 @@ public class PlayerSpellCast : Singleton<PlayerSpellCast>
             }
             currentCooldownTimer = 0;
             GameObject spellPrefab = null;
-            if(nextSpell!=null && nextSpell.Length > 0)
-            {
-
-                spellPrefab = Resources.Load<GameObject>("spells/"+nextSpell);
-            }
+            string spellId = BattleManager.Instance.getCurrentWeapon().spell;
+            spellPrefab = Resources.Load<GameObject>("spells/"+ spellId);
             if (spellPrefab!=null)
             {
                 var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -37,7 +42,6 @@ public class PlayerSpellCast : Singleton<PlayerSpellCast>
                 Instantiate(spellPrefab, mousePosition, spellPrefab.transform.rotation);
 
             }
-        //nextSpell = "";
         }
     }
 }

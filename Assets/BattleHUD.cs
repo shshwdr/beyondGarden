@@ -10,8 +10,6 @@ public class BattleHUD : MonoBehaviour
     void Start()
     {
         var selectWeapons = BattleManager.Instance.getSelectedWeapons();
-        //test
-        //selectWeapons = new List<string>() { "waterlily", "lupin", "lavender", "marigold", "AppleTreeFlower" };
         if (selectWeapons.Count > 0)
         {
             int i = 0;
