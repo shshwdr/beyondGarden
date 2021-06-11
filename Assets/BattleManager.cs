@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 public class BattleManager : Singleton<BattleManager>
 {
     List<string> selectWeapons = new List<string>();
-    int currentWeaponId = 1;
+    public int currentWeaponId = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,8 @@ public class BattleManager : Singleton<BattleManager>
     public void selectWeapon(int index)
     {
         currentWeaponId = index;
+        EventParam eventParam = new EventParam(index);
+        EventManager.TriggerEvent("selectWeapon", eventParam);
     }
 
     public void selectNextWeapon()
@@ -51,6 +54,7 @@ public class BattleManager : Singleton<BattleManager>
             return;
         }
         currentWeaponId = (currentWeaponId + 1) % selectWeapons.Count;
+        selectWeapon(currentWeaponId);
     }
     public void selectPreviousWeapon()
     {
@@ -60,6 +64,7 @@ public class BattleManager : Singleton<BattleManager>
             return;
         }
         currentWeaponId = (currentWeaponId - 1) % selectWeapons.Count;
+        selectWeapon(currentWeaponId);
     }
 
     // Update is called once per frame
