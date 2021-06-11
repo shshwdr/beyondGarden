@@ -19,6 +19,11 @@ public class circleBullet : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        var ally = collision.GetComponent<AllyController>();
+        if (ally && ally.canBeAttacked())
+        {
+            collision.GetComponent<AllyController>().getDamage();
+        }
         if (collision.GetComponent<PlayerController>())
         {
             collision.GetComponent<PlayerController>().getDamage();

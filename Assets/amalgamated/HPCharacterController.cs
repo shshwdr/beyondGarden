@@ -62,7 +62,7 @@ public class HPCharacterController : MonoBehaviour
     {
 
     }
-    public void getDamage(float damage = 1, string element = "")
+    public virtual void getDamage(float damage = 1, string element = "")
     {
         if (isDead)
         {
@@ -95,7 +95,7 @@ public class HPCharacterController : MonoBehaviour
         {
             isStuned = true;
             currentStunTimer = 0;
-            animator.SetTrigger("hit");
+            //animator.SetTrigger("hit");
         }
 
     }

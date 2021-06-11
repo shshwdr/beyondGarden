@@ -226,4 +226,12 @@ public class PlayerController: HPCharacterController
     {
         GameOver.Instance .Gameover();
     }
+
+    public void getAlly(AllyController ac)
+    {
+        ac.gameObject.transform.parent = transform;
+        ac.isAttachedToPlayer = true;
+        ac.playerController = this;
+        ac.getAttached();
+    }
 }

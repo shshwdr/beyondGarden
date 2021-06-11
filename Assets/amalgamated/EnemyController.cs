@@ -102,11 +102,11 @@ public class EnemyController : HPCharacterController
     // Update is called once per frame
     protected override void Update()
     {
-        if(DungeonManager.Instance.currentLevel == 7)
-        {
-            //agent.isStopped = true;
-            return;
-        }
+        //if(DungeonManager.Instance.currentLevel == 7)
+        //{
+        //    //agent.isStopped = true;
+        //    return;
+        //}
         if (isDead || EnemyManager.instance.player.isDead)
         {
             agent.isStopped = true;
@@ -197,6 +197,7 @@ public class EnemyController : HPCharacterController
 
     bool canBePairedWith(EnemyController other)
     {
+        return false;
         if (!other.canBePaired() || !canBePaired())
         {
             return false;
@@ -335,7 +336,7 @@ public class EnemyController : HPCharacterController
         //always generate items
         //generate seed
 
-        generateDrop();
+        //generateDrop();
 
 
         if (EnemyManager.instance.bossController)

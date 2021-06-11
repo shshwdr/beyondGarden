@@ -13,7 +13,13 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.GetComponent<PlayerController>())
+        var ally = collision.collider.GetComponent<AllyController>();
+        if (ally && ally.canBeAttacked())
+        {
+            collision.collider.GetComponent<AllyController>().getDamage();
+            Destroy(gameObject);
+        }
+        else if (collision.collider.GetComponent<PlayerController>())
         {
             collision.collider.GetComponent<PlayerController>().getDamage();
             Destroy(gameObject);
@@ -26,7 +32,18 @@ public class EnemyBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<PlayerController>())
+        var ally = collision.GetComponent<AllyController>();
+        if (ally && ally.canBeAttacked())
+        {
+            collision.GetComponent<AllyController>().getDamage();
+            Destroy(gameObject);
+        }
+        //else if (collision.GetComponentInParent<AllyController>())
+        //{
+        //    collision.GetComponentInParent<AllyController>().getDamage();
+        //    Destroy(gameObject);
+        //}
+        else if (collision.GetComponent<PlayerController>())
         {
             collision.GetComponent<PlayerController>().getDamage();
             Destroy(gameObject);
@@ -36,5 +53,6 @@ public class EnemyBullet : MonoBehaviour
             collision.GetComponentInParent<PlayerController>().getDamage();
             Destroy(gameObject);
         }
+
     }
 }

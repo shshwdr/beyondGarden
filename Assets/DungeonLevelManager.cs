@@ -9,7 +9,7 @@ public class DungeonLevelManager : MonoBehaviour
     void Start()
     {
         dm = DungeonManager.Instance;
-        LoadDungeonLevel();
+        //LoadDungeonLevel();
     }
 
     // Update is called once per frame
