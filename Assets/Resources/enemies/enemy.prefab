@@ -273,6 +273,7 @@ MonoBehaviour:
   hasInvinsibleTime: 1
   invinsibleTime: 0.1
   elementType: 
+  facingRight: 1
   levelText: {fileID: 2922333272537187966}
   enemyType: 0
   mergeLevel: 0
@@ -611,6 +612,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 7486062213767542105, guid: 5014b9f95935bf64b9e8f16c9db01cde,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8101526995955897992, guid: 5014b9f95935bf64b9e8f16c9db01cde,
         type: 3}
       propertyPath: m_Layer
@@ -707,6 +713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380647299519603169, guid: 7d1dac36c0294854b8b1abeeb5dd166f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d1dac36c0294854b8b1abeeb5dd166f, type: 3}

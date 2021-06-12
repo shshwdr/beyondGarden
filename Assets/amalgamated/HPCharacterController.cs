@@ -99,7 +99,7 @@ public class HPCharacterController : MonoBehaviour
         {
             isStuned = true;
             currentStunTimer = 0;
-            //animator.SetTrigger("hit");
+            animator.SetTrigger("hit");
         }
 
     }
@@ -110,7 +110,7 @@ public class HPCharacterController : MonoBehaviour
     }
 
 
-    bool facingRight = true;
+    public  bool facingRight = true;
     void flip()
     {
         facingRight = !facingRight;

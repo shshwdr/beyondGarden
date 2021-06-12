@@ -95,19 +95,19 @@ public class FModSoundManager : Singleton<FModSoundManager>
     // Update is called once per frame
     void Update()
     {
-        if (FMODUnity.RuntimeManager.HasBankLoaded("Master") && !loaded)
-        {
-            loaded = true;
-            Debug.Log("Master Bank Loaded");
-            startEvent("event:/Town - Forest");
-            //SceneManager.LoadScene(1);
-        }
-        if(pressedStart && loaded)
-        {
-            pressedStart = false;
+        //if (FMODUnity.RuntimeManager.HasBankLoaded("Master") && !loaded)
+        //{
+        //    loaded = true;
+        //    Debug.Log("Master Bank Loaded");
+        //    startEvent("event:/Town - Forest");
+        //    //SceneManager.LoadScene(1);
+        //}
+        //if(pressedStart && loaded)
+        //{
+        //    pressedStart = false;
 
-            SceneManager.LoadScene(1);
-        }
+        //    SceneManager.LoadScene(1);
+        //}
     }
     private void OnDestroy()
     {

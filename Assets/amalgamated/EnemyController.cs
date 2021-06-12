@@ -114,14 +114,14 @@ public class EnemyController : HPCharacterController
         //}
         if (isDead || EnemyManager.instance.player.isDead)
         {
-            agent.isStopped = true;
+            //agent.isStopped = true;
             return;
         }
         base.Update();
         if (isStuned)
         {
-            agent.isStopped = true;
-            agent.velocity = Vector3.zero;
+            //agent.isStopped = true;
+            //agent.velocity = Vector3.zero;
             //return;
         }
 
@@ -129,9 +129,9 @@ public class EnemyController : HPCharacterController
         {
             //walk back?
 
-            agent.isStopped = false;
-            agent.SetDestination(originalPosition);
-            testFlip(agent.velocity);
+            //agent.isStopped = false;
+            //agent.SetDestination(originalPosition);
+            //testFlip(agent.velocity);
         }
 
         //move
@@ -147,17 +147,17 @@ public class EnemyController : HPCharacterController
                 shortestTarget = EnemyManager.instance.player.transform;
                 foundTarget = true;
             }
-            if (m_Renderer.isVisible)
-            {
-                agent.speed = originSpeed;
-            }
-            else
-            {
-                agent.speed = originSpeed * invincibleSpeedScale;
+            //if (m_Renderer.isVisible)
+            //{
+            //    agent.speed = originSpeed;
+            //}
+            //else
+            //{
+            //    agent.speed = originSpeed * invincibleSpeedScale;
 
-                shortestTarget = transform;
-                shortestDistance = float.MaxValue;
-            }
+            //    shortestTarget = transform;
+            //    shortestDistance = float.MaxValue;
+            //}
             //foreach (EnemyController enemy in EnemyManager.instance.enemiesDictionary[enemyType])
             //{
             //    if (!enemy || enemy.isDead)
@@ -187,13 +187,13 @@ public class EnemyController : HPCharacterController
             if (foundTarget)
             {
 
-                agent.isStopped = false;
-                agent.SetDestination(shortestTarget.position);
+                //agent.isStopped = false;
+                //agent.SetDestination(shortestTarget.position);
                 testFlip(agent.velocity);
             }
             else
             {
-                agent.isStopped = true;
+                //agent.isStopped = true;
             }
         }
         animator.SetFloat("speed", agent.velocity.magnitude);
@@ -357,7 +357,7 @@ public class EnemyController : HPCharacterController
         animator.SetTrigger("die");
        // AudioManager.Instance.playMonsterDie(mergeLevel);
         //deathAnimator.enabled = true;
-        Destroy(gameObject, 0.3f);
+        Destroy(gameObject, 1f);
     }
 
 }
