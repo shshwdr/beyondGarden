@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 1
   maxHP: 1
+  attackSound: {fileID: 0}
   target: {fileID: 0}
   attackRadius: 0.2
   attackCooldown: 1

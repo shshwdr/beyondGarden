@@ -16,6 +16,7 @@ MonoBehaviour:
     type: 3}
   cooldownTime: 5
   bulletSpeed: 0.4
+  shootCenter: {fileID: 0}
 --- !u!1001 &6910923697822616606
 PrefabInstance:
   m_ObjectHideFlags: 0

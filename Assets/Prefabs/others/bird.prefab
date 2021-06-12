@@ -48,10 +48,11 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -654604301
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 45131cb4876bda04082dca28c85e0ff3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,7 +97,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropbox: {fileID: 4855194311797131180, guid: 4f044d8717c8efb45ac8047f0a0a6273, type: 3}
+  dropSound: {fileID: 0}
+  appearSound: {fileID: 0}
   speed: 1
+  verticalSpeed: 1
+  amplitude: 1
+  isClicked: 0
 --- !u!60 &9133226179536723845
 PolygonCollider2D:
   m_ObjectHideFlags: 0

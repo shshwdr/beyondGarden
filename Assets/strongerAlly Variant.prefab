@@ -90,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 8945456877936333210, guid: 0a5d98f2b078ab8488df46e2dafb009d,
         type: 3}
       propertyPath: m_Name
-      value: strongerAlly
+      value: strongerAlly Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a5d98f2b078ab8488df46e2dafb009d, type: 3}

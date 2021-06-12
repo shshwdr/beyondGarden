@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce001fe621b17db41a8e127e45472f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   maxHp: 15
   isDead: 0
   isStuned: 0
@@ -63,9 +64,18 @@ MonoBehaviour:
   stunTime: 0.3
   hasInvinsibleTime: 1
   invinsibleTime: 0.5
+  elementType: 
+  facingRight: 1
   moveSpeed: 1
   meleeAttackCollider: {fileID: 5651503750927383219}
   animatorController: {fileID: 22100000, guid: 251c5eb99377a7344b722bfd9dd2693a, type: 2}
+  dashTime: 0.2
+  dashCooldown: 0.5
+  dashScale: 5
+  disembleForce: 10
+  stopAttachTime: 1
+  maxAllyCount: 10
+  gameOverObject: {fileID: 0}
 --- !u!50 &2174674611672211884
 Rigidbody2D:
   serializedVersion: 4
@@ -341,7 +351,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -360,7 +370,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1822039905
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 2119751515082679053, guid: 3e3cd866607b0174882926e61f14e654,
     type: 3}
@@ -464,7 +474,7 @@ PrefabInstance:
     - target: {fileID: 3401130030216706848, guid: 7d1dac36c0294854b8b1abeeb5dd166f,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3401130030216706848, guid: 7d1dac36c0294854b8b1abeeb5dd166f,
         type: 3}

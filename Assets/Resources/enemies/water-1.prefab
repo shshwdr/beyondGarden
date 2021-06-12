@@ -98,7 +98,7 @@ PrefabInstance:
     - target: {fileID: 3281820176807701804, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}
       propertyPath: m_Name
-      value: mushroom1 (1)
+      value: water-1
       objectReference: {fileID: 0}
     - target: {fileID: 5503615570830460806, guid: 88a4c3bc8c652b042b81cf622dca24b0,
         type: 3}

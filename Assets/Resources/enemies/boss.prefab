@@ -56,10 +56,11 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1184272079
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: adfcf83b842419c498bda8d2dbaa3053, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d953da7e87f2e594daf2d3cea082c18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   maxHp: 10
   isDead: 0
   isStuned: 0
@@ -167,11 +169,20 @@ MonoBehaviour:
   stunTime: 0.3
   hasInvinsibleTime: 0
   invinsibleTime: 0
+  elementType: 
+  facingRight: 1
+  isMelee: 0
+  meleeRadius: 0
+  meleeCooldown: 0
+  levelText: {fileID: 0}
   enemyType: 0
   mergeLevel: 0
   isMerging: 0
   mergedToMonster: {fileID: 0}
   invincibleSpeedScale: 0.05
+  deathAnimator: {fileID: 0}
+  enemyId: deamon0
+  room: {fileID: 0}
 --- !u!195 &1337939136942657034
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -283,10 +294,11 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -305,7 +317,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1184272079
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: adfcf83b842419c498bda8d2dbaa3053, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

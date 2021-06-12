@@ -54,6 +54,23 @@ MonoBehaviour:
   colliders: []
   debug: 1
   threshold: 0.01
+--- !u!114 &5059515273672214965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160618843027230651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff577662cf387b44a64570b2da25f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  summonObj: {fileID: 1074549629194744771, guid: 73ead658ff35d524d92ee4f120045072,
+    type: 3}
+  summonAmount: 1
+  summonPositionParent: {fileID: 2702925277704214282}
+  summoned: []
 --- !u!1 &2699676062438572696
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,23 +240,6 @@ Transform:
   m_Father: {fileID: 2702925277704214282}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5059515273672214965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2160618843027230651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ff577662cf387b44a64570b2da25f7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  summonObj: {fileID: 1074549629194744771, guid: 73ead658ff35d524d92ee4f120045072,
-    type: 3}
-  summonAmount: 1
-  summonPositionParent: {fileID: 2702925277704214282}
-  summoned: []
 --- !u!1 &8600604429253255714
 GameObject:
   m_ObjectHideFlags: 0

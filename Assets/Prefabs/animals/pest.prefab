@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 1
   maxHP: 1
+  attackSound: {fileID: 0}
   target: {fileID: 0}
   attackRadius: 1
   attackCooldown: 1
   walkSpeed: 1
   atk: 1
+  isFacingRight: 1
+  hasTargetP: 0
+  targetP: {x: 0, y: 0, z: 0}
+  clickSound: {fileID: 0}
 --- !u!1001 &8428406468402813887
 PrefabInstance:
   m_ObjectHideFlags: 0
