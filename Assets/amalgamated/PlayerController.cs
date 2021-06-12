@@ -28,6 +28,10 @@ public class PlayerController: FriendController
     public float disembleForce = 10f;
     public float stopAttachTime = 1f;
     int allyCount = 0;
+    public int maxAllyCount = 10;
+
+    public GameObject gameOverObject;
+
     // private void Awake()
     //{
     //if (instance == null)
@@ -110,7 +114,18 @@ public class PlayerController: FriendController
         if (isDead)
         {
             stopAttackAnim();
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Restart();
+            }
+
             return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            disemble();
         }
         //if (GameManager.instance.isCheatOn && Input.GetKeyDown(KeyCode.M))
         //{
@@ -245,6 +260,11 @@ public class PlayerController: FriendController
             {
                 enemy.getDamage();
             }
+            var stone = collision.GetComponent<DesctroyableObstacle>();
+            if (stone)
+            {
+                stone.getDamage();
+            }
         }
     }
     protected override void Die()
@@ -262,17 +282,30 @@ public class PlayerController: FriendController
     }
     void gameover()
     {
-        GameOver.Instance .Gameover();
+        //GameOver.Instance .Gameover();
+        gameOverObject.SetActive(true);
+    }
+    void Restart()
+    {
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
     }
 
     public void getAlly(AllyController ac)
     {
-        ac.gameObject.transform.parent = transform;
-        ac.isAttachedToPlayer = true;
-        ac.playerController = this;
-        allyList.Add(ac);
-        ac.getAttached();
-        allyCoundAdd(1);
+        if(allyCount>= maxAllyCount)
+        {
+
+        }
+        else
+        {
+            ac.gameObject.transform.parent = transform;
+            ac.isAttachedToPlayer = true;
+            ac.playerController = this;
+            allyList.Add(ac);
+            ac.getAttached();
+            allyCoundAdd(1);
+        }
 
     }
     public void allyCoundAdd(int v)

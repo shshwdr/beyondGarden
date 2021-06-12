@@ -55,8 +55,12 @@ public class HPCharacterController : MonoBehaviour
     public void updateHP()
     {
         hp = Mathf.Clamp(hp, 0, maxHp);
-        hpBar.SetMaxHpValue(maxHp);
-        hpBar.SetHealthBarValue(hp);
+        if (hpBar)
+        {
+
+            hpBar.SetMaxHpValue(maxHp);
+            hpBar.SetHealthBarValue(hp);
+        }
     }
     virtual protected void playHurtSound()
     {

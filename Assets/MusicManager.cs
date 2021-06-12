@@ -8,6 +8,7 @@ public class MusicManager : Singleton<MusicManager>
     public List<AudioClip> allyClips;
     public List<AudioClip> enemyClips;
 
+    public AudioSource playerSource;
     public List<AudioSource> allySources;
     public List<AudioSource> enemySources;
 
@@ -19,10 +20,10 @@ public class MusicManager : Singleton<MusicManager>
     // Start is called before the first frame update
     void Start()
     {
-        var go = gameObject.AddComponent<AudioSource>();
-        go.clip = playerClip;
-        go.loop = true;
-        go.Play();
+        playerSource = gameObject.AddComponent<AudioSource>();
+        playerSource.clip = playerClip;
+        playerSource.loop = true;
+        playerSource.Play();
         for (int i = 0; i < allyClips.Count; i++)
         {
             var source = gameObject.AddComponent<AudioSource>();
@@ -46,6 +47,7 @@ public class MusicManager : Singleton<MusicManager>
         {
             if (count >= allyCountChange[i])
             {
+                allySources[i].time = playerSource.time;
                 allySources[i].Play();
             }
             else
@@ -65,7 +67,9 @@ public class MusicManager : Singleton<MusicManager>
         {
             return;
         }
+        enemySources[i].time = playerSource.time;
         enemySources[i].Play();
+
     }
     public void stopEnemySound(int i)
     {

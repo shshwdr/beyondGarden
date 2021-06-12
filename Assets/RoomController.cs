@@ -7,7 +7,7 @@ public class RoomController : MonoBehaviour
     Collider2D roomCollider;
     public Transform enemies;
     public Transform buttons;
-    public Transform doors;
+    public List<Transform> doors;
     public Transform showWhenFinish;
     public Transform hideWhenFinish;
     int enemyCount = 0;
@@ -83,10 +83,13 @@ public class RoomController : MonoBehaviour
         }
         isFinished = true;
         MusicManager.Instance.stopEnemySound(roomMusicId);
-        if (doors)
+        if (doors.Count>0)
         {
+            foreach (Transform door in doors)
+            {
 
-            doors.gameObject.SetActive(false);
+                door.gameObject.SetActive(false);
+            }
         }
         if (hideWhenFinish)
         {
@@ -111,7 +114,11 @@ public class RoomController : MonoBehaviour
         {
             isRoomActive = true;
             MusicManager.Instance.startEnemySound(roomMusicId);
-            hiddenRoom.SetActive(true);
+            if (hiddenRoom)
+            {
+
+                hiddenRoom.SetActive(true);
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -120,7 +127,11 @@ public class RoomController : MonoBehaviour
         {
             isRoomActive = false;
             MusicManager.Instance.stopEnemySound(roomMusicId);
-            hiddenRoom.SetActive(false);
+            if (hiddenRoom)
+            {
+
+                hiddenRoom.SetActive(false);
+            }
         }
     }
 }
