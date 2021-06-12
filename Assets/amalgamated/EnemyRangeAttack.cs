@@ -9,24 +9,26 @@ public class EnemyRangeAttack : MonoBehaviour
     public float cooldownTime = 2f;
     public float bulletSpeed = 10f;
     float currentCooldownTimer;
+    public Transform shootCenter;
     EnemyController enemyController;
     // Start is called before the first frame update
     void Start()
     {
         enemyController = GetComponentInParent<EnemyController>();
-
+        currentCooldownTimer = cooldownTime;
     }
 
     void Attack()
     {
+        enemyController.animator.SetTrigger("attack");
         var player = EnemyManager.instance.player;
         var dir = player.transform.position - transform.position;
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         var quat = Quaternion.AngleAxis(angle, Vector3.forward);
-
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, quat) as GameObject;
+        var position = shootCenter.position;
+        GameObject bullet = Instantiate(bulletPrefab, position, quat) as GameObject;
         //bullet.GetComponent<EnemyBullet>().GetPlayer(player.transform);
-        bullet.GetComponent<Rigidbody2D>().velocity = (player.transform.position - transform.position).normalized * bulletSpeed;
+        bullet.GetComponent<Rigidbody2D>().velocity = (player.transform.position - position).normalized * bulletSpeed;
         //bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
         //bullet.GetComponent<EnemyBullet>().isEnemyBullet = true;
         //StartCoroutine(CoolDown());

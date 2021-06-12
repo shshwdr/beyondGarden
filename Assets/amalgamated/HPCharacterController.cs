@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HPCharacterController : MonoBehaviour
 {
-    protected Animator animator;
+    public Animator animator;
     public int maxHp = 10;
     protected int hp = 0;
     HPBarHandler hpBar;

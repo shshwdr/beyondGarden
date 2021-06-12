@@ -9,6 +9,12 @@ public class EnemyController : HPCharacterController
 {
     NavMeshAgent agent;
 
+    public bool isMelee;
+    public float meleeRadius;
+    public float meleeCooldown;
+    float meleeCooldownTimer;
+
+
     public TMP_Text levelText;
 
     public EnemyType enemyType;
@@ -147,43 +153,24 @@ public class EnemyController : HPCharacterController
                 shortestTarget = EnemyManager.instance.player.transform;
                 foundTarget = true;
             }
-            //if (m_Renderer.isVisible)
-            //{
-            //    agent.speed = originSpeed;
-            //}
-            //else
-            //{
-            //    agent.speed = originSpeed * invincibleSpeedScale;
-
-            //    shortestTarget = transform;
-            //    shortestDistance = float.MaxValue;
-            //}
-            //foreach (EnemyController enemy in EnemyManager.instance.enemiesDictionary[enemyType])
-            //{
-            //    if (!enemy || enemy.isDead)
-            //    {
-            //        continue;
-            //    }
-            //        if (enemy == this)
-            //    {
-            //        continue;
-            //    }
-            //    if (!enemy.canBePaired())
-            //    {
-            //        continue;
-            //    }
-            //    if (enemy.mergeLevel != mergeLevel)
-            //    {
-            //        continue;
-            //    }
-            //    float distance = getDistanceToTarget(enemy.transform);
-            //    if (distance < shortestDistance)
-            //    {
-            //        shortestTarget = enemy.transform;
-            //        shortestDistance = distance;
-            //        foundTarget = true;
-            //    }
-            //}
+            if (isMelee)
+            {
+                if (getDistanceToTarget(EnemyManager.instance.player.transform) < meleeRadius)
+                {
+                    meleeCooldownTimer += Time.deltaTime;
+                }
+                else
+                {
+                    meleeCooldownTimer = 0;
+                }
+                if (meleeCooldownTimer >= meleeCooldown)
+                {
+                    meleeCooldownTimer = 0;
+                    animator.SetTrigger("attack");
+                    EnemyManager.instance.player.getDamage();
+                }
+            }
+            
             if (foundTarget)
             {
 

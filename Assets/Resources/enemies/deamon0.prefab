@@ -505,8 +505,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1337939136942657038, guid: 5d77390d53382134482583ecfe7f553e,
         type: 3}
+      propertyPath: isMelee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337939136942657038, guid: 5d77390d53382134482583ecfe7f553e,
+        type: 3}
       propertyPath: mergeLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337939136942657038, guid: 5d77390d53382134482583ecfe7f553e,
+        type: 3}
+      propertyPath: meleeRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337939136942657038, guid: 5d77390d53382134482583ecfe7f553e,
+        type: 3}
+      propertyPath: meleeCooldown
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1337939136942657038, guid: 5d77390d53382134482583ecfe7f553e,
         type: 3}
