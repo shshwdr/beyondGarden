@@ -270,8 +270,8 @@ MonoBehaviour:
   beHitClips: []
   rb: {fileID: 0}
   stunTime: 0.3
-  hasInvinsibleTime: 0
-  invinsibleTime: 0
+  hasInvinsibleTime: 1
+  invinsibleTime: 0.1
   elementType: 
   levelText: {fileID: 2922333272537187966}
   enemyType: 0

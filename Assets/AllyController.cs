@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AllyController : HPCharacterController
+public class AllyController : FriendController
 {
     public bool isAttachedToPlayer = false;
     public PlayerController playerController;
@@ -51,6 +51,13 @@ public class AllyController : HPCharacterController
     {
         //rb.bodyType = RigidbodyType2D.Kinematic;
         agent.enabled = false;
+    }
+
+    protected override void Die()
+    {
+        base.Die();
+
+        Destroy(gameObject, 0.3f);
     }
 }
 

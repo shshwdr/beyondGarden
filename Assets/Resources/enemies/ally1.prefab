@@ -82,6 +82,21 @@ PrefabInstance:
       propertyPath: isAttachedToPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8321187208437621932, guid: a09e39a2a83a79c4c9a334c73091175c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.12670746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321187208437621932, guid: a09e39a2a83a79c4c9a334c73091175c,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.07745151
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321187208437621932, guid: a09e39a2a83a79c4c9a334c73091175c,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1337939136942657033, guid: a09e39a2a83a79c4c9a334c73091175c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a09e39a2a83a79c4c9a334c73091175c, type: 3}

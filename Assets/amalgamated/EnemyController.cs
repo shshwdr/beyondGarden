@@ -31,6 +31,10 @@ public class EnemyController : HPCharacterController
     EnemyInfo enemyInfo;
     int level = 0;
 
+    RoomController room;
+
+    Vector3 originalPosition;
+
     public void Init(DungeonLevelInfo dungeonInfo,int index)
     {
         enemyId = dungeonInfo.enemies[index];
@@ -44,6 +48,7 @@ public class EnemyController : HPCharacterController
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        originalPosition = transform.position;
     }
     //Rigidbody2D rb;
     // Start is called before the first frame update
@@ -69,10 +74,10 @@ public class EnemyController : HPCharacterController
             DialogueManager.StartConversation("getHelp", null, null);
         }
 
-        enemyInfo = JsonManager.Instance.getEnemy(enemyId);
-        elementType = enemyInfo.type;
-        maxHp = getMapHP();
-        hp = maxHp;
+        //enemyInfo = JsonManager.Instance.getEnemy(enemyId);
+        //elementType = enemyInfo.type;
+        //maxHp = getMapHP();
+        //hp = maxHp;
         updateHP();
         levelText.text = "LvL " + level;
     }
@@ -120,14 +125,13 @@ public class EnemyController : HPCharacterController
             //return;
         }
 
-        else if (isMerging)
+        else if (room && !room.isRoomActive)
         {
-            //if far away, stop merging
-            //return;
-            if (!mergingOther || mergingOther.isDead||(mergingOther.transform.position - transform.position).magnitude>= offMergeDistance)
-            {
-                StopMerging();
-            }
+            //walk back?
+
+            agent.isStopped = false;
+            agent.SetDestination(originalPosition);
+            testFlip(agent.velocity);
         }
 
         //move
@@ -330,6 +334,10 @@ public class EnemyController : HPCharacterController
         ClickToCollect.createClickToCollectItem(res, transform.position);
     }
 
+    public void addRoom(RoomController r)
+    {
+        room = r;
+    }
     protected override void Die()
     {
         //spawn drops if lucky!
@@ -344,6 +352,7 @@ public class EnemyController : HPCharacterController
             EnemyManager.instance.bossController.spawnersDie();
         }
         base.Die();
+        room.getEnemyDie();
         EnemyManager.instance.updateEnemies();
         animator.SetTrigger("die");
         AudioManager.Instance.playMonsterDie(mergeLevel);

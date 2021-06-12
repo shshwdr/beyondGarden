@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //using PixelCrushers.DialogueSystem;
-public class PlayerController: HPCharacterController
+public class PlayerController: FriendController
 {
    // public static Player instance = null;
     Vector2 movement;
@@ -18,9 +18,15 @@ public class PlayerController: HPCharacterController
     bool spawned = false;
     public AnimatorOverrideController animatorController;
 
-   // private void Awake()
-   //{
-   //if (instance == null)
+    public float dashTime = 0.2f;
+    float currentDashTimer = 0f;
+    public float dashCooldown = 0.5f;
+    float currentDashCooldownTimer = 0f;
+    public float dashScale = 5f; 
+
+    // private void Awake()
+    //{
+    //if (instance == null)
 
     //    //if not, set instance to this
     //    instance = this;
@@ -86,6 +92,15 @@ public class PlayerController: HPCharacterController
     //    GameManager.instance.isPaused = false;
     //}
     // Update is called once per frame
+
+    bool isDashing()
+    {
+        return currentDashTimer > 0;
+    }
+    bool canDashing()
+    {
+        return currentDashCooldownTimer <= 0;
+    }
     override protected void Update()
     {
         if (isDead)
@@ -104,6 +119,15 @@ public class PlayerController: HPCharacterController
         //    movement = Vector2.zero;
         //    return;
         //}
+        if (currentDashTimer > 0)
+        {
+
+            currentDashTimer -= Time.deltaTime;
+        }
+        if (currentDashCooldownTimer > 0)
+        {
+            currentDashCooldownTimer -= Time.deltaTime;
+        }
 
         if (EnemyManager.instance.isLevelCleared && firstClear && DungeonManager.Instance.currentLevel != 0 && DungeonManager.Instance.currentLevel != 7)
         {
@@ -120,6 +144,12 @@ public class PlayerController: HPCharacterController
         movement = Vector2.ClampMagnitude(movement, 1);
         animator.SetFloat("speed", movement.sqrMagnitude);
 
+
+        if (speed>0.001 && Input.GetMouseButtonDown(0) && !isDashing() && canDashing())
+        {
+            currentDashTimer = dashTime;
+            currentDashCooldownTimer = dashCooldown;
+        }
 
         base.Update();
 
@@ -191,24 +221,28 @@ public class PlayerController: HPCharacterController
         {
             return;
         }
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        var speed = moveSpeed;
+        if (isDashing())
+        {
+            speed *= dashScale;
+        }
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         testFlip(movement);
         // rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.tag == "coat" && !isCamouflage)
-    //    {
-    //        isCamouflage = true;
-    //        Destroy(collision.gameObject);
-    //        GetComponent<SpriteRenderer>().sprite = camouflagedSprite;
-    //        animator.runtimeAnimatorController = camouflagedAnimator;
-    //        isCamouflage = true;
-    //        exit.SetActive(true);
-    //        DialogueManager.ShowAlert("You are camouflaged");
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isDashing())
+        {
+
+            var enemy = collision.GetComponent<EnemyController>();
+            if (enemy)
+            {
+                enemy.getDamage();
+            }
+        }
+    }
     protected override void Die()
     {
         if (isDead)
