@@ -9,11 +9,11 @@ public class EnemyRangeAttack : MonoBehaviour
     public float cooldownTime = 2f;
     public float bulletSpeed = 10f;
     float currentCooldownTimer;
-    HPCharacterController enemyController;
+    EnemyController enemyController;
     // Start is called before the first frame update
     void Start()
     {
-        enemyController = GetComponentInParent<HPCharacterController>();
+        enemyController = GetComponentInParent<EnemyController>();
 
     }
 
@@ -39,12 +39,17 @@ public class EnemyRangeAttack : MonoBehaviour
         {
             return;
         }
-        if (!enemyController.isStuned){
-            currentCooldownTimer += Time.deltaTime;
-            if (currentCooldownTimer > cooldownTime)
+        if (enemyController.room.isRoomActive)
+        {
+
+            if (!enemyController.isStuned)
             {
-                currentCooldownTimer = 0;
-                Attack();
+                currentCooldownTimer += Time.deltaTime;
+                if (currentCooldownTimer > cooldownTime)
+                {
+                    currentCooldownTimer = 0;
+                    Attack();
+                }
             }
         }
     }

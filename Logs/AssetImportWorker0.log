@@ -4422,3 +4422,1395 @@ System memory in use after: 110.8 MB.
 Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5583.
 Total: 3.291600 ms (FindLiveObjects: 0.735000 ms CreateObjectMapping: 0.245200 ms MarkObjects: 2.230700 ms  DeleteObjects: 0.079100 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006494 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.167 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.3 MB.
+System memory in use after: 110.8 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5586.
+Total: 2.980200 ms (FindLiveObjects: 0.553900 ms CreateObjectMapping: 0.257400 ms MarkObjects: 2.078500 ms  DeleteObjects: 0.089200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006400 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.311 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.3 MB.
+System memory in use after: 110.8 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5589.
+Total: 2.908800 ms (FindLiveObjects: 0.490700 ms CreateObjectMapping: 0.222200 ms MarkObjects: 2.117100 ms  DeleteObjects: 0.077800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006104 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.264 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.2 MB.
+System memory in use after: 110.6 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5593.
+Total: 2.992700 ms (FindLiveObjects: 0.595900 ms CreateObjectMapping: 0.238500 ms MarkObjects: 2.080500 ms  DeleteObjects: 0.076100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 10577.239106 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX1 Demo Logo.png
+  artifactKey: Guid(f7c98b268308d794b8148d0c2914372d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX1 Demo Logo.png using Guid(f7c98b268308d794b8148d0c2914372d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9653388939f77f34d027a8b5777ce2') in 0.075653 seconds
+  Import took 0.087852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@32px.png
+  artifactKey: Guid(4426df64dd903d54abddd489b490532a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@32px.png using Guid(4426df64dd903d54abddd489b490532a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f08dd2423a504879be76a68bdaced64') in 0.022461 seconds
+  Import took 0.034080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Create_Edge@4x.png
+  artifactKey: Guid(1f21190ca9d1e8540b2a3a2e46002685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Create_Edge@4x.png using Guid(1f21190ca9d1e8540b2a3a2e46002685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05e46e3875f682cf380a019e157a2cf0') in 0.024152 seconds
+  Import took 0.036089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX2 Demo Logo.png
+  artifactKey: Guid(5bd23007d5e4e2b48ad7618f94328601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX2 Demo Logo.png using Guid(5bd23007d5e4e2b48ad7618f94328601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7dc32759a583efc20eb838c28c24192') in 0.026284 seconds
+  Import took 0.035949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/external-link.png
+  artifactKey: Guid(c44e15ed5784a6e4a83d53913c9868e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/external-link.png using Guid(c44e15ed5784a6e4a83d53913c9868e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9a03fbc13c4d34bb0a77597271f274') in 0.026358 seconds
+  Import took 0.035303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_4@1024px.png
+  artifactKey: Guid(2b62cc33d9739f54aa72164d22c3cb35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_4@1024px.png using Guid(2b62cc33d9739f54aa72164d22c3cb35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1849e3eaf8c7448eb240c6ae185c2f8') in 0.026534 seconds
+  Import took 0.035540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Create_Vertex.png
+  artifactKey: Guid(31f371f2dfe50c34081023094aed72c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Create_Vertex.png using Guid(31f371f2dfe50c34081023094aed72c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7451bcc607a72d98db47ac4fe525b0c8') in 0.020449 seconds
+  Import took 0.029605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFXFree Demo Logo.png
+  artifactKey: Guid(c474936d3f7aa204d8939cbe05170aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFXFree Demo Logo.png using Guid(c474936d3f7aa204d8939cbe05170aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3de537370b7b298dc034499368f2121d') in 0.020595 seconds
+  Import took 0.030089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Create_Vertex@2x.png
+  artifactKey: Guid(a0c33b3a6e0728343b29883d739f1322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Create_Vertex@2x.png using Guid(a0c33b3a6e0728343b29883d739f1322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce4789add57b82610fe6e220ab843c7c') in 0.023816 seconds
+  Import took 0.033974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode.png
+  artifactKey: Guid(d4d64a6cd9624c34a815dd79fb2a20a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode.png using Guid(d4d64a6cd9624c34a815dd79fb2a20a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '063864cf27aa944c48a78d6f86588172') in 0.025269 seconds
+  Import took 0.036151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX3 Demo Logo.png
+  artifactKey: Guid(18a39eb748b6d664eb57f4b97b68bef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX3 Demo Logo.png using Guid(18a39eb748b6d664eb57f4b97b68bef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e040e3e0585ed8a08644350127036c17') in 0.024202 seconds
+  Import took 0.034494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Create_Vertex.png
+  artifactKey: Guid(e7ddb9213511d984f8b951a7c913d83a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Create_Vertex.png using Guid(e7ddb9213511d984f8b951a7c913d83a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0031cdb24de115e2e0b3101c69f45bd4') in 0.021645 seconds
+  Import took 0.031874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Create_Vertex@2x.png
+  artifactKey: Guid(8afb57fea8c4eea4a8085e91c810380b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Create_Vertex@2x.png using Guid(8afb57fea8c4eea4a8085e91c810380b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a7a7bd373b76fd52be6446395be4211') in 0.021855 seconds
+  Import took 0.031597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_4@128px.png
+  artifactKey: Guid(f92118deb85501b4e8d5ab87684fe9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_4@128px.png using Guid(f92118deb85501b4e8d5ab87684fe9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd07aa26f748d76462a9412396f2d8eeb') in 0.025729 seconds
+  Import took 0.037794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_4@512px.png
+  artifactKey: Guid(49af4741d06f4414880838fb9ca68c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_4@512px.png using Guid(49af4741d06f4414880838fb9ca68c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '514b451e1e9ee78a0c23fa32b74edcd3') in 0.028264 seconds
+  Import took 0.038001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_4@256px.png
+  artifactKey: Guid(8696e3b06e07af74e8236cc098c1ced6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_4@256px.png using Guid(8696e3b06e07af74e8236cc098c1ced6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceedc700c887893f687fa5b0ec728a09') in 0.027215 seconds
+  Import took 0.038769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@24px.png
+  artifactKey: Guid(edfd14166f6878940973c028a792b306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@24px.png using Guid(edfd14166f6878940973c028a792b306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc94abd1a4dc8d39f3c09faa19324470') in 0.022407 seconds
+  Import took 0.033542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/eye, scan, retina, biometric.png
+  artifactKey: Guid(75a99c3685459c64f8722e14e848f0b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/eye, scan, retina, biometric.png using Guid(75a99c3685459c64f8722e14e848f0b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc2f4c58867700f490359325decef050') in 0.027578 seconds
+  Import took 0.038045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@96px.png
+  artifactKey: Guid(4ba24589db8f3e143b0b87ac4e513c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@96px.png using Guid(4ba24589db8f3e143b0b87ac4e513c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c171049ee673bea30f19cd17404de8d') in 0.020916 seconds
+  Import took 0.030946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Doozy/Examples/Textures/Misc/Character 1.png
+  artifactKey: Guid(6c028cb6d1783c048b280d82dd008854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Misc/Character 1.png using Guid(6c028cb6d1783c048b280d82dd008854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b95464da139e857c0ec0daeedac7a69c') in 0.024123 seconds
+  Import took 0.033256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@48px.png
+  artifactKey: Guid(bb8d4ab4f71cd9947bea200ea0f9f9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@48px.png using Guid(bb8d4ab4f71cd9947bea200ea0f9f9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e30a5cad6bd8632ec3fdd582dbd5afb2') in 0.021732 seconds
+  Import took 0.030466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/amalgamated/art/hits/Hits-2/frames/hits-2-4.png
+  artifactKey: Guid(a313eb0eda7a8a943b8b25063aca562e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-2/frames/hits-2-4.png using Guid(a313eb0eda7a8a943b8b25063aca562e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59b83868dcbd9e64eb6f234ecc172c61') in 0.023553 seconds
+  Import took 0.034039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/amalgamated/art/hits/Hits-3/frames/hits-3-1.png
+  artifactKey: Guid(56b4b58e9ace5284d9ec8ec11c815265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-3/frames/hits-3-1.png using Guid(56b4b58e9ace5284d9ec8ec11c815265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2a390adf5a45f1b38189033abcaf36e') in 0.018366 seconds
+  Import took 0.027267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/mars, venus, uranus, jupiter.png
+  artifactKey: Guid(b4fad10b57b127b428c007763ac449f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/mars, venus, uranus, jupiter.png using Guid(b4fad10b57b127b428c007763ac449f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad69ffe2b2435e917aed29f6ffb65d09') in 0.037800 seconds
+  Import took 0.049775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/mars, rover, robot, martian.png
+  artifactKey: Guid(cc040b525cd2a5949894b91e6383750f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/mars, rover, robot, martian.png using Guid(cc040b525cd2a5949894b91e6383750f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8ee84d1e8b65bab81033cc57cab57d8') in 0.036045 seconds
+  Import took 0.050393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/medal.png
+  artifactKey: Guid(3f129890482a711469a4296935c7624c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/medal.png using Guid(3f129890482a711469a4296935c7624c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763547703ee04ccaacc849d3f4e02e1e') in 0.038614 seconds
+  Import took 0.052829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000476 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@96px.png
+  artifactKey: Guid(e7715c844611d654eb826366048d6083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@96px.png using Guid(e7715c844611d654eb826366048d6083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f54e309b2df5c17d20e106567403fae2') in 0.032598 seconds
+  Import took 0.045241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/password, folder, authorization, secret.png
+  artifactKey: Guid(24ef7dc3b7877d74685cd35cf93d6cd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/password, folder, authorization, secret.png using Guid(24ef7dc3b7877d74685cd35cf93d6cd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '073eb4d16e33856f6c51ccce970f6771') in 0.026913 seconds
+  Import took 0.037489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Paste@2x.png
+  artifactKey: Guid(54b8604d8a7085842917d5b83ca73854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Paste@2x.png using Guid(54b8604d8a7085842917d5b83ca73854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ead8796f5c658051b53276cd4d084bf5') in 0.023757 seconds
+  Import took 0.034117 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Mesh.png
+  artifactKey: Guid(24f90d3fa2df5c84abbf1455cfda472e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Mesh.png using Guid(24f90d3fa2df5c84abbf1455cfda472e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4487dcb2d327de4bc1a38b858f6de4f7') in 0.024182 seconds
+  Import took 0.033013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/amalgamated/art/hits/Hits-2/frames/hits-2-3.png
+  artifactKey: Guid(4fb69f1969045bc41a590dc996d2f1cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-2/frames/hits-2-3.png using Guid(4fb69f1969045bc41a590dc996d2f1cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f32bf3e2102cc030d940aefddc8b83') in 0.023095 seconds
+  Import took 0.032269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/amalgamated/art/hits/Hits-2/frames/hits-2-7.png
+  artifactKey: Guid(7a76a00f15020b249bae7bde76853e7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-2/frames/hits-2-7.png using Guid(7a76a00f15020b249bae7bde76853e7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86aa735992f19bf1440dc197c9587ed7') in 0.020438 seconds
+  Import took 0.029029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/parking, sign, road.png
+  artifactKey: Guid(1188f5e5a394b66418f67998a016a304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/parking, sign, road.png using Guid(1188f5e5a394b66418f67998a016a304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '546e65258fe5dad524aa902ba2fbb7a5') in 0.024647 seconds
+  Import took 0.034486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@64px.png
+  artifactKey: Guid(7973487902bffc243be5840f97b27632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@64px.png using Guid(7973487902bffc243be5840f97b27632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb573f55d9ff4bc451be3d41a822118f') in 0.020928 seconds
+  Import took 0.030131 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@256px.png
+  artifactKey: Guid(8fe29106538bed446aa15c32edce9963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@256px.png using Guid(8fe29106538bed446aa15c32edce9963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec298f23192e32b096ed5302ff964f9f') in 0.024779 seconds
+  Import took 0.035886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@1024px.png
+  artifactKey: Guid(95d528fdc36120c45a945906abe22dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@1024px.png using Guid(95d528fdc36120c45a945906abe22dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89f38d9fc5c22703c38f2c681d668e99') in 0.025457 seconds
+  Import took 0.035432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@128px.png
+  artifactKey: Guid(354d88513473a2a4993dab6c449cc77f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@128px.png using Guid(354d88513473a2a4993dab6c449cc77f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e302202614dac24c3b1ed7ab088c775d') in 0.024444 seconds
+  Import took 0.033462 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@32px.png
+  artifactKey: Guid(525128e471994524497c74732490805d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@32px.png using Guid(525128e471994524497c74732490805d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39cded589291d3b0eb29774a7d8342df') in 0.019467 seconds
+  Import took 0.028771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Parent_Bone@4x.png
+  artifactKey: Guid(d0604e80537a4ff4881a6182ae5afe7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Parent_Bone@4x.png using Guid(d0604e80537a4ff4881a6182ae5afe7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e19e107ae1c7fa27781601055d803f12') in 0.021617 seconds
+  Import took 0.030510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Paste@4x.png
+  artifactKey: Guid(f53eca637c0194e4ab6729cf60753757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Paste@4x.png using Guid(f53eca637c0194e4ab6729cf60753757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad0c6f6b8e45887fe58258fb28f138cf') in 0.023798 seconds
+  Import took 0.033556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/amalgamated/art/hits/Hits-3/frames/hits-3-2.png
+  artifactKey: Guid(5b2683740df0a8f43aba19c819df84bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-3/frames/hits-3-2.png using Guid(5b2683740df0a8f43aba19c819df84bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbadd123b5853290ab7861d9460b79f8') in 0.024549 seconds
+  Import took 0.036255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/megaphone.png
+  artifactKey: Guid(d5c50b235ca532846a9021fe90c2458b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/megaphone.png using Guid(d5c50b235ca532846a9021fe90c2458b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08d7b025c46b75e12009913e091d8ab8') in 0.027298 seconds
+  Import took 0.037161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/password, computer, access, pc.png
+  artifactKey: Guid(ccf2991eb64bfd54194b2695e482c0cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/password, computer, access, pc.png using Guid(ccf2991eb64bfd54194b2695e482c0cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e190e3907ebefe2cbb9c3a42732a1105') in 0.028872 seconds
+  Import took 0.037462 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_3@24px.png
+  artifactKey: Guid(741f92a7ae66b23498b45cc9863ea490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_3@24px.png using Guid(741f92a7ae66b23498b45cc9863ea490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '045e81e64ab453734e853b166dff94ac') in 0.022295 seconds
+  Import took 0.032122 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/amalgamated/art/hits/Hits-2/hits-2-preview.gif
+  artifactKey: Guid(407bf59ff03055546810431db896ec2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-2/hits-2-preview.gif using Guid(407bf59ff03055546810431db896ec2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '433dc2d079849f2d004ff3bb87a3710a') in 0.024668 seconds
+  Import took 0.035272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_2@24px.png
+  artifactKey: Guid(0a76eaddeb25212438f1de5a7fb84af5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_2@24px.png using Guid(0a76eaddeb25212438f1de5a7fb84af5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd85ba0ce1376ae10437573800c09a53f') in 0.019495 seconds
+  Import took 0.028817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/amalgamated/art/hits/Hits-3/frames/hits-3-3.png
+  artifactKey: Guid(f56ccbfaa914cf649a6686122ae6eac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-3/frames/hits-3-3.png using Guid(f56ccbfaa914cf649a6686122ae6eac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ffe2eb256a53bfbcc290ff8d902833') in 0.021648 seconds
+  Import took 0.032170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Paste.png
+  artifactKey: Guid(94cc0d3ec6363a94c8802f10ef239744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Paste.png using Guid(94cc0d3ec6363a94c8802f10ef239744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1d015b2f6f5cf0e0327cdf821564c1b') in 0.022762 seconds
+  Import took 0.032058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_2@512px.png
+  artifactKey: Guid(1cf0f5e36c431894ab7d66c09bf5807d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_2@512px.png using Guid(1cf0f5e36c431894ab7d66c09bf5807d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9845600e1cc93e6d8238c2744044ad74') in 0.026310 seconds
+  Import took 0.034711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/eye, scan, virtual, reality.png
+  artifactKey: Guid(91e44cef6ca323644bb753eb1c79eec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/eye, scan, virtual, reality.png using Guid(91e44cef6ca323644bb753eb1c79eec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa175f9f68ce2fc3df38c822449cb72') in 0.021964 seconds
+  Import took 0.031808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@512px.png
+  artifactKey: Guid(fec1982f320fbc242a5d138187e85648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@512px.png using Guid(fec1982f320fbc242a5d138187e85648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6648f39b8102fe1aed08914cf15f2062') in 0.024755 seconds
+  Import took 0.033834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/amalgamated/art/new/PlayerAttackUp (x1.5 speed).png
+  artifactKey: Guid(93aa5bcdb112653449ebc4cfa89f2472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/new/PlayerAttackUp (x1.5 speed).png using Guid(93aa5bcdb112653449ebc4cfa89f2472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e2be9e8a919db2d3416f24ec0635ee8') in 0.031660 seconds
+  Import took 0.040761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/school, bag, backpack.png
+  artifactKey: Guid(3d4f42b0795735240adcd0546bd600f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/school, bag, backpack.png using Guid(3d4f42b0795735240adcd0546bd600f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e16139047c62df5d95d4062cf4e20a3') in 0.025193 seconds
+  Import took 0.033999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/school bus, vehicle, transportation.png
+  artifactKey: Guid(f92358c9611ef244bad7bdabcfd08c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/school bus, vehicle, transportation.png using Guid(f92358c9611ef244bad7bdabcfd08c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91ae7cef15d7912c1e27a1f54a171668') in 0.022905 seconds
+  Import took 0.033174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/search-minus.png
+  artifactKey: Guid(6e09a7d39aae2354d94a7c6e208810fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/search-minus.png using Guid(6e09a7d39aae2354d94a7c6e208810fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3cc9a0578ffd19b9b53c15983a260cb') in 0.021685 seconds
+  Import took 0.033570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/search-location.png
+  artifactKey: Guid(e1b725d32677d5040b518a667f2491ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/search-location.png using Guid(e1b725d32677d5040b518a667f2491ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a89ab2096ac004f75e7af63a2ec5f4a') in 0.026395 seconds
+  Import took 0.035191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/secure, privacy, safety, cyber.png
+  artifactKey: Guid(68b5cf657a3d9fe498075d3a42ef90b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/secure, privacy, safety, cyber.png using Guid(68b5cf657a3d9fe498075d3a42ef90b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cc3832fa283eae4aebad7030efc4e06') in 0.031765 seconds
+  Import took 0.042679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Textures/Runic/ScrollButtonHighlighted.png
+  artifactKey: Guid(37df733a277b8aa478484d53e57209e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Textures/Runic/ScrollButtonHighlighted.png using Guid(37df733a277b8aa478484d53e57209e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c99740a036ffcf52d378ea09d08efd87') in 0.025700 seconds
+  Import took 0.036138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/search-plus.png
+  artifactKey: Guid(1f1241b64217dd8469667264053c5453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/search-plus.png using Guid(1f1241b64217dd8469667264053c5453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '871602d3b6e45e1aa600bdd6def836f4') in 0.025395 seconds
+  Import took 0.034318 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/school, university, elementary.png
+  artifactKey: Guid(90ba875c7e4be6d46bdac825e1150e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/school, university, elementary.png using Guid(90ba875c7e4be6d46bdac825e1150e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764ab9fb515cf914d53d1c7fc9359dcb') in 0.028514 seconds
+  Import took 0.039771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/Search, zoom, magnifying.png
+  artifactKey: Guid(529b2360d2717d34e9be29f376b054ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/Search, zoom, magnifying.png using Guid(529b2360d2717d34e9be29f376b054ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c976203032e652d6acecee1507477f') in 0.030793 seconds
+  Import took 0.041737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/search.png
+  artifactKey: Guid(354d95839bcc1c940b5827d28dd6ccad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/search.png using Guid(354d95839bcc1c940b5827d28dd6ccad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9f870910b94eb16501005c35ffbf03b') in 0.023047 seconds
+  Import took 0.032378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/script, code, coding.png
+  artifactKey: Guid(cf29fcbf0ee3b38468e75df7e40fc89a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/script, code, coding.png using Guid(cf29fcbf0ee3b38468e75df7e40fc89a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9211ba8ae8b5888f1cb6e67aca320d4') in 0.023955 seconds
+  Import took 0.033777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@64px.png
+  artifactKey: Guid(926bc6ce5badc6f4493037e0cd3adf1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/CircleStroke_5@64px.png using Guid(926bc6ce5badc6f4493037e0cd3adf1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '490d78853f8f50ddba353f2ad4165097') in 0.022587 seconds
+  Import took 0.032870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode.png
+  artifactKey: Guid(e60718119cec31e4190849292fcde068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode.png using Guid(e60718119cec31e4190849292fcde068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f312bbf3f1fc04a31ef10e7b7ac587') in 0.017981 seconds
+  Import took 0.027878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_2@256px.png
+  artifactKey: Guid(23917c749a736e5438e238778ec400b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_2@256px.png using Guid(23917c749a736e5438e238778ec400b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '010dc529cc6326e02f4f0f1ba8a4de03') in 0.023712 seconds
+  Import took 0.035220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/scissors, cut, tool.png
+  artifactKey: Guid(b3173daa60cfac24ca2caa5431d403ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/scissors, cut, tool.png using Guid(b3173daa60cfac24ca2caa5431d403ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0690e9295aeae47b8b6c2acdd5bd0eb') in 0.029079 seconds
+  Import took 0.040021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/password, lock, login, authentication.png
+  artifactKey: Guid(e6ae1f3ac9e59cf478f28d6e111068ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/password, lock, login, authentication.png using Guid(e6ae1f3ac9e59cf478f28d6e111068ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c9deaae5b9dbcf3abac1094ea6eebc') in 0.026937 seconds
+  Import took 0.037088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/amalgamated/art/hits/Hits-2/frames/hits-2-5.png
+  artifactKey: Guid(2a4219e523cd1204a8282c85699816c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-2/frames/hits-2-5.png using Guid(2a4219e523cd1204a8282c85699816c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc46e780e07ae480fe0430902467189') in 0.025839 seconds
+  Import took 0.035885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/amalgamated/art/playerBullet.png
+  artifactKey: Guid(c095ba10025b3864eb268b6b27fd45f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/playerBullet.png using Guid(c095ba10025b3864eb268b6b27fd45f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a64110dda4c5bb533d125f22889818c1') in 0.016198 seconds
+  Import took 0.027300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_2@1024px.png
+  artifactKey: Guid(d8463b34ca8aa2643b3f332e896bb153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_2@1024px.png using Guid(d8463b34ca8aa2643b3f332e896bb153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b03f3a61ad12b0d2d304440aef747d7') in 0.025321 seconds
+  Import took 0.034612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/security, protection, shield.png
+  artifactKey: Guid(a020dfa5149d1854aa423352419e8826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/security, protection, shield.png using Guid(a020dfa5149d1854aa423352419e8826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd225075f577428994f75679aac3b93d') in 0.028276 seconds
+  Import took 0.038870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX4 Demo Logo.png
+  artifactKey: Guid(db8ec42c9f48282458fe93cfc5f48a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Demo/UI Canvas/CFX4 Demo Logo.png using Guid(db8ec42c9f48282458fe93cfc5f48a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67cebc8e9ae7c754aa506c0871bd8919') in 0.025850 seconds
+  Import took 0.035119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Create_Edge@4x.png
+  artifactKey: Guid(3458c119c69e9bc4f9647599c2901dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Create_Edge@4x.png using Guid(3458c119c69e9bc4f9647599c2901dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e6e31c08c2cc71911bba1a70f5d6dbe') in 0.023767 seconds
+  Import took 0.032835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/amalgamated/Assets/Tilesets/Tileset_1/mask.png
+  artifactKey: Guid(fe2a620893cb9ca468fd2fe774e55989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/Assets/Tilesets/Tileset_1/mask.png using Guid(fe2a620893cb9ca468fd2fe774e55989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9d43c6837333afb26647e2a4d54dfcd') in 0.023686 seconds
+  Import took 0.034774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/Settings, control, options.png
+  artifactKey: Guid(82b0698c33ab3d242b865a820c3a00f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/Settings, control, options.png using Guid(82b0698c33ab3d242b865a820c3a00f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a26ba14dd5e8a1a17dbd6c5babb6cce') in 0.026324 seconds
+  Import took 0.035191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Textures/UnityUI/SF Button.psd
+  artifactKey: Guid(9a32a6cc2cb803443983d45d4a513506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Textures/UnityUI/SF Button.psd using Guid(9a32a6cc2cb803443983d45d4a513506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a6b9ecf631b0710c21226f11bfc74c5') in 0.026673 seconds
+  Import took 0.035879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@512px.png
+  artifactKey: Guid(481f6d4cb900a32499082303bc26e4b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@512px.png using Guid(481f6d4cb900a32499082303bc26e4b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f447be7a1006d7804c65f39902699770') in 0.023164 seconds
+  Import took 0.031571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@512px.png
+  artifactKey: Guid(febb38bd9c49df442b87e278a74fdfd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@512px.png using Guid(febb38bd9c49df442b87e278a74fdfd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb54ab9222c9cd3e6e13b061f41d153a') in 0.025907 seconds
+  Import took 0.036350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_1@64px.png
+  artifactKey: Guid(189cc5f8c809fe744a48b93c903ee60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_1@64px.png using Guid(189cc5f8c809fe744a48b93c903ee60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df201b568f6656aaa0d606c9e02a6688') in 0.021822 seconds
+  Import took 0.034002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Textures/UnityUI/SF Title.psd
+  artifactKey: Guid(966be606197166640a108ef53355eddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Textures/UnityUI/SF Title.psd using Guid(966be606197166640a108ef53355eddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e072109aa24f46fdbe03831bc833febb') in 0.032589 seconds
+  Import took 0.043972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@256px.png
+  artifactKey: Guid(38a8e518f87ec94458a9d97dab3fd537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@256px.png using Guid(38a8e518f87ec94458a9d97dab3fd537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd06af09914fc467de56e3833e3b6e0a') in 0.026839 seconds
+  Import took 0.036369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_1@32px.png
+  artifactKey: Guid(19afa5429ff871244a89e954b3ffd8cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_1@32px.png using Guid(19afa5429ff871244a89e954b3ffd8cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ec5c0ddf7b387338f082d82a947b364') in 0.026572 seconds
+  Import took 0.038345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@256px.png
+  artifactKey: Guid(01c7d01f8331a8940bff1de7b81de671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@256px.png using Guid(01c7d01f8331a8940bff1de7b81de671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f31c4f585292246dd3a7bec98070900') in 0.024436 seconds
+  Import took 0.036328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@128px.png
+  artifactKey: Guid(0490517f4669957428ec8e64adbaa64e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@128px.png using Guid(0490517f4669957428ec8e64adbaa64e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '236ee84e84f45e7c98f07cc569c31c4d') in 0.029156 seconds
+  Import took 0.039958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@1024px.png
+  artifactKey: Guid(32cd365e14cc4cd4b8b6161427c306bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@1024px.png using Guid(32cd365e14cc4cd4b8b6161427c306bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '953fb54e92be47c588ab460a120f9f94') in 0.026687 seconds
+  Import took 0.037299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@1024px.png
+  artifactKey: Guid(950f4c220731dea498079f065d9dd7ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@1024px.png using Guid(950f4c220731dea498079f065d9dd7ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3de1f40ca8abb3cb5f099ef936c73ab') in 0.028129 seconds
+  Import took 0.038281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@512px.png
+  artifactKey: Guid(1104f5393677f0947938a90abf93bc8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@512px.png using Guid(1104f5393677f0947938a90abf93bc8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb2698530f73b4107d24ff05a4e1e509') in 0.024273 seconds
+  Import took 0.035213 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@96px.png
+  artifactKey: Guid(828e3184c90d7734aaba03e081bd4ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@96px.png using Guid(828e3184c90d7734aaba03e081bd4ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd261e8b71b827c500965fc07b51db3bd') in 0.021748 seconds
+  Import took 0.032287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@128px.png
+  artifactKey: Guid(d3b7b267d2cae9847a8e2159e7270dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@128px.png using Guid(d3b7b267d2cae9847a8e2159e7270dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab8c2a607dc41ca2f1d9be446ffa4762') in 0.024096 seconds
+  Import took 0.033550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@96px.png
+  artifactKey: Guid(9eb5308365cb0f14bbe36489e093f970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@96px.png using Guid(9eb5308365cb0f14bbe36489e093f970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a9d9f9e80b9cfa2263f9c52c4fb385a') in 0.022287 seconds
+  Import took 0.031362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/server.png
+  artifactKey: Guid(acd4a49bd2e5e1e46868cde1d2362c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/server.png using Guid(acd4a49bd2e5e1e46868cde1d2362c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee28cc239b5d5c8435e78e5896c0afc') in 0.026555 seconds
+  Import took 0.036233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@256px.png
+  artifactKey: Guid(9b94915a9db59f944aecb5b4aed14e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@256px.png using Guid(9b94915a9db59f944aecb5b4aed14e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc39cc81512d042aaac3efc49ff88056') in 0.025488 seconds
+  Import took 0.035793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/Rounded64px.png
+  artifactKey: Guid(5765424b27ee5f8408478922c82d99a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/Rounded64px.png using Guid(5765424b27ee5f8408478922c82d99a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83dd02d176d56bd88f1e7942f64ea345') in 0.022553 seconds
+  Import took 0.032225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/Rounded64px Stroke8px.png
+  artifactKey: Guid(b155e3f4ed65dbf48a63147795b88097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/Rounded64px Stroke8px.png using Guid(b155e3f4ed65dbf48a63147795b88097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e07da5cc4d3031477b0f4eb23dbe54c') in 0.026707 seconds
+  Import took 0.038640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_1@48px.png
+  artifactKey: Guid(5ae9699973efa3e438597eba336d6e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_1@48px.png using Guid(5ae9699973efa3e438597eba336d6e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad60c3803555231a3fed0ec6e5ebf6c') in 0.031339 seconds
+  Import took 0.045069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_1@24px.png
+  artifactKey: Guid(885e5952236d1e546abac7e923a2df6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_1@24px.png using Guid(885e5952236d1e546abac7e923a2df6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584dcb076f1771900acb1b76b221832e') in 0.026790 seconds
+  Import took 0.038340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@48px.png
+  artifactKey: Guid(073085c1bb572ba469889a7b5bb7c71d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@48px.png using Guid(073085c1bb572ba469889a7b5bb7c71d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40ff19dfb97d8299449b26a49f8bdee0') in 0.023024 seconds
+  Import took 0.034670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/portrait.png
+  artifactKey: Guid(be247d9afbe83224b9f83b83b6efc37b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/portrait.png using Guid(be247d9afbe83224b9f83b83b6efc37b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04d6736a36158ac814ca15704c7f3a33') in 0.026255 seconds
+  Import took 0.037718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Textures/Basic/portrait.png
+  artifactKey: Guid(8fbfa1bc77a0388499f83f32b410eea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Textures/Basic/portrait.png using Guid(8fbfa1bc77a0388499f83f32b410eea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273df15224a6b6c79b63b6752550cc3b') in 0.018746 seconds
+  Import took 0.028690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/qr, code, scan, barcode.png
+  artifactKey: Guid(9b7d0f0c56173f347b51a74cee632f44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/qr, code, scan, barcode.png using Guid(9b7d0f0c56173f347b51a74cee632f44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd93056021c9389b7cd3dd184d133b33') in 0.025274 seconds
+  Import took 0.035066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Pond Water.png
+  artifactKey: Guid(841ec424131f73442b138028dcd7004d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pond Water.png using Guid(841ec424131f73442b138028dcd7004d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb75f3f4835cb10bdc3af306beb868d8') in 0.024026 seconds
+  Import took 0.034077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@128px.png
+  artifactKey: Guid(2a2e049502799d04c88fad2478e39b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@128px.png using Guid(2a2e049502799d04c88fad2478e39b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77dbc5398647cf4e4d3f988f34fc077a') in 0.026145 seconds
+  Import took 0.035821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_6@24px.png
+  artifactKey: Guid(0a8aa987004115f4b8c8934badf3c60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_6@24px.png using Guid(0a8aa987004115f4b8c8934badf3c60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd80c19dc71f825fa98800255eccfab5b') in 0.024284 seconds
+  Import took 0.033515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@32px.png
+  artifactKey: Guid(69d8f98b44b56044eb8ff0d4dc73c6da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@32px.png using Guid(69d8f98b44b56044eb8ff0d4dc73c6da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ea8fd690785d0843fb874a1165b14e') in 0.028224 seconds
+  Import took 0.038630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@1024px.png
+  artifactKey: Guid(645fbbdae0ab29240b58b8df56c00e70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareFull@1024px.png using Guid(645fbbdae0ab29240b58b8df56c00e70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '737d043a751e1300a37fa533df6a430e') in 0.027363 seconds
+  Import took 0.037427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Doozy/Examples/Icons/Awesome/puzzle-piece.png
+  artifactKey: Guid(8a55fb665d4922343a36076d6b8ad526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Awesome/puzzle-piece.png using Guid(8a55fb665d4922343a36076d6b8ad526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c55e59ad56e6c9756e788b5e4d5662') in 0.026824 seconds
+  Import took 0.035788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@64px.png
+  artifactKey: Guid(906166b5681181e478894605d0ebe88d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/RoundedSquareStroke_5@64px.png using Guid(906166b5681181e478894605d0ebe88d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e2e7c0fe14b5130f1f8f0a63db2f339') in 0.023726 seconds
+  Import took 0.032738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Doozy/Examples/Icons/Simple/Power, shutdown, start.png
+  artifactKey: Guid(84d56b31b2072524aaf385de4860de42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Icons/Simple/Power, shutdown, start.png using Guid(84d56b31b2072524aaf385de4860de42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dc9432b03db5661a8be0d0c155079a9') in 0.030128 seconds
+  Import took 0.040778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Art/flowers/Marsh Marigold.png
+  artifactKey: Guid(abbbf6b0613b8a845904ae951ea6eac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/flowers/Marsh Marigold.png using Guid(abbbf6b0613b8a845904ae951ea6eac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba43e796a4e4aaf31adfd76f850cb489') in 0.029841 seconds
+  Import took 0.043080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Paste@3x.png
+  artifactKey: Guid(2b072f285a732f747b9be104aae155b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Paste@3x.png using Guid(2b072f285a732f747b9be104aae155b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090bb774fd864229aa28ea8f24c9a54f') in 0.027079 seconds
+  Import took 0.038361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@48px.png
+  artifactKey: Guid(50028f049cd9594489f1ed7b3a5cbc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/PentagonStroke_1@48px.png using Guid(50028f049cd9594489f1ed7b3a5cbc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34fe23db53e85c4d8c2c2102af845e1e') in 0.029998 seconds
+  Import took 0.040283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/amalgamated/art/final/MenuScreenTest.png
+  artifactKey: Guid(25e644c558c0aa14f86bdd96269d9747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/final/MenuScreenTest.png using Guid(25e644c558c0aa14f86bdd96269d9747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb3753090e4b26c1f4c2baeed61712b4') in 0.032530 seconds
+  Import took 0.043875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@96px.png
+  artifactKey: Guid(ba92474a6ab1dd549add66fffa33ea56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/SeptagonStroke_6@96px.png using Guid(ba92474a6ab1dd549add66fffa33ea56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfacea1aa98b1407649c42f252b4accf') in 0.024305 seconds
+  Import took 0.034468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Doozy/Examples/Textures/Shapes/Rounded64px Stroke5px.png
+  artifactKey: Guid(c04a63d54069e8f4bac378fe7ab6026c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Textures/Shapes/Rounded64px Stroke5px.png using Guid(c04a63d54069e8f4bac378fe7ab6026c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84bfc721c287deb501a944ea453ea2d2') in 0.023780 seconds
+  Import took 0.033401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/amalgamated/art/hits/Hits-2/frames/hits-2-6.png
+  artifactKey: Guid(9fbfaa512b1242644a1dc425becbed2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/art/hits/Hits-2/frames/hits-2-6.png using Guid(9fbfaa512b1242644a1dc425becbed2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe3e0decf4f5cf7816c5ef8b307cfae') in 0.022684 seconds
+  Import took 0.032200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Mesh@2x.png
+  artifactKey: Guid(242f58a86f3ee8e418809e5fc269d531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Mesh@2x.png using Guid(242f58a86f3ee8e418809e5fc269d531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76f48e082df50323df1a9fb8e96b61f6') in 0.023417 seconds
+  Import took 0.031909 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005214 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.256 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.2 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5614.
+Total: 2.856100 ms (FindLiveObjects: 0.540600 ms CreateObjectMapping: 0.217700 ms MarkObjects: 2.015100 ms  DeleteObjects: 0.081600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.979367 seconds.
+  path: Assets/Prefabs/button.prefab
+  artifactKey: Guid(f1c2f637e6341c646bddb7446fd3ffc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/button.prefab using Guid(f1c2f637e6341c646bddb7446fd3ffc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8414b35b3361b2f860e39fc7499dcfd7') in 0.054466 seconds
+  Import took 0.064626 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007279 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.269 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.2 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5618.
+Total: 3.013100 ms (FindLiveObjects: 0.588400 ms CreateObjectMapping: 0.277400 ms MarkObjects: 2.071500 ms  DeleteObjects: 0.074500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007178 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.266 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.2 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5621.
+Total: 3.215100 ms (FindLiveObjects: 0.562100 ms CreateObjectMapping: 0.286600 ms MarkObjects: 2.276400 ms  DeleteObjects: 0.088700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005380 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.171 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.2 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5624.
+Total: 3.034600 ms (FindLiveObjects: 0.512900 ms CreateObjectMapping: 0.226200 ms MarkObjects: 2.185400 ms  DeleteObjects: 0.108700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005503 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.198 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.1 MB.
+System memory in use after: 111.5 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5627.
+Total: 3.165100 ms (FindLiveObjects: 0.583700 ms CreateObjectMapping: 0.311200 ms MarkObjects: 2.181700 ms  DeleteObjects: 0.087000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005047 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.188 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.3 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5630.
+Total: 3.301000 ms (FindLiveObjects: 0.609600 ms CreateObjectMapping: 0.324700 ms MarkObjects: 2.288300 ms  DeleteObjects: 0.077300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006263 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.256 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.3 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5633.
+Total: 5.964300 ms (FindLiveObjects: 0.960600 ms CreateObjectMapping: 0.448600 ms MarkObjects: 4.383900 ms  DeleteObjects: 0.168500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006110 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.209 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.3 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5636.
+Total: 3.216500 ms (FindLiveObjects: 0.693100 ms CreateObjectMapping: 0.276600 ms MarkObjects: 2.169100 ms  DeleteObjects: 0.076100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006380 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.290 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.3 MB.
+System memory in use after: 111.8 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5639.
+Total: 3.106200 ms (FindLiveObjects: 0.473300 ms CreateObjectMapping: 0.245400 ms MarkObjects: 2.301100 ms  DeleteObjects: 0.085300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009002 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.316 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.1 MB.
+System memory in use after: 111.6 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5642.
+Total: 3.585300 ms (FindLiveObjects: 0.483500 ms CreateObjectMapping: 0.275900 ms MarkObjects: 2.719900 ms  DeleteObjects: 0.103900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 821.871718 seconds.
+  path: Assets/amalgamated/Assets/Mechanics/Buttons/Button_Blue/button_blue_off.png
+  artifactKey: Guid(5a80b076ea618c345bee186d014cebac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/Assets/Mechanics/Buttons/Button_Blue/button_blue_off.png using Guid(5a80b076ea618c345bee186d014cebac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a36b31bc5d8fcc1b5778e9784de852') in 0.069836 seconds
+  Import took 0.082322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026102 seconds.
+  path: Assets/amalgamated/Assets/Mechanics/Buttons/Button_Blue/button_blue_off.png
+  artifactKey: Guid(5a80b076ea618c345bee186d014cebac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/amalgamated/Assets/Mechanics/Buttons/Button_Blue/button_blue_off.png using Guid(5a80b076ea618c345bee186d014cebac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a36b31bc5d8fcc1b5778e9784de852') in 0.010287 seconds
+  Import took 0.020685 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006083 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.512 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.4 MB.
+System memory in use after: 111.9 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5646.
+Total: 5.185100 ms (FindLiveObjects: 0.791400 ms CreateObjectMapping: 0.426400 ms MarkObjects: 3.812500 ms  DeleteObjects: 0.151800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007117 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.964 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.4 MB.
+System memory in use after: 111.9 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5649.
+Total: 3.671100 ms (FindLiveObjects: 0.558000 ms CreateObjectMapping: 0.288000 ms MarkObjects: 2.727400 ms  DeleteObjects: 0.096100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007600 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.661 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.4 MB.
+System memory in use after: 111.9 MB.
+
+Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5652.
+Total: 5.027900 ms (FindLiveObjects: 0.678300 ms CreateObjectMapping: 0.376700 ms MarkObjects: 3.781100 ms  DeleteObjects: 0.189300 ms)
+

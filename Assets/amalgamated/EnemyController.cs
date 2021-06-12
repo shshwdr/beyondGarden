@@ -31,7 +31,7 @@ public class EnemyController : HPCharacterController
     EnemyInfo enemyInfo;
     int level = 0;
 
-    RoomController room;
+    public RoomController room;
 
     Vector3 originalPosition;
 

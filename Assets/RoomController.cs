@@ -6,11 +6,14 @@ public class RoomController : MonoBehaviour
 {
     Collider2D roomCollider;
     public Transform enemies;
+    public Transform buttons;
     public Transform doors;
     public Transform showWhenFinish;
     public Transform hideWhenFinish;
     int enemyCount = 0;
+    int buttonCount = 0;
     public bool isRoomActive;
+    bool isFinished;
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,10 +22,26 @@ public class RoomController : MonoBehaviour
     }
     private void Start()
     {
-        foreach (Transform t in enemies)
+        if (enemies)
         {
-            enemyCount++;
-            t.GetComponent<EnemyController>().addRoom(this);
+
+            foreach (Transform t in enemies)
+            {
+                enemyCount++;
+                t.GetComponent<EnemyController>().addRoom(this);
+            }
+        }
+        if (buttons)
+        {
+            foreach (Transform t in buttons)
+            {
+                if (t.gameObject.active)
+                {
+
+                    buttonCount++;
+                    t.GetComponent<ButtonTrigger>().room = this;
+                }
+            }
         }
     }
 
@@ -35,8 +54,28 @@ public class RoomController : MonoBehaviour
         }
     }
 
+    public void getButtonPress()
+    {
+        buttonCount -= 1;
+
+        if (buttonCount == 0)
+        {
+            finishRoom();
+        }
+    }
+
+    public void getButtonRelease()
+    {
+        buttonCount += 1;
+    }
+
     public void finishRoom()
     {
+        if (isFinished)
+        {
+            return;
+        }
+        isFinished = true;
         if (doors)
         {
 
