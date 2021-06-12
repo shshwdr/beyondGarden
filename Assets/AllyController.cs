@@ -112,7 +112,7 @@ public class AllyController : FriendController
     protected override void Die()
     {
         base.Die();
-
+        playerController.allyCoundAdd(-1);
         Destroy(gameObject, 0.3f);
     }
 }

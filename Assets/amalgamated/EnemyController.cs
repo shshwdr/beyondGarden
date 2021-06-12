@@ -355,7 +355,7 @@ public class EnemyController : HPCharacterController
         room.getEnemyDie();
         EnemyManager.instance.updateEnemies();
         animator.SetTrigger("die");
-        AudioManager.Instance.playMonsterDie(mergeLevel);
+       // AudioManager.Instance.playMonsterDie(mergeLevel);
         //deathAnimator.enabled = true;
         Destroy(gameObject, 0.3f);
     }

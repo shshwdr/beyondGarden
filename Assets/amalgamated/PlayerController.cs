@@ -27,6 +27,7 @@ public class PlayerController: FriendController
 
     public float disembleForce = 10f;
     public float stopAttachTime = 1f;
+    int allyCount = 0;
     // private void Awake()
     //{
     //if (instance == null)
@@ -271,7 +272,14 @@ public class PlayerController: FriendController
         ac.playerController = this;
         allyList.Add(ac);
         ac.getAttached();
+        allyCoundAdd(1);
 
+    }
+    public void allyCoundAdd(int v)
+    {
+        allyCount += v;
+
+        MusicManager.Instance.allyChanged(allyCount);
     }
 
     public void disemble()
@@ -284,5 +292,9 @@ public class PlayerController: FriendController
             }
         }
         allyList.Clear();
+
+        allyCount =0;
+
+        MusicManager.Instance.allyChanged(allyCount);
     }
 }

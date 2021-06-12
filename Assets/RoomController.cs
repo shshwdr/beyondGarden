@@ -14,10 +14,16 @@ public class RoomController : MonoBehaviour
     int buttonCount = 0;
     public bool isRoomActive;
     bool isFinished;
+    public int roomMusicId = 0;
+    public GameObject hiddenRoom;
     // Start is called before the first frame update
     void Awake()
     {
         roomCollider = GetComponent<Collider2D>();
+        if (hiddenRoom)
+        {
+            hiddenRoom.SetActive(false);
+        }
 
     }
     private void Start()
@@ -76,6 +82,7 @@ public class RoomController : MonoBehaviour
             return;
         }
         isFinished = true;
+        MusicManager.Instance.stopEnemySound(roomMusicId);
         if (doors)
         {
 
@@ -100,9 +107,11 @@ public class RoomController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<PlayerController>())
+        if (collision.gameObject.GetComponent<PlayerController>() && !isFinished)
         {
             isRoomActive = true;
+            MusicManager.Instance.startEnemySound(roomMusicId);
+            hiddenRoom.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -110,6 +119,8 @@ public class RoomController : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>())
         {
             isRoomActive = false;
+            MusicManager.Instance.stopEnemySound(roomMusicId);
+            hiddenRoom.SetActive(false);
         }
     }
 }

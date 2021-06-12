@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: 1337939136942657030, guid: 5d77390d53382134482583ecfe7f553e,
         type: 3}
       propertyPath: m_Name
-      value: zombie2
+      value: stone0
       objectReference: {fileID: 0}
     - target: {fileID: 1337939136942657031, guid: 5d77390d53382134482583ecfe7f553e,
         type: 3}
@@ -153,7 +153,7 @@ PrefabInstance:
     - target: {fileID: 1337939136942657038, guid: 5d77390d53382134482583ecfe7f553e,
         type: 3}
       propertyPath: maxHp
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1337939136942657038, guid: 5d77390d53382134482583ecfe7f553e,
         type: 3}
