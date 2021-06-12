@@ -281,6 +281,7 @@ MonoBehaviour:
   invincibleSpeedScale: 0.05
   deathAnimator: {fileID: 0}
   enemyId: deamon0
+  room: {fileID: 0}
 --- !u!195 &1337939136942657034
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -336,7 +337,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337939136942657030}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
   m_Name: 

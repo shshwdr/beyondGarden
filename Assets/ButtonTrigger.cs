@@ -9,16 +9,23 @@ public class ButtonTrigger : MonoBehaviour
     SpriteRenderer render;
     int pressedCount = 0;
     public RoomController room;
+    public bool isDisembled = false;
+    public GameObject UIWhenPress;
     // Start is called before the first frame update
     void Start()
     {
         render = GetComponent<SpriteRenderer>();
+        render.sprite = normalImage;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(isDisembled && isPressed() && Input.GetKeyDown(KeyCode.Space))
+        {
+            var player = GameObject.Find("Player").GetComponent<PlayerController>();
+            player.disemble();
+        }
     }
 
     public bool isPressed()
@@ -28,27 +35,61 @@ public class ButtonTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<FriendController>())
+        FriendController fc;
+        if (isDisembled)
+        {
+            fc = collision.GetComponent<PlayerController>();
+        }
+        else
+        {
+            fc = collision.GetComponent<FriendController>();
+        }
+        if (fc)
         {
 
             pressedCount++;
             render.sprite = pressedDownImage;
-            if(pressedCount == 1)
+            if (UIWhenPress)
             {
-                room.getButtonPress();
+                UIWhenPress.SetActive(true);
+            }
+            if (pressedCount == 1)
+            {
+                if (room)
+                {
+
+                    room.getButtonPress();
+                }
             }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<FriendController>())
+        FriendController fc;
+        if (isDisembled)
+        {
+            fc = collision.GetComponent<PlayerController>();
+        }
+        else
+        {
+            fc = collision.GetComponent<FriendController>();
+        }
+        if (fc)
         {
             pressedCount--;
             if (pressedCount == 0)
             {
 
                 render.sprite = normalImage;
-                room.getButtonRelease();
+                if (UIWhenPress)
+                {
+                    UIWhenPress.SetActive(false);
+                }
+                if (room)
+                {
+
+                    room.getButtonRelease();
+                }
             }
         }
     }

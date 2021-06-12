@@ -22,8 +22,11 @@ public class PlayerController: FriendController
     float currentDashTimer = 0f;
     public float dashCooldown = 0.5f;
     float currentDashCooldownTimer = 0f;
-    public float dashScale = 5f; 
+    public float dashScale = 5f;
+    List<AllyController> allyList = new List<AllyController>();
 
+    public float disembleForce = 10f;
+    public float stopAttachTime = 1f;
     // private void Awake()
     //{
     //if (instance == null)
@@ -266,6 +269,20 @@ public class PlayerController: FriendController
         ac.gameObject.transform.parent = transform;
         ac.isAttachedToPlayer = true;
         ac.playerController = this;
+        allyList.Add(ac);
         ac.getAttached();
+
+    }
+
+    public void disemble()
+    {
+        foreach(AllyController ac in allyList)
+        {
+            if (ac && !ac.isDead)
+            {
+                ac.getDisembled();
+            }
+        }
+        allyList.Clear();
     }
 }
