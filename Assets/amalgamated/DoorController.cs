@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    public bool needKey;
+    bool isOpened;
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var player = collision.GetComponent<PlayerController>();
+        if(player && player.inventory.ContainsKey("key") && player.inventory["key"] > 0)
+        {
+            open();
+        }
+    }
     public void open()
     {
+        if (isOpened)
+        {
+            return;
+        }
+        isOpened = true;
         GetComponentInChildren<Animator>().SetTrigger("open");
         GetComponent<BoxCollider2D>().enabled = false;
     }

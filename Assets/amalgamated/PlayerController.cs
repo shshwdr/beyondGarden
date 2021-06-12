@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 //using PixelCrushers.DialogueSystem;
 public class PlayerController: FriendController
 {
+
+    public Dictionary<string, int> inventory = new Dictionary<string, int>();
    // public static Player instance = null;
     Vector2 movement;
     public float moveSpeed = 5f;
@@ -266,6 +268,11 @@ public class PlayerController: FriendController
                 stone.getDamage();
             }
         }
+        if (collision.GetComponent<RoomKey>())
+        {
+            inventory["key"] = 1;
+            Destroy(collision.gameObject);
+        }
     }
     protected override void Die()
     {
@@ -330,4 +337,5 @@ public class PlayerController: FriendController
 
         MusicManager.Instance.allyChanged(allyCount);
     }
+    
 }
