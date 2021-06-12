@@ -322,10 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf57d847d22b004284365847de8d59a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: 
-  openedDoor: {fileID: 1058967191951248341}
-  closedDoor: {fileID: 7461585741101692909}
-  isOpened: 0
 --- !u!61 &8647041950902515875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -679,6 +675,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!95 &1530438536978018274
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437651392930415879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ca75dedef5bac14ca278023810a6377, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6622042781228039225
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +904,12 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 8754958369734974797, guid: 8b840be460889fa44bfb38dc6464410c,
     type: 3}
+--- !u!1 &4437651392930415879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7587647410164597690, guid: 8b840be460889fa44bfb38dc6464410c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6113928347709114045}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2799059817266881509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8214930082031445336, guid: 8b840be460889fa44bfb38dc6464410c,

@@ -85,10 +85,14 @@ public class RoomController : MonoBehaviour
         MusicManager.Instance.stopEnemySound(roomMusicId);
         if (doors.Count>0)
         {
-            foreach (Transform door in doors)
+            foreach (var ds in doors)
             {
+                foreach(Transform door in ds)
+                {
 
-                door.gameObject.SetActive(false);
+                    //door.gameObject.SetActive(false);
+                    door.GetComponent<DoorController>().open();
+                }
             }
         }
         if (hideWhenFinish)

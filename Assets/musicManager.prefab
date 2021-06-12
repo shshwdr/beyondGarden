@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8286502472868641831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8286502472868641824}
+  - component: {fileID: 8286502472868641826}
+  m_Layer: 0
+  m_Name: musicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8286502472868641824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286502472868641831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8286502472868641826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286502472868641831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9bce8616bfb33b4a92f8fe93cdf9b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClip: {fileID: 8300000, guid: a95881feb2e80244d85e6b79899aa6bb, type: 3}
+  allyClips:
+  - {fileID: 8300000, guid: eac49a04b0cacc844aed8e6810b12b5c, type: 3}
+  - {fileID: 8300000, guid: 6038dee78ba509c42b217d1c89f966ca, type: 3}
+  - {fileID: 8300000, guid: eba1c2511e4cc9f42bf3ac442bed587c, type: 3}
+  enemyClips:
+  - {fileID: 8300000, guid: 9157211a4c821fe459abbb3d55066080, type: 3}
+  playerSource: {fileID: 0}
+  allySources: []
+  enemySources: []
+  allyCountChange: 010000000400000006000000

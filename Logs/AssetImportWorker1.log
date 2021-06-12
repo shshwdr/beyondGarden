@@ -3718,3 +3718,35 @@ System memory in use after: 111.4 MB.
 Unloading 159 unused Assets to reduce memory usage. Loaded Objects now: 5671.
 Total: 2.942600 ms (FindLiveObjects: 0.552300 ms CreateObjectMapping: 0.240300 ms MarkObjects: 2.072800 ms  DeleteObjects: 0.076000 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 297.243309 seconds.
+  path: Assets/Resources/dungeons/joinedTogether.unity
+  artifactKey: Guid(bc0e8a110dc6e2048803f6ca40eb53af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/dungeons/joinedTogether.unity using Guid(bc0e8a110dc6e2048803f6ca40eb53af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f9745fce049ddbe1656498c9c20d336') in 0.015732 seconds
+  Import took 0.026069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030890 seconds.
+  path: Assets/Resources/dungeons/joinedTogether.unity
+  artifactKey: Guid(bc0e8a110dc6e2048803f6ca40eb53af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/dungeons/joinedTogether.unity using Guid(bc0e8a110dc6e2048803f6ca40eb53af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f9745fce049ddbe1656498c9c20d336') in 0.003267 seconds
+  Import took 0.012156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.043119 seconds.
+  path: Assets/Resources/dungeons/joinedTogether 1.unity
+  artifactKey: Guid(389c522d1f0c842439db57567a66ddec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/dungeons/joinedTogether 1.unity using Guid(389c522d1f0c842439db57567a66ddec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d5181d63c94751cef08162916bb8b95') in 0.008973 seconds
+  Import took 0.018902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.113063 seconds.
+  path: Assets/Resources/dungeons/joinedTogether - test.unity
+  artifactKey: Guid(389c522d1f0c842439db57567a66ddec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/dungeons/joinedTogether - test.unity using Guid(389c522d1f0c842439db57567a66ddec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7068fe7c8d4958b29880a33d268af3e0') in 0.011017 seconds
+  Import took 0.021176 seconds .
+

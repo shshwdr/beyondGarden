@@ -14,9 +14,14 @@ public class DesctroyableObstacle : HPCharacterController
 
 
         base.Die();
+        animator.SetTrigger("open");
+        foreach (Collider2D c in GetComponents<Collider2D>())
+        {
+            c.enabled = false;
+        }
         //animator.SetTrigger("die");
         // AudioManager.Instance.playMonsterDie(mergeLevel);
         //deathAnimator.enabled = true;
-        Destroy(gameObject, 0f);
+        //Destroy(gameObject, 0f);
     }
 }

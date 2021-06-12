@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &2245727155059596812
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343409310005745873}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6737e0329c4a03447bdbc11c81ded922, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8042984659952018518
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230bfa40edd625e49afcf8b99a5a4c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 2245727155059596812}
   maxHp: 1
   isDead: 0
   isStuned: 0
@@ -143,12 +162,12 @@ PrefabInstance:
     - target: {fileID: -8981209304593761855, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.0068745017
+      value: -0.006876886
       objectReference: {fileID: 0}
     - target: {fileID: -8981209304593761855, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.048315227
+      value: 0.04831499
       objectReference: {fileID: 0}
     - target: {fileID: -8981209304593761855, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
@@ -163,7 +182,7 @@ PrefabInstance:
     - target: {fileID: -5791414104609307512, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4227102723253174032, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
@@ -193,17 +212,17 @@ PrefabInstance:
     - target: {fileID: -4227102723253174032, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4227102723253174032, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4227102723253174032, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4227102723253174032, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
@@ -223,22 +242,22 @@ PrefabInstance:
     - target: {fileID: -1711889663095685453, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.025889337
+      value: -0.02589196
       objectReference: {fileID: 0}
     - target: {fileID: -1711889663095685453, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.017640114
+      value: -0.017639637
       objectReference: {fileID: 0}
     - target: {fileID: 3416614423795607974, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 1.1981684
+      value: 1.1981698
       objectReference: {fileID: 0}
     - target: {fileID: 3416614423795607974, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.049999893
+      value: 0.05000025
       objectReference: {fileID: 0}
     - target: {fileID: 3416614423795607974, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
@@ -303,16 +322,22 @@ PrefabInstance:
     - target: {fileID: 9120684317257541407, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.0008303523
+      value: -0.0008279681
       objectReference: {fileID: 0}
     - target: {fileID: 9120684317257541407, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.0044299364
+      value: -0.004430175
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -5012914981310829422, guid: a0d3d28ace4cee8498cba2c2853b9cff,
     type: 3}
+--- !u!1 &6343409310005745873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4005453548962809781, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+    type: 3}
+  m_PrefabInstance: {fileID: 8042984660743872356}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3082779466051968916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4227102723253174032, guid: a0d3d28ace4cee8498cba2c2853b9cff,
