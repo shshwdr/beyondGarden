@@ -115,7 +115,7 @@ public class AllyController : FriendController
         playerController.allyCoundAdd(-1);
 
         GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.loseAlly);
-        Destroy(gameObject, 0.3f);
+        Destroy(gameObject, 0.5f);
     }
 }
 

@@ -14,6 +14,8 @@ public class PlayerController: FriendController
     Vector2 movement;
     public float moveSpeed = 5f;
 
+    public List<Animator> animators;
+
     public PlayerMeleeAttack meleeAttackCollider;
     Vector3 originMeleeAttackPosition;
     bool firstClear = true;
@@ -48,7 +50,7 @@ public class PlayerController: FriendController
     //    //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
     //    Destroy(gameObject);
     //}
-
+    public GameObject finalSprite;
 
     ////Sets this to not be destroyed when reloading scene
     //DontDestroyOnLoad(gameObject);
@@ -57,7 +59,7 @@ public class PlayerController: FriendController
 
     public void updateToMergedPlayer()
     {
-        animator.runtimeAnimatorController = animatorController;
+        //animator.runtimeAnimatorController = animatorController;
     }
     protected override void Start()
     {
@@ -66,8 +68,8 @@ public class PlayerController: FriendController
         //originMeleeAttackPosition = meleeAttackCollider.transform.localPosition;
         base.Start();
 
-        animator = transform.Find("Sprites").GetComponent<Animator>();
-        spriteObject = animator.gameObject;
+        //animator = transform.Find("Sprites").GetComponent<Animator>();
+        spriteObject = finalSprite;
 
         if (FModSoundManager.Instance.isMerged)
         {
@@ -111,6 +113,14 @@ public class PlayerController: FriendController
     {
         return currentDashCooldownTimer <= 0;
     }
+
+    void clearAnimatorObject()
+    {
+
+        animators[0].gameObject.SetActive(false);
+        animators[1].gameObject.SetActive(false);
+        animators[2].gameObject.SetActive(false);
+    }
     override protected void Update()
     {
         if (isDead)
@@ -153,17 +163,48 @@ public class PlayerController: FriendController
         if (EnemyManager.instance.isLevelCleared && firstClear && DungeonManager.Instance.currentLevel != 0 && DungeonManager.Instance.currentLevel != 7)
         {
             firstClear = false;
-            animator.SetTrigger("victory");
+            //animator.SetTrigger("victory");
 
         }
+
 
         movement.x = Input.GetAxisRaw("Horizontal");
 
         //Get input from the input manager, round it to an integer and store in vertical to set y axis move direction
         movement.y = Input.GetAxisRaw("Vertical");
         float speed = movement.sqrMagnitude;
+        //if (speed > 0.01)
+        //{
+        //    //change face
+        //    if (Mathf.Abs(movement.y) > Mathf.Abs(movement.x))
+        //    {
+        //        if (movement.y > 0.01f)
+        //        {
+        //            clearAnimatorObject();
+        //            animators[2].gameObject.SetActive(true);
+        //        }
+        //        else if (movement.y < 0.01f)
+        //        {
+
+        //            clearAnimatorObject();
+        //            animators[0].gameObject.SetActive(true);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        clearAnimatorObject();
+        //        animators[1].gameObject.SetActive(true);
+
+        //    }
+        //}
+
         movement = Vector2.ClampMagnitude(movement, 1);
-        animator.SetFloat("speed", movement.sqrMagnitude);
+        //animator.SetFloat("speed", movement.sqrMagnitude);
+        foreach (Animator anim in animators)
+        {
+            anim.SetFloat("speed", movement.sqrMagnitude);
+        }
+
 
 
         if (speed>0.001 && Input.GetMouseButtonDown(0) && !isDashing() && canDashing())
@@ -171,7 +212,19 @@ public class PlayerController: FriendController
             currentDashTimer = dashTime;
             currentDashCooldownTimer = dashCooldown;
             GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.dash);
+            foreach(Animator anim in animators)
+            {
+                anim.SetTrigger("dash");
+            }
+            foreach(AllyController ally in allyList)
+            {
+                if(ally && !ally.isDead)
+                {
+                    ally.animator.SetTrigger("dash");
+                }
+            }
         }
+
 
         base.Update();
 
@@ -217,6 +270,12 @@ public class PlayerController: FriendController
 
         }
     }
+
+    void playAnim(string anim)
+    {
+        
+    }
+
     override protected void playHurtSound()
     {
 
@@ -225,16 +284,23 @@ public class PlayerController: FriendController
 
     public void attackAnim()
     {
-        animator.SetBool("attack", true);
-        animator.SetFloat("attackHorizontal", movement.x);
+        foreach(Animator anim in animators)
+        {
 
-        animator.SetFloat("attackVertical", movement.y);
+            anim.SetBool("attack", true);
+            anim.SetFloat("attackHorizontal", movement.x);
+
+            anim.SetFloat("attackVertical", movement.y);
+        }
     }
 
     public void stopAttackAnim()
     {
+        foreach (Animator anim in animators)
+        {
 
-        animator.SetBool("attack", false);
+            animator.SetBool("attack", false);
+        }
     }
 
     private void LateUpdate()
@@ -282,7 +348,10 @@ public class PlayerController: FriendController
             return;
         }
         isDead = true;
-        animator.SetTrigger("die");
+        foreach (Animator anim in animators)
+        {
+            animator.SetTrigger("die");
+        }
 
         //AudioManager.Instance.playGameOver();
         FModSoundManager.Instance.SetParam("Game Over", 1);

@@ -362,3 +362,328 @@ System memory in use after: 117.7 MB.
 Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5531.
 Total: 3.026100 ms (FindLiveObjects: 0.461700 ms CreateObjectMapping: 0.262700 ms MarkObjects: 2.214000 ms  DeleteObjects: 0.086700 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005661 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.262 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.1 MB.
+System memory in use after: 117.6 MB.
+
+Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5534.
+Total: 3.690000 ms (FindLiveObjects: 0.419800 ms CreateObjectMapping: 0.200900 ms MarkObjects: 2.972900 ms  DeleteObjects: 0.094700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 5872.127314 seconds.
+  path: Assets/Doozy/Examples/Resources/Soundy/SoundDatabase_ExampleSlides.asset
+  artifactKey: Guid(f357811014801dc489af9b0c14c815e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Resources/Soundy/SoundDatabase_ExampleSlides.asset using Guid(f357811014801dc489af9b0c14c815e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e69cd81181adb1d6c47268e2b675b649') in 0.387812 seconds
+  Import took 0.402346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.920447 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Slides/Clack Pop Click.mp3
+  artifactKey: Guid(cf501f3fa0ad473418ade0eeacbc3d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Slides/Clack Pop Click.mp3 using Guid(cf501f3fa0ad473418ade0eeacbc3d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064d625e46c034a2bf8a4bf0fae6175c') in 0.073966 seconds
+  Import took 0.083510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001669 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Slides/Clack Pop Click.mp3
+  artifactKey: Guid(cf501f3fa0ad473418ade0eeacbc3d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Slides/Clack Pop Click.mp3 using Guid(cf501f3fa0ad473418ade0eeacbc3d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064d625e46c034a2bf8a4bf0fae6175c') in 0.011945 seconds
+  Import took 0.023374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.714080 seconds.
+  path: Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Shared Audio/click.ogg
+  artifactKey: Guid(37cc5c4c34e880e4ea94f0daa8bb4aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Pixel Crushers/Dialogue System/Prefabs/Art/Shared Audio/click.ogg using Guid(37cc5c4c34e880e4ea94f0daa8bb4aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9addd52bce8d70d6364c0827cf55b90e') in 0.023165 seconds
+  Import took 0.034636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.300307 seconds.
+  path: Assets/SFX/Click_On_Snail_1.mp3
+  artifactKey: Guid(e0bb26e29b8adb144b1fae4b425dedf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SFX/Click_On_Snail_1.mp3 using Guid(e0bb26e29b8adb144b1fae4b425dedf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ede8297aa364782a9259b484fd2b38b3') in 0.018376 seconds
+  Import took 0.030368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.896971 seconds.
+  path: Assets/SFX/Click_On_Snail_2.mp3
+  artifactKey: Guid(e01ff33115a9ea24d911e845870b8700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SFX/Click_On_Snail_2.mp3 using Guid(e01ff33115a9ea24d911e845870b8700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6113a7973b6be9fdf272b3a97f565016') in 0.016620 seconds
+  Import took 0.028229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.870831 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Slides/Catch Rattle Click.mp3
+  artifactKey: Guid(100b4764f735e6d4781c1480d62d5a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Slides/Catch Rattle Click.mp3 using Guid(100b4764f735e6d4781c1480d62d5a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d9ab59baba4e30b0a13e5303b205bf') in 0.017822 seconds
+  Import took 0.029685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.412732 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Clicks/Mouse Clicks.mp3
+  artifactKey: Guid(4efd4c64faecba2419a71cd7d6584d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Clicks/Mouse Clicks.mp3 using Guid(4efd4c64faecba2419a71cd7d6584d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f64ab2c467e056e3019838b30c3e06a') in 0.017817 seconds
+  Import took 0.030405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.296607 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Clicks/Metallic Buzz Click.mp3
+  artifactKey: Guid(400bde4a2870e7b4eb2f81af6db120ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Clicks/Metallic Buzz Click.mp3 using Guid(400bde4a2870e7b4eb2f81af6db120ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08943faa35b78c9eb75874f611fc7b0c') in 0.016106 seconds
+  Import took 0.027326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.941508 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Clicks/Sharp Tick Or Click.mp3
+  artifactKey: Guid(58c628cc3e0623f4fa034ecc271aa561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Clicks/Sharp Tick Or Click.mp3 using Guid(58c628cc3e0623f4fa034ecc271aa561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10bdd3842b5408d8aabc20aa08de3715') in 0.018499 seconds
+  Import took 0.028986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.905138 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Clicks/Multimedia Rollover Click.mp3
+  artifactKey: Guid(b055bca48801dec448526dc19731c2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Clicks/Multimedia Rollover Click.mp3 using Guid(b055bca48801dec448526dc19731c2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49efc7ba862c47fd031f70292dc32f3c') in 0.017966 seconds
+  Import took 0.029492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.695716 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Clicks/Tweet Media Click.mp3
+  artifactKey: Guid(e7b018d4f9cd45c4e94267c14a5f3f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Clicks/Tweet Media Click.mp3 using Guid(e7b018d4f9cd45c4e94267c14a5f3f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dba591142ce59782524ab3d181c5dcd') in 0.018759 seconds
+  Import took 0.029124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.319082 seconds.
+  path: Assets/Doozy/Examples/Sounds/SFX/Clicks/Typical Click Clack.mp3
+  artifactKey: Guid(c3025dc6b55ae234994062b2b1f0c800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Doozy/Examples/Sounds/SFX/Clicks/Typical Click Clack.mp3 using Guid(c3025dc6b55ae234994062b2b1f0c800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c71e4c60ce8c17745050bb8d1f6cfc73') in 0.020551 seconds
+  Import took 0.030866 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006044 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.176 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.6 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5540.
+Total: 3.340300 ms (FindLiveObjects: 0.660700 ms CreateObjectMapping: 0.317300 ms MarkObjects: 2.276200 ms  DeleteObjects: 0.084800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005806 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.244 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.6 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5543.
+Total: 3.333400 ms (FindLiveObjects: 0.462600 ms CreateObjectMapping: 0.233200 ms MarkObjects: 2.555300 ms  DeleteObjects: 0.081100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005934 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.214 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.6 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5546.
+Total: 2.836200 ms (FindLiveObjects: 0.491300 ms CreateObjectMapping: 0.232800 ms MarkObjects: 2.034100 ms  DeleteObjects: 0.076800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005601 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.262 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.7 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5549.
+Total: 3.204900 ms (FindLiveObjects: 0.454000 ms CreateObjectMapping: 0.220400 ms MarkObjects: 2.448200 ms  DeleteObjects: 0.080400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 496.740740 seconds.
+  path: Assets/Resources/enemyRanged.prefab
+  artifactKey: Guid(a57bcd06a7c92cd468458c9d4f785fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/enemyRanged.prefab using Guid(a57bcd06a7c92cd468458c9d4f785fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b909c5bac87dee819ef9195b62d74f') in 0.260231 seconds
+  Import took 0.274417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003170 seconds.
+  path: Assets/Resources/enemyRanged.prefab
+  artifactKey: Guid(a57bcd06a7c92cd468458c9d4f785fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/enemyRanged.prefab using Guid(a57bcd06a7c92cd468458c9d4f785fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b909c5bac87dee819ef9195b62d74f') in 0.046799 seconds
+  Import took 0.055629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.161103 seconds.
+  path: Assets/Resources/enemyMalee.prefab
+  artifactKey: Guid(72254917155a6bf478d82d427bfdb928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/enemyMalee.prefab using Guid(72254917155a6bf478d82d427bfdb928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9cb5e9a1a4aa86e094148358d182b4d') in 0.051770 seconds
+  Import took 0.062329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042551 seconds.
+  path: Assets/Resources/enemyMalee.prefab
+  artifactKey: Guid(72254917155a6bf478d82d427bfdb928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/enemyMalee.prefab using Guid(72254917155a6bf478d82d427bfdb928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9cb5e9a1a4aa86e094148358d182b4d') in 0.049786 seconds
+  Import took 0.058993 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005325 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.232 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.7 MB.
+System memory in use after: 117.2 MB.
+
+Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5588.
+Total: 3.005700 ms (FindLiveObjects: 0.510700 ms CreateObjectMapping: 0.230000 ms MarkObjects: 2.186600 ms  DeleteObjects: 0.076900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006894 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.512 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.9 MB.
+System memory in use after: 117.4 MB.
+
+Unloading 160 unused Assets to reduce memory usage. Loaded Objects now: 5591.
+Total: 3.605700 ms (FindLiveObjects: 0.615200 ms CreateObjectMapping: 0.344100 ms MarkObjects: 2.559500 ms  DeleteObjects: 0.085500 ms)
+

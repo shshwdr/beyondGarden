@@ -189,8 +189,11 @@ public class EnemyController : HPCharacterController
             pathFinding.enabled = true;
             if (foundTarget)
             {
+                if (pathSetter)
+                {
 
-                pathSetter.target = EnemyManager.instance.player.transform;
+                    pathSetter.target = EnemyManager.instance.player.transform;
+                }
                 //agent.isStopped = false;
                 //agent.SetDestination(shortestTarget.position);
                 testFlip(agent.velocity);
