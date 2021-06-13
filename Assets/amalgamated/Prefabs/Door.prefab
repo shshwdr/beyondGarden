@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2686668911505965158}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: openedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2669005693684950500}
   - component: {fileID: 2669005693684950501}
   - component: {fileID: 2669005693684950502}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: doors_leaf_closed (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 2669005694432717558}
   - component: {fileID: 2669005694432717559}
   - component: {fileID: 2669005694432717560}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: doors_leaf_closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 8647041950902515875}
   - component: {fileID: 2777531728302074658}
   - component: {fileID: 2150780222391473658}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ MonoBehaviour:
   - {x: -1.2938137, y: 3.2268047, z: 0}
   m_ShapePathHash: 1789263141
   m_Mesh: {fileID: 0}
-  m_InstanceId: 987224
+  m_InstanceId: -6034
 --- !u!61 &2150780222391473658
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 2669005694721259238}
   - component: {fileID: 2669005694721259239}
   - component: {fileID: 2669005694721259240}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: doors_leaf_closed (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 2669005694753334120}
   - component: {fileID: 2669005694753334121}
   - component: {fileID: 2669005694753334122}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: doors_leaf_closed (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 2669005694779280891}
   - component: {fileID: 2669005694779280892}
   - component: {fileID: 2669005694779280893}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: doors_leaf_closed (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 4186185472140494137}
   - component: {fileID: 297053477022106782}
   - component: {fileID: 4169842187600836463}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: doors_leaf_closed (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5646470101168346989}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: closedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -896,6 +896,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2669005694635206803}
     m_Modifications:
+    - target: {fileID: -8824963283273642619, guid: 8b840be460889fa44bfb38dc6464410c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -1472911014056662484, guid: 8b840be460889fa44bfb38dc6464410c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -906,10 +911,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5079435003463306732, guid: 8b840be460889fa44bfb38dc6464410c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7587647410164597690, guid: 8b840be460889fa44bfb38dc6464410c,
         type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587647410164597690, guid: 8b840be460889fa44bfb38dc6464410c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8214930082031445336, guid: 8b840be460889fa44bfb38dc6464410c,
         type: 3}

@@ -32,7 +32,7 @@ GameObject:
   - component: {fileID: 8042984659952018515}
   - component: {fileID: 338262211}
   - component: {fileID: 194647586}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: cage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ MonoBehaviour:
   - {x: -1.7877722, y: 2.9253964, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -525832
+  m_InstanceId: -8012
 --- !u!1001 &8042984660743872356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,6 +186,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8042984659952018517}
     m_Modifications:
+    - target: {fileID: -9147824246607251955, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -8981209304593761855, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -201,6 +206,16 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Extent.x
       value: 0.38905507
       objectReference: {fileID: 0}
+    - target: {fileID: -8613734130064920761, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -6836942246517981963, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -5791414104609307512, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -210,6 +225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4232146571227650410, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4227102723253174032, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
@@ -266,6 +286,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3695551192996543151, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -3688065952391795124, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -2197112720341506101, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -1711889663095685453, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -275,6 +310,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: -0.017639637
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103850799148235087, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360082481995157994, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3416614423795607974, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
@@ -296,6 +341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cage
       objectReference: {fileID: 0}
+    - target: {fileID: 4005453548962809781, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4953421909185059580, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_SortingLayer
@@ -311,6 +361,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5179035679240428746, guid: a0d3d28ace4cee8498cba2c2853b9cff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 5290406530607935769, guid: a0d3d28ace4cee8498cba2c2853b9cff,
         type: 3}
       propertyPath: m_SortingLayer

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4735393277526277540}
   - component: {fileID: 4735393277526277541}
   - component: {fileID: 9174019148972754983}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Wall 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,4 +221,4 @@ MonoBehaviour:
   - {x: -0.5481224, y: -0.8617492, z: 0}
   m_ShapePathHash: -578470600
   m_Mesh: {fileID: 0}
-  m_InstanceId: -526560
+  m_InstanceId: -8102

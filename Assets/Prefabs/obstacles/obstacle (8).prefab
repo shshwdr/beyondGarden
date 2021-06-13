@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1077936623903035253}
   - component: {fileID: 1077936623903035251}
   - component: {fileID: 1077936623903035250}
-  m_Layer: 0
+  - component: {fileID: 1459319051}
+  m_Layer: 13
   m_Name: obstacle (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,3 +166,29 @@ PolygonCollider2D:
       - {x: 0.074999996, y: 0.79999995}
       - {x: -0.005, y: 0.78}
       - {x: -0.015, y: 0.78999996}
+--- !u!114 &1459319051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077936623903035252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000008338aa0dd5c20669ed75673e91c237dc4f88b2f2ef872252f387fbd851507a590989b12b611f9a6c1527753b1576c97d37d139acdd8f5a9e
+  m_ShapePath:
+  - {x: -0.575, y: -2.81, z: 0}
+  - {x: 0.575, y: -2.81, z: 0}
+  - {x: 0.575, y: 2.81, z: 0}
+  - {x: -0.575, y: 2.81, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 33216

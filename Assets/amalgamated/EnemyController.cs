@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
-
+using Pathfinding;
 public class EnemyController : HPCharacterController
 {
     NavMeshAgent agent;
-
+    AIPath pathFinding;
+    AIDestinationSetter pathSetter;
     public bool isMelee;
     public float meleeRadius;
     public float meleeCooldown;
@@ -55,6 +56,11 @@ public class EnemyController : HPCharacterController
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         originalPosition = transform.position;
+        pathFinding = GetComponent<AIPath>();
+        pathFinding.enabled = false;
+        pathSetter = GetComponent<AIDestinationSetter>();
+
+
     }
     //Rigidbody2D rb;
     // Start is called before the first frame update
@@ -86,6 +92,7 @@ public class EnemyController : HPCharacterController
         //hp = maxHp;
         updateHP();
         levelText.text = "LvL " + level;
+
     }
 
     int getMapHP()
@@ -121,6 +128,8 @@ public class EnemyController : HPCharacterController
         if (isDead || EnemyManager.instance.player.isDead)
         {
             //agent.isStopped = true;
+
+            pathFinding.enabled = false;
             return;
         }
         base.Update();
@@ -138,6 +147,8 @@ public class EnemyController : HPCharacterController
             //agent.isStopped = false;
             //agent.SetDestination(originalPosition);
             //testFlip(agent.velocity);
+
+            pathFinding.enabled = false;
         }
 
         //move
@@ -170,13 +181,16 @@ public class EnemyController : HPCharacterController
                     EnemyManager.instance.player.getDamage();
                 }
             }
-            
+
+            pathFinding.enabled = true;
             if (foundTarget)
             {
 
+                pathSetter.target = EnemyManager.instance.player.transform;
                 //agent.isStopped = false;
                 //agent.SetDestination(shortestTarget.position);
                 testFlip(agent.velocity);
+
             }
             else
             {
