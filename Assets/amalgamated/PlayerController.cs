@@ -278,8 +278,7 @@ public class PlayerController: FriendController
 
     override protected void playHurtSound()
     {
-
-        AudioManager.Instance.playPlayerHurt();
+        //AudioManager.Instance.playPlayerHurt();
     }
 
     public void attackAnim()
