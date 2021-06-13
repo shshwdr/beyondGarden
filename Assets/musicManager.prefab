@@ -43,14 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bce8616bfb33b4a92f8fe93cdf9b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerClip: {fileID: 8300000, guid: a95881feb2e80244d85e6b79899aa6bb, type: 3}
+  playerClip: {fileID: 8300000, guid: 9b8a9a41d78662f4aab5e65adb1f9c57, type: 3}
   allyClips:
-  - {fileID: 8300000, guid: eac49a04b0cacc844aed8e6810b12b5c, type: 3}
-  - {fileID: 8300000, guid: 6038dee78ba509c42b217d1c89f966ca, type: 3}
-  - {fileID: 8300000, guid: eba1c2511e4cc9f42bf3ac442bed587c, type: 3}
+  - {fileID: 8300000, guid: a5f34390cb92243428bfde2dbed312eb, type: 3}
+  - {fileID: 8300000, guid: e52ca4c199a2727448ed240b7d4d938f, type: 3}
+  - {fileID: 8300000, guid: 4430ca7df3875eb4faa766b3b23f0d0d, type: 3}
   enemyClips:
-  - {fileID: 8300000, guid: 9157211a4c821fe459abbb3d55066080, type: 3}
+  - {fileID: 8300000, guid: a61cdc9ebd2ceff40a94d05152fe9c76, type: 3}
   playerSource: {fileID: 0}
   allySources: []
   enemySources: []
-  allyCountChange: 010000000400000006000000
+  allyCountChange: 010000000300000006000000
