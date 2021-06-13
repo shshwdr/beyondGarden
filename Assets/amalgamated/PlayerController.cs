@@ -35,6 +35,7 @@ public class PlayerController: FriendController
     public int maxAllyCount = 10;
 
     public GameObject gameOverObject;
+    GameObject ghostManager;
 
     // private void Awake()
     //{
@@ -63,6 +64,10 @@ public class PlayerController: FriendController
     }
     protected override void Start()
     {
+        GameObject gmPrefab = Resources.Load<GameObject>("ghost");
+        //ghostManager = Instantiate(gmPrefab, Vector3.zero, Quaternion.identity);
+        //ghostManager.GetComponent<GhostManager>().characterT = transform;
+        //ghostManager.GetComponent<GhostManager>().dashTime = dashTime;
 
         EnemyManager.instance.player = this;
         //originMeleeAttackPosition = meleeAttackCollider.transform.localPosition;
@@ -120,6 +125,21 @@ public class PlayerController: FriendController
         animators[0].gameObject.SetActive(false);
         animators[1].gameObject.SetActive(false);
         animators[2].gameObject.SetActive(false);
+    }
+
+    IEnumerator StopTrailRender()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GetComponent<TrailRenderer>().emitting = false;
+
+        foreach (AllyController ally in allyList)
+        {
+            if (ally && !ally.isDead)
+            {
+
+                ally.GetComponent<TrailRenderer>().emitting = false;
+            }
+        }
     }
     override protected void Update()
     {
@@ -216,11 +236,16 @@ public class PlayerController: FriendController
             {
                 anim.SetTrigger("dash");
             }
+            //ghostManager.GetComponent<GhostManager>(). StartGhost();
+            GetComponent<TrailRenderer>().emitting = true;
+            StartCoroutine(StopTrailRender());
             foreach(AllyController ally in allyList)
             {
                 if(ally && !ally.isDead)
                 {
                     ally.animator.SetTrigger("dash");
+
+                    ally.GetComponent<TrailRenderer>().emitting = true;
                 }
             }
         }

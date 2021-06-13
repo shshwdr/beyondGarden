@@ -83,7 +83,7 @@ public class HelperPlant : HPObject
 
     protected virtual void loadWithInitData()
     {
-
+        return;
         harvestTime = JsonManager.Instance.getFlower(type).harvestTime;
         if (initData == null)
         {
@@ -113,6 +113,7 @@ public class HelperPlant : HPObject
     // Start is called before the first frame update
     protected override void Start()
     {
+        return;
         base.Start();
         if (resourcePositionsParent)
         {
@@ -126,6 +127,7 @@ public class HelperPlant : HPObject
 
     private void OnMouseEnter()
     {
+        return;
         if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -220,6 +222,7 @@ public class HelperPlant : HPObject
     // Update is called once per frame
     protected override void Update()
     {
+        return;
         if (isDragging)
         {
             if (!canPlant())
@@ -265,6 +268,7 @@ public class HelperPlant : HPObject
 
     void Harvest()
     {
+        return;
         spawnedResourceCount++;
         Transform spawnTransform = resourcePositionsParent.GetChild(currentResourcePositionId);
         currentResourcePositionId++;
