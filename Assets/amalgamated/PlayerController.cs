@@ -370,7 +370,7 @@ public class PlayerController: FriendController
             GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.gameover);
         }
     }
-    void Restart()
+    public void Restart()
     {
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
