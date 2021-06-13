@@ -54,6 +54,7 @@ MonoBehaviour:
   loseAlly: {fileID: 8300000, guid: e13e728f596b08745a8850a5238d65e6, type: 3}
   killMonster: {fileID: 8300000, guid: 0ae3b3c5122d6ed40969ac0bce99f063, type: 3}
   gameover: {fileID: 8300000, guid: 4d48382cecd783447afe270029267124, type: 3}
+  die: {fileID: 8300000, guid: d3f9d46789c121248b632e1dd0d8de51, type: 3}
   dash: {fileID: 8300000, guid: 7398a5027c7ccd54493641dd88bd84c8, type: 3}
   doorOpen: {fileID: 8300000, guid: 8a6c97073a25c054da1ef09dc6fdbddf, type: 3}
   explode: {fileID: 8300000, guid: 32097a3646493f54f8586395dc47cffd, type: 3}
