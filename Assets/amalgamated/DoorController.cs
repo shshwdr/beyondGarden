@@ -24,6 +24,11 @@ public class DoorController : MonoBehaviour
         isOpened = true;
         GetComponentInChildren<Animator>().SetTrigger("open");
         GetComponent<BoxCollider2D>().enabled = false;
+
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.doorOpen);
+        }
     }
 
     //public string nextLevelName;

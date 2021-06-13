@@ -359,6 +359,11 @@ public class EnemyController : HPCharacterController
        // AudioManager.Instance.playMonsterDie(mergeLevel);
         //deathAnimator.enabled = true;
         Destroy(gameObject, 1f);
+
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.killMonster);
+        }
     }
 
 }

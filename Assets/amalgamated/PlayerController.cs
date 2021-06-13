@@ -170,6 +170,7 @@ public class PlayerController: FriendController
         {
             currentDashTimer = dashTime;
             currentDashCooldownTimer = dashCooldown;
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.dash);
         }
 
         base.Update();
@@ -285,12 +286,21 @@ public class PlayerController: FriendController
 
         //AudioManager.Instance.playGameOver();
         FModSoundManager.Instance.SetParam("Game Over", 1);
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.die);
+        }
         Invoke("gameover", 1);
     }
     void gameover()
     {
         //GameOver.Instance .Gameover();
         gameOverObject.SetActive(true);
+
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.gameover);
+        }
     }
     void Restart()
     {
@@ -314,6 +324,7 @@ public class PlayerController: FriendController
             allyCoundAdd(1);
         }
 
+        GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.getAlly);
     }
     public void allyCoundAdd(int v)
     {

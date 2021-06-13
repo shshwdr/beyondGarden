@@ -50,6 +50,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4430ca7df3875eb4faa766b3b23f0d0d, type: 3}
   enemyClips:
   - {fileID: 8300000, guid: a61cdc9ebd2ceff40a94d05152fe9c76, type: 3}
+  getAlly: {fileID: 8300000, guid: 66e28592600b4aa4eb6ce234cd212387, type: 3}
+  loseAlly: {fileID: 8300000, guid: e13e728f596b08745a8850a5238d65e6, type: 3}
+  killMonster: {fileID: 8300000, guid: 0ae3b3c5122d6ed40969ac0bce99f063, type: 3}
+  gameover: {fileID: 8300000, guid: 4d48382cecd783447afe270029267124, type: 3}
+  dash: {fileID: 8300000, guid: 7398a5027c7ccd54493641dd88bd84c8, type: 3}
+  doorOpen: {fileID: 8300000, guid: 8a6c97073a25c054da1ef09dc6fdbddf, type: 3}
+  explode: {fileID: 8300000, guid: 32097a3646493f54f8586395dc47cffd, type: 3}
+  cageExplode: {fileID: 8300000, guid: 39836b2c364f23a4b936e1131da83bb3, type: 3}
+  projectile: {fileID: 8300000, guid: 94299b18d00a8f64e8ec265c91b7de29, type: 3}
+  findSecret: {fileID: 8300000, guid: 1fd402e1ee1b88545bfa23da742be16f, type: 3}
   playerSource: {fileID: 0}
   allySources: []
   enemySources: []

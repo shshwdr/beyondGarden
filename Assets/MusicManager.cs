@@ -8,9 +8,23 @@ public class MusicManager : Singleton<MusicManager>
     public List<AudioClip> allyClips;
     public List<AudioClip> enemyClips;
 
+
+    public AudioClip getAlly;
+    public AudioClip loseAlly;
+    public AudioClip killMonster;
+    public AudioClip gameover;
+    public AudioClip die;
+    public AudioClip dash;
+    public AudioClip doorOpen;
+    public AudioClip explode;
+    public AudioClip cageExplode;
+    public AudioClip projectile;
+    public AudioClip findSecret;
+
     public AudioSource playerSource;
     public List<AudioSource> allySources;
     public List<AudioSource> enemySources;
+
 
     public List<int> allyCountChange = new List<int>()
     {

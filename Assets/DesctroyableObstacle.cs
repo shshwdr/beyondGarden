@@ -19,6 +19,10 @@ public class DesctroyableObstacle : HPCharacterController
         {
             c.enabled = false;
         }
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.explode);
+        }
         //animator.SetTrigger("die");
         // AudioManager.Instance.playMonsterDie(mergeLevel);
         //deathAnimator.enabled = true;

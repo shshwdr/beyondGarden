@@ -30,11 +30,21 @@ public class RoomController : MonoBehaviour
     {
         if (enemies)
         {
-
-            foreach (Transform t in enemies)
+            foreach (EnemySpawner t in enemies.GetComponentsInChildren<EnemySpawner>())
             {
                 enemyCount++;
-                t.GetComponent<EnemyController>().addRoom(this);
+                string spawnName = "enemyRanged";
+                if (t.spawnRanged)
+                {
+
+                }
+                else
+                {
+                    spawnName = "enemyMalee";
+                }
+                var eP = Resources.Load<GameObject>(spawnName);
+                var go = Instantiate(eP, t.transform.position, t.transform.rotation, t.transform.parent);
+                go.GetComponent<EnemyController>().addRoom(this);
             }
         }
         if (buttons)
