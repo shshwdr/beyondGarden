@@ -179,6 +179,10 @@ public class EnemyController : HPCharacterController
                     meleeCooldownTimer = 0;
                     animator.SetTrigger("attack");
                     EnemyManager.instance.player.getDamage();
+                    if (GetComponent<AudioSource>())
+                    {
+                        GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.meleeAttack);
+                    }
                 }
             }
 

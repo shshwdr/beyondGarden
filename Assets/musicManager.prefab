@@ -61,6 +61,7 @@ MonoBehaviour:
   cageExplode: {fileID: 8300000, guid: 39836b2c364f23a4b936e1131da83bb3, type: 3}
   projectile: {fileID: 8300000, guid: 94299b18d00a8f64e8ec265c91b7de29, type: 3}
   findSecret: {fileID: 8300000, guid: 1fd402e1ee1b88545bfa23da742be16f, type: 3}
+  click: {fileID: 8300000, guid: 37cc5c4c34e880e4ea94f0daa8bb4aef, type: 3}
   playerSource: {fileID: 0}
   allySources: []
   enemySources: []

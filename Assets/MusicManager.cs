@@ -13,6 +13,7 @@ public class MusicManager : Singleton<MusicManager>
     public AudioClip loseAlly;
     public AudioClip killMonster;
     public AudioClip gameover;
+    public AudioClip damage;
     public AudioClip die;
     public AudioClip dash;
     public AudioClip doorOpen;
@@ -20,6 +21,8 @@ public class MusicManager : Singleton<MusicManager>
     public AudioClip cageExplode;
     public AudioClip projectile;
     public AudioClip findSecret;
+    public AudioClip click;
+    public AudioClip meleeAttack;
 
     public AudioSource playerSource;
     public List<AudioSource> allySources;

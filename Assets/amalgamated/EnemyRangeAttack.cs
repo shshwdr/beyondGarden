@@ -20,6 +20,10 @@ public class EnemyRangeAttack : MonoBehaviour
 
     void Attack()
     {
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.projectile);
+        }
         enemyController.animator.SetTrigger("attack");
         var player = EnemyManager.instance.player;
         var dir = player.transform.position - transform.position;

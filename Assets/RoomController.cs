@@ -16,6 +16,8 @@ public class RoomController : MonoBehaviour
     bool isFinished;
     public int roomMusicId = 0;
     public GameObject hiddenRoom;
+    AudioSource audioSource;
+    bool firstGetIntoHiddenRoom = true;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,6 +25,7 @@ public class RoomController : MonoBehaviour
         if (hiddenRoom)
         {
             hiddenRoom.SetActive(false);
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
 
     }
@@ -132,6 +135,11 @@ public class RoomController : MonoBehaviour
             {
 
                 hiddenRoom.SetActive(true);
+                if (firstGetIntoHiddenRoom)
+                {
+                    firstGetIntoHiddenRoom = false;
+                    audioSource.PlayOneShot(MusicManager.Instance.findSecret);
+                }
             }
         }
     }

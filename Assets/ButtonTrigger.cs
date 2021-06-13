@@ -59,6 +59,11 @@ public class ButtonTrigger : MonoBehaviour
                 {
 
                     room.getButtonPress();
+
+                    if (GetComponent<AudioSource>())
+                    {
+                        GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.click);
+                    }
                 }
             }
         }

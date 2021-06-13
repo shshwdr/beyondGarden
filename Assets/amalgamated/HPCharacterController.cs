@@ -100,6 +100,10 @@ public class HPCharacterController : MonoBehaviour
             isStuned = true;
             currentStunTimer = 0;
             animator.SetTrigger("hit");
+            if (GetComponent<AudioSource>())
+            {
+                GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.damage);
+            }
         }
 
     }
