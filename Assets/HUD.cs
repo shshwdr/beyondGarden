@@ -55,6 +55,7 @@ public class HUD : Singleton<HUD>
 
     public void UpdatePlantButtons()
     {
+        return;
         foreach (Transform go in plantsContent.transform)
         {
             Destroy(go.gameObject);
@@ -219,6 +220,7 @@ public class HUD : Singleton<HUD>
         // Update is called once per frame
         void Update()
     {
+        return;
         foreach (var pair in plantManager.currentResource)
         {
 

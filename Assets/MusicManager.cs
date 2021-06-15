@@ -23,8 +23,11 @@ public class MusicManager : Singleton<MusicManager>
     public AudioClip findSecret;
     public AudioClip click;
     public AudioClip meleeAttack;
+    public AudioClip victory;
+    public AudioClip pickup;
 
     public AudioSource playerSource;
+    public AudioSource victorySource;
     public List<AudioSource> allySources;
     public List<AudioSource> enemySources;
 

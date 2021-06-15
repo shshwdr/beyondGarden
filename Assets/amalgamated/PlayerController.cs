@@ -141,6 +141,17 @@ public class PlayerController: FriendController
             }
         }
     }
+    public static Vector3 GetMouseWorldPositionWithZ(Vector3 screenPosition, Camera worldCamera)
+    {
+        Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
+        return worldPosition;
+    }
+    public static Vector3 GetMouseWorldPosition()
+    {
+        Vector3 vec = GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
+        vec.z = 0f;
+        return vec;
+    }
     override protected void Update()
     {
         if (isDead)
@@ -193,30 +204,6 @@ public class PlayerController: FriendController
         //Get input from the input manager, round it to an integer and store in vertical to set y axis move direction
         movement.y = Input.GetAxisRaw("Vertical");
         float speed = movement.sqrMagnitude;
-        //if (speed > 0.01)
-        //{
-        //    //change face
-        //    if (Mathf.Abs(movement.y) > Mathf.Abs(movement.x))
-        //    {
-        //        if (movement.y > 0.01f)
-        //        {
-        //            clearAnimatorObject();
-        //            animators[2].gameObject.SetActive(true);
-        //        }
-        //        else if (movement.y < 0.01f)
-        //        {
-
-        //            clearAnimatorObject();
-        //            animators[0].gameObject.SetActive(true);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        clearAnimatorObject();
-        //        animators[1].gameObject.SetActive(true);
-
-        //    }
-        //}
 
         movement = Vector2.ClampMagnitude(movement, 1);
         //animator.SetFloat("speed", movement.sqrMagnitude);
@@ -343,7 +330,7 @@ public class PlayerController: FriendController
         // rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (isDashing())
         {

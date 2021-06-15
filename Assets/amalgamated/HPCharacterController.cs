@@ -66,6 +66,24 @@ public class HPCharacterController : MonoBehaviour
     {
 
     }
+
+    public void getHeal()
+    {
+        if (isDead)
+        {
+            return;
+        }
+        if (hasInvinsibleTime && currentInvinsibleTimer < invinsibleTime)
+        {
+            return;
+        }
+        hp += 1;
+        updateHP();
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.pickup);
+        }
+    }
     public virtual void getDamage(float damage = 1, string element = "")
     {
         if (isDead)

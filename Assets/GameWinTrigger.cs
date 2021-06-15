@@ -18,6 +18,10 @@ public class GameWinTrigger : MonoBehaviour
 
             WinUI.SetActive(true);
         }
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().PlayOneShot(MusicManager.Instance.victory);
+        }
 
 
     }
