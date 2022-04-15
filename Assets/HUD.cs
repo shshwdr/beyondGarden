@@ -215,7 +215,7 @@ public class HUD : Singleton<HUD>
     }
     public void HidePlantDetail()
     {
-        plantDetailPanel.SetActive(false);
+        //plantDetailPanel.SetActive(false);
     }
         // Update is called once per frame
         void Update()

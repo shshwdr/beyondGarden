@@ -6,20 +6,12 @@ public class AllyController : FriendController
 {
     public bool isAttachedToPlayer = false;
     public PlayerController playerController;
-    UnityEngine.AI.NavMeshAgent agent;
 
     public float stopAttachTimer = 0;
     bool isAttached;
     public bool canBeAttacked()
     {
         return !isDead && isAttachedToPlayer;
-    }
-    protected override void Awake()
-    {
-        base.Awake();
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
     }
     public override void getDamage(float damage = 1, string element = "")
     {
@@ -62,23 +54,8 @@ public class AllyController : FriendController
     {
         isAttached = true;
         Destroy(rb);
-        //rb.simulated = false;
-        //rb.bodyType = RigidbodyType2D.Kinematic;
-        //agent.enabled = false;
     }
 
-    Component CopyComponent(Component original, GameObject destination)
-    {
-        System.Type type = original.GetType();
-        Component copy = destination.AddComponent(type);
-        // Copied fields can be restricted with BindingFlags
-        System.Reflection.FieldInfo[] fields = type.GetFields();
-        foreach (System.Reflection.FieldInfo field in fields)
-        {
-            field.SetValue(copy, field.GetValue(original));
-        }
-        return copy;
-    }
     public void getDisembled()
     {
         isAttached = false;

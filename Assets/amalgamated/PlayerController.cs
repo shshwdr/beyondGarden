@@ -37,6 +37,9 @@ public class PlayerController: FriendController
     public GameObject gameOverObject;
     GameObject ghostManager;
 
+
+    public float hideDistance = 100f;
+
     // private void Awake()
     //{
     //if (instance == null)
@@ -199,6 +202,12 @@ public class PlayerController: FriendController
         }
 
 
+        if (isDashing())
+        {
+            //if is dashing, ignore movement input
+            return;
+        }
+
         movement.x = Input.GetAxisRaw("Horizontal");
 
         //Get input from the input manager, round it to an integer and store in vertical to set y axis move direction
@@ -207,14 +216,14 @@ public class PlayerController: FriendController
 
         movement = Vector2.ClampMagnitude(movement, 1);
         //animator.SetFloat("speed", movement.sqrMagnitude);
-        foreach (Animator anim in animators)
-        {
-            anim.SetFloat("speed", movement.sqrMagnitude);
-        }
+        //foreach (Animator anim in animators)
+        //{
+        //    anim.SetFloat("speed", movement.sqrMagnitude);
+        //}
+        animator.SetFloat("speed", movement.sqrMagnitude);
 
 
-
-        if (speed>0.001 && Input.GetMouseButtonDown(0) && !isDashing() && canDashing())
+        if (Input.GetMouseButtonDown(0) && !isDashing() && canDashing())
         {
             currentDashTimer = dashTime;
             currentDashCooldownTimer = dashCooldown;
@@ -223,7 +232,14 @@ public class PlayerController: FriendController
             {
                 anim.SetTrigger("dash");
             }
-            //ghostManager.GetComponent<GhostManager>(). StartGhost();
+
+
+
+            Vector3 mousePosition = GetMouseWorldPosition();
+            Vector2 dir = mousePosition - transform.position;
+            dir.Normalize();
+            movement = dir * moveSpeed;
+            speed = 1;
             GetComponent<TrailRenderer>().emitting = true;
             StartCoroutine(StopTrailRender());
             foreach(AllyController ally in allyList)
@@ -241,46 +257,6 @@ public class PlayerController: FriendController
         base.Update();
 
 
-        ////melee prepare
-        //if (speed > 0.01f)
-        //{
-        //    Time.timeScale = 1;
-        //    meleeAttackCollider.setactive(true);
-        //    var dir = new Vector3(movement.x, movement.y, 0)*0.08f;
-        //    // The shortcuts way
-        //    //meleeAttackCollider. transform.DOMove(transform.position + dir, 1);
-        //    // The generic way
-        //    DOTween.To(() => meleeAttackCollider.transform.localPosition, x => meleeAttackCollider.transform.localPosition = x, dir, 0.5f);
-
-        //    //DOTween.To(() => transform.position, x => transform.position = x, new Vector3(2, 2, 2), 1);
-
-        //}
-        //else
-        //{
-
-        //    meleeAttackCollider.setactive(false);
-        //    meleeAttackCollider.transform.localPosition = Vector3.zero;
-        //    stopAttackAnim();
-        //}
-        // transform
-
-        //if (Input.GetKeyDown(KeyCode.L))
-        //{
-        //    getDamage(1000);
-        //}
-
-        if (FModSoundManager.Instance.isMerged && Input.GetKeyDown(KeyCode.Space) && DungeonManager.Instance.currentLevel == 6&& DialogueEventHelper.Instance.dialogueFinished)
-        {
-            var dir = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0);
-            EnemyManager.instance.spawnMinions(transform.position+ dir);
-            if (!spawned)
-            {
-                spawned = true;
-
-                DialogueManager.StartConversation("firstMerge", null, null);
-            }
-
-        }
     }
 
     void playAnim(string anim)

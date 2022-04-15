@@ -24,6 +24,9 @@ public class HPCharacterController : MonoBehaviour
     protected EmotesController emotesController;
     protected GameObject spriteObject;
     public string elementType;
+    GameObject player;
+    public GameObject hideWhenFarAway;
+    float hideDistance = 100f;
     // Start is called before the first frame update
     virtual protected void Awake()
     {
@@ -31,6 +34,10 @@ public class HPCharacterController : MonoBehaviour
         emotesController = GetComponentInChildren<EmotesController>();
         hpBar = GetComponentInChildren<HPBarHandler>();
         rb = GetComponent<Rigidbody2D>();
+
+        player = GameObject.Find("Player");
+        hideDistance = player.GetComponent<PlayerController>().hideDistance;
+
     }
     virtual protected void Start()
     {
@@ -41,15 +48,19 @@ public class HPCharacterController : MonoBehaviour
     // Update is called once per frame
     virtual protected void Update()
     {
-        if (isStuned)
+        currentInvinsibleTimer += Time.deltaTime;
+        if (hideWhenFarAway)
         {
-            currentStunTimer += Time.deltaTime;
-            if (currentStunTimer >= stunTime)
+
+            if ((transform.position - player.transform.position).sqrMagnitude >= hideDistance)
             {
-                isStuned = false;
+                hideWhenFarAway.SetActive(false);
+            }
+            else
+            {
+                hideWhenFarAway.SetActive(true);
             }
         }
-        currentInvinsibleTimer += Time.deltaTime;
     }
 
     public void updateHP()

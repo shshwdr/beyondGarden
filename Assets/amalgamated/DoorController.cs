@@ -9,11 +9,24 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var player = collision.GetComponent<PlayerController>();
-        if(player && player.inventory.ContainsKey("key") && player.inventory["key"] > 0)
+        if (needKey)
         {
-            open();
+            var player = collision.GetComponent<PlayerController>();
+            if (player && player.inventory.ContainsKey("key") && player.inventory["key"] > 0)
+            {
+                open();
+            }
+            else
+            {
+
+                var ally = collision.GetComponent<AllyController>();
+                if (ally && ally.playerController.inventory.ContainsKey("key") && ally.playerController.inventory["key"] > 0)
+                {
+                    open();
+                }
+            }
         }
+
     }
     public void open()
     {
